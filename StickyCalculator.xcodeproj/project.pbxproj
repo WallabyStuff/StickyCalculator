@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1904488B42F7086492589A9C /* Pods_StickyCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC72BB46267FB575F536FB4 /* Pods_StickyCalculator.framework */; };
+		45522419C1E9814959FBF018 /* Pods_StickyCalculator_StickyCalculatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC87BF13603FD8F460454EA /* Pods_StickyCalculator_StickyCalculatorUITests.framework */; };
+		8E975D6A27E2333A00F6C7C5 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E975D6927E2333A00F6C7C5 /* R.generated.swift */; };
 		8EA670AA27E1CBD7007928E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA670A927E1CBD7007928E4 /* AppDelegate.swift */; };
 		8EA670AC27E1CBD7007928E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA670AB27E1CBD7007928E4 /* SceneDelegate.swift */; };
 		8EA670AE27E1CBD7007928E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA670AD27E1CBD7007928E4 /* ViewController.swift */; };
@@ -16,6 +19,7 @@
 		8EA670C127E1CBD8007928E4 /* StickyCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA670C027E1CBD8007928E4 /* StickyCalculatorTests.swift */; };
 		8EA670CB27E1CBD8007928E4 /* StickyCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA670CA27E1CBD8007928E4 /* StickyCalculatorUITests.swift */; };
 		8EA670CD27E1CBD8007928E4 /* StickyCalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA670CC27E1CBD8007928E4 /* StickyCalculatorUITestsLaunchTests.swift */; };
+		ABCAD8A813DAAEB7BC975258 /* Pods_StickyCalculatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D15C59816DCC9548DF509E /* Pods_StickyCalculatorTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0CC72BB46267FB575F536FB4 /* Pods_StickyCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StickyCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BF61DA7880B1D3897989E75 /* Pods-StickyCalculator-StickyCalculatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyCalculator-StickyCalculatorUITests.debug.xcconfig"; path = "Target Support Files/Pods-StickyCalculator-StickyCalculatorUITests/Pods-StickyCalculator-StickyCalculatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		66DE472ACDFA0BE721A45F0A /* Pods-StickyCalculatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyCalculatorTests.release.xcconfig"; path = "Target Support Files/Pods-StickyCalculatorTests/Pods-StickyCalculatorTests.release.xcconfig"; sourceTree = "<group>"; };
+		73FC627BAA5F2168C92C01E9 /* Pods-StickyCalculator-StickyCalculatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyCalculator-StickyCalculatorUITests.release.xcconfig"; path = "Target Support Files/Pods-StickyCalculator-StickyCalculatorUITests/Pods-StickyCalculator-StickyCalculatorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7EC87BF13603FD8F460454EA /* Pods_StickyCalculator_StickyCalculatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StickyCalculator_StickyCalculatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84D15C59816DCC9548DF509E /* Pods_StickyCalculatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StickyCalculatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E975D6927E2333A00F6C7C5 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		8EA670A627E1CBD7007928E4 /* StickyCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StickyCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA670A927E1CBD7007928E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EA670AB27E1CBD7007928E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +60,9 @@
 		8EA670C627E1CBD8007928E4 /* StickyCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StickyCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA670CA27E1CBD8007928E4 /* StickyCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyCalculatorUITests.swift; sourceTree = "<group>"; };
 		8EA670CC27E1CBD8007928E4 /* StickyCalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyCalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9963D5BFCED10531D6CE5054 /* Pods-StickyCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyCalculator.release.xcconfig"; path = "Target Support Files/Pods-StickyCalculator/Pods-StickyCalculator.release.xcconfig"; sourceTree = "<group>"; };
+		F0DECCFB688CD0551B1FE76F /* Pods-StickyCalculatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyCalculatorTests.debug.xcconfig"; path = "Target Support Files/Pods-StickyCalculatorTests/Pods-StickyCalculatorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F99B2FDA4162886EDA7F7EB3 /* Pods-StickyCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyCalculator.debug.xcconfig"; path = "Target Support Files/Pods-StickyCalculator/Pods-StickyCalculator.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1904488B42F7086492589A9C /* Pods_StickyCalculator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABCAD8A813DAAEB7BC975258 /* Pods_StickyCalculatorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +86,86 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45522419C1E9814959FBF018 /* Pods_StickyCalculator_StickyCalculatorUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D246FB0C6278569B9DF5050 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0CC72BB46267FB575F536FB4 /* Pods_StickyCalculator.framework */,
+				7EC87BF13603FD8F460454EA /* Pods_StickyCalculator_StickyCalculatorUITests.framework */,
+				84D15C59816DCC9548DF509E /* Pods_StickyCalculatorTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8E4FE4BA27E2303F00182E4F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8E4FE4C027E2309300182E4F /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8E4FE4BB27E2304600182E4F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8E4FE4BC27E2304B00182E4F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8EA670AD27E1CBD7007928E4 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8E4FE4BD27E2305800182E4F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8EA670B427E1CBD8007928E4 /* LaunchScreen.storyboard */,
+				8EA670B227E1CBD8007928E4 /* Assets.xcassets */,
+				8E975D6927E2333A00F6C7C5 /* R.generated.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8E4FE4BE27E2306100182E4F /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				8EA670B727E1CBD8007928E4 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		8E4FE4C027E2309300182E4F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8EA670AF27E1CBD7007928E4 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8E9C394227E2330F004263B0 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8EA670A927E1CBD7007928E4 /* AppDelegate.swift */,
+				8EA670AB27E1CBD7007928E4 /* SceneDelegate.swift */,
+				8E4FE4BB27E2304600182E4F /* Models */,
+				8E4FE4BC27E2304B00182E4F /* ViewControllers */,
+				8E4FE4BA27E2303F00182E4F /* Views */,
+				8E4FE4BD27E2305800182E4F /* Resources */,
+				8E4FE4BE27E2306100182E4F /* SupportingFiles */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		8EA6709D27E1CBD7007928E4 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +173,8 @@
 				8EA670BF27E1CBD8007928E4 /* StickyCalculatorTests */,
 				8EA670C927E1CBD8007928E4 /* StickyCalculatorUITests */,
 				8EA670A727E1CBD7007928E4 /* Products */,
+				E71046B597D8C908F9A6E936 /* Pods */,
+				0D246FB0C6278569B9DF5050 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +191,7 @@
 		8EA670A827E1CBD7007928E4 /* StickyCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				8EA670A927E1CBD7007928E4 /* AppDelegate.swift */,
-				8EA670AB27E1CBD7007928E4 /* SceneDelegate.swift */,
-				8EA670AD27E1CBD7007928E4 /* ViewController.swift */,
-				8EA670AF27E1CBD7007928E4 /* Main.storyboard */,
-				8EA670B227E1CBD8007928E4 /* Assets.xcassets */,
-				8EA670B427E1CBD8007928E4 /* LaunchScreen.storyboard */,
-				8EA670B727E1CBD8007928E4 /* Info.plist */,
+				8E9C394227E2330F004263B0 /* Sources */,
 			);
 			path = StickyCalculator;
 			sourceTree = "<group>";
@@ -127,6 +213,19 @@
 			path = StickyCalculatorUITests;
 			sourceTree = "<group>";
 		};
+		E71046B597D8C908F9A6E936 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F99B2FDA4162886EDA7F7EB3 /* Pods-StickyCalculator.debug.xcconfig */,
+				9963D5BFCED10531D6CE5054 /* Pods-StickyCalculator.release.xcconfig */,
+				5BF61DA7880B1D3897989E75 /* Pods-StickyCalculator-StickyCalculatorUITests.debug.xcconfig */,
+				73FC627BAA5F2168C92C01E9 /* Pods-StickyCalculator-StickyCalculatorUITests.release.xcconfig */,
+				F0DECCFB688CD0551B1FE76F /* Pods-StickyCalculatorTests.debug.xcconfig */,
+				66DE472ACDFA0BE721A45F0A /* Pods-StickyCalculatorTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +233,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8EA670D027E1CBD8007928E4 /* Build configuration list for PBXNativeTarget "StickyCalculator" */;
 			buildPhases = (
+				B6A8EAA0CD0495F16DD6CE5F /* [CP] Check Pods Manifest.lock */,
+				8E4FE4C127E2314300182E4F /* R.swift */,
 				8EA670A227E1CBD7007928E4 /* Sources */,
 				8EA670A327E1CBD7007928E4 /* Frameworks */,
 				8EA670A427E1CBD7007928E4 /* Resources */,
+				77DE732B46EBEAF260746FFF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +253,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8EA670D327E1CBD8007928E4 /* Build configuration list for PBXNativeTarget "StickyCalculatorTests" */;
 			buildPhases = (
+				1766C89661E98BE06812845B /* [CP] Check Pods Manifest.lock */,
 				8EA670B827E1CBD8007928E4 /* Sources */,
 				8EA670B927E1CBD8007928E4 /* Frameworks */,
 				8EA670BA27E1CBD8007928E4 /* Resources */,
@@ -169,9 +272,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8EA670D627E1CBD8007928E4 /* Build configuration list for PBXNativeTarget "StickyCalculatorUITests" */;
 			buildPhases = (
+				472C9662E9EB20FB4362587D /* [CP] Check Pods Manifest.lock */,
 				8EA670C227E1CBD8007928E4 /* Sources */,
 				8EA670C327E1CBD8007928E4 /* Frameworks */,
 				8EA670C427E1CBD8007928E4 /* Resources */,
+				6B6243BDB8B931333C00F0E8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +358,129 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1766C89661E98BE06812845B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StickyCalculatorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		472C9662E9EB20FB4362587D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StickyCalculator-StickyCalculatorUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B6243BDB8B931333C00F0E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StickyCalculator-StickyCalculatorUITests/Pods-StickyCalculator-StickyCalculatorUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StickyCalculator-StickyCalculatorUITests/Pods-StickyCalculator-StickyCalculatorUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StickyCalculator-StickyCalculatorUITests/Pods-StickyCalculator-StickyCalculatorUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77DE732B46EBEAF260746FFF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StickyCalculator/Pods-StickyCalculator-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StickyCalculator/Pods-StickyCalculator-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StickyCalculator/Pods-StickyCalculator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E4FE4C127E2314300182E4F /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		B6A8EAA0CD0495F16DD6CE5F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StickyCalculator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8EA670A227E1CBD7007928E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -261,6 +489,7 @@
 				8EA670AE27E1CBD7007928E4 /* ViewController.swift in Sources */,
 				8EA670AA27E1CBD7007928E4 /* AppDelegate.swift in Sources */,
 				8EA670AC27E1CBD7007928E4 /* SceneDelegate.swift in Sources */,
+				8E975D6A27E2333A00F6C7C5 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +661,7 @@
 		};
 		8EA670D127E1CBD8007928E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F99B2FDA4162886EDA7F7EB3 /* Pods-StickyCalculator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -439,12 +669,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 497P4L97SV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = StickyCalculator/Info.plist;
+				INFOPLIST_FILE = StickyCalculator/Sources/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -460,6 +691,7 @@
 		};
 		8EA670D227E1CBD8007928E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9963D5BFCED10531D6CE5054 /* Pods-StickyCalculator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -467,12 +699,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 497P4L97SV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = StickyCalculator/Info.plist;
+				INFOPLIST_FILE = StickyCalculator/Sources/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -488,6 +721,7 @@
 		};
 		8EA670D427E1CBD8007928E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0DECCFB688CD0551B1FE76F /* Pods-StickyCalculatorTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +742,7 @@
 		};
 		8EA670D527E1CBD8007928E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66DE472ACDFA0BE721A45F0A /* Pods-StickyCalculatorTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -528,6 +763,7 @@
 		};
 		8EA670D727E1CBD8007928E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BF61DA7880B1D3897989E75 /* Pods-StickyCalculator-StickyCalculatorUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -546,6 +782,7 @@
 		};
 		8EA670D827E1CBD8007928E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73FC627BAA5F2168C92C01E9 /* Pods-StickyCalculator-StickyCalculatorUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
