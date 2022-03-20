@@ -114,10 +114,45 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.color` struct is generated, and contains static references to 1 colors.
+  /// This `R.color` struct is generated, and contains static references to 14 colors.
   struct color {
+    /// Color `AccentBlack-light`.
+    static let accentBlackLight = Rswift.ColorResource(bundle: R.hostingBundle, name: "AccentBlack-light")
     /// Color `AccentColor`.
     static let accentColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "AccentColor")
+    /// Color `AccentGray-lightest`.
+    static let accentGrayLightest = Rswift.ColorResource(bundle: R.hostingBundle, name: "AccentGray-lightest")
+    /// Color `AccentPink-placeholder`.
+    static let accentPinkPlaceholder = Rswift.ColorResource(bundle: R.hostingBundle, name: "AccentPink-placeholder")
+    /// Color `AccentPink`.
+    static let accentPink = Rswift.ColorResource(bundle: R.hostingBundle, name: "AccentPink")
+    /// Color `AccentYellow`.
+    static let accentYellow = Rswift.ColorResource(bundle: R.hostingBundle, name: "AccentYellow")
+    /// Color `BackgroundBlack`.
+    static let backgroundBlack = Rswift.ColorResource(bundle: R.hostingBundle, name: "BackgroundBlack")
+    /// Color `BackgroundGray`.
+    static let backgroundGray = Rswift.ColorResource(bundle: R.hostingBundle, name: "BackgroundGray")
+    /// Color `BackgroundWhite`.
+    static let backgroundWhite = Rswift.ColorResource(bundle: R.hostingBundle, name: "BackgroundWhite")
+    /// Color `IconBlack`.
+    static let iconBlack = Rswift.ColorResource(bundle: R.hostingBundle, name: "IconBlack")
+    /// Color `IconWhite`.
+    static let iconWhite = Rswift.ColorResource(bundle: R.hostingBundle, name: "IconWhite")
+    /// Color `LineGray`.
+    static let lineGray = Rswift.ColorResource(bundle: R.hostingBundle, name: "LineGray")
+    /// Color `TextBlack`.
+    static let textBlack = Rswift.ColorResource(bundle: R.hostingBundle, name: "TextBlack")
+    /// Color `TextWhite`.
+    static let textWhite = Rswift.ColorResource(bundle: R.hostingBundle, name: "TextWhite")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "AccentBlack-light", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func accentBlackLight(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.accentBlackLight, compatibleWith: traitCollection)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIColor(named: "AccentColor", bundle: ..., traitCollection: ...)`
@@ -128,11 +163,223 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "AccentGray-lightest", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func accentGrayLightest(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.accentGrayLightest, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "AccentPink", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func accentPink(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.accentPink, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "AccentPink-placeholder", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func accentPinkPlaceholder(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.accentPinkPlaceholder, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "AccentYellow", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func accentYellow(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.accentYellow, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "BackgroundBlack", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func backgroundBlack(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.backgroundBlack, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "BackgroundGray", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func backgroundGray(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.backgroundGray, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "BackgroundWhite", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func backgroundWhite(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.backgroundWhite, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "IconBlack", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func iconBlack(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.iconBlack, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "IconWhite", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func iconWhite(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.iconWhite, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "LineGray", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func lineGray(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.lineGray, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "TextBlack", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func textBlack(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.textBlack, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "TextWhite", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func textWhite(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.textWhite, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "AccentBlack-light", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func accentBlackLight(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.accentBlackLight.name)
+    }
+    #endif
+
     #if os(watchOS)
     /// `UIColor(named: "AccentColor", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
     static func accentColor(_: Void = ()) -> UIKit.UIColor? {
       return UIKit.UIColor(named: R.color.accentColor.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "AccentGray-lightest", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func accentGrayLightest(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.accentGrayLightest.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "AccentPink", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func accentPink(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.accentPink.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "AccentPink-placeholder", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func accentPinkPlaceholder(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.accentPinkPlaceholder.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "AccentYellow", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func accentYellow(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.accentYellow.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "BackgroundBlack", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func backgroundBlack(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.backgroundBlack.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "BackgroundGray", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func backgroundGray(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.backgroundGray.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "BackgroundWhite", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func backgroundWhite(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.backgroundWhite.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "IconBlack", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func iconBlack(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.iconBlack.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "IconWhite", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func iconWhite(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.iconWhite.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "LineGray", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func lineGray(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.lineGray.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "TextBlack", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func textBlack(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.textBlack.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "TextWhite", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func textWhite(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.textWhite.name)
     }
     #endif
 
