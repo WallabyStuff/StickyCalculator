@@ -9,16 +9,28 @@
 /* Begin PBXBuildFile section */
 		1904488B42F7086492589A9C /* Pods_StickyCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC72BB46267FB575F536FB4 /* Pods_StickyCalculator.framework */; };
 		45522419C1E9814959FBF018 /* Pods_StickyCalculator_StickyCalculatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC87BF13603FD8F460454EA /* Pods_StickyCalculator_StickyCalculatorUITests.framework */; };
+		8E2CC74327E969700046E314 /* UIFont+NanumSquareRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2CC74227E969700046E314 /* UIFont+NanumSquareRound.swift */; };
+		8E414F5127E723A9007F0B65 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E414F5027E723A9007F0B65 /* History.storyboard */; };
+		8E414F5327E723D0007F0B65 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E414F5227E723D0007F0B65 /* HistoryViewController.swift */; };
+		8E414F5527E72453007F0B65 /* MainViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E414F5427E72453007F0B65 /* MainViewReactor.swift */; };
+		8E414F5727E72465007F0B65 /* HistoryViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E414F5627E72465007F0B65 /* HistoryViewReactor.swift */; };
+		8E64D96827EF547500330497 /* UITraitColleciton+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64D96727EF547500330497 /* UITraitColleciton+Orientation.swift */; };
+		8E87761227E6FFB600ED5839 /* IconKeyPadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E87761127E6FFB600ED5839 /* IconKeyPadButton.swift */; };
+		8E87761427E7021900ED5839 /* KeypadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E87761327E7021900ED5839 /* KeypadButton.swift */; };
 		8E975D6A27E2333A00F6C7C5 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E975D6927E2333A00F6C7C5 /* R.generated.swift */; };
+		8E977FCF27EB81E400B91E1B /* TextKeypadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E977FCE27EB81E400B91E1B /* TextKeypadButton.swift */; };
 		8EA670AA27E1CBD7007928E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA670A927E1CBD7007928E4 /* AppDelegate.swift */; };
 		8EA670AC27E1CBD7007928E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA670AB27E1CBD7007928E4 /* SceneDelegate.swift */; };
-		8EA670AE27E1CBD7007928E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA670AD27E1CBD7007928E4 /* ViewController.swift */; };
+		8EA670AE27E1CBD7007928E4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA670AD27E1CBD7007928E4 /* MainViewController.swift */; };
 		8EA670B127E1CBD7007928E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA670AF27E1CBD7007928E4 /* Main.storyboard */; };
 		8EA670B327E1CBD8007928E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EA670B227E1CBD8007928E4 /* Assets.xcassets */; };
 		8EA670B627E1CBD8007928E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA670B427E1CBD8007928E4 /* LaunchScreen.storyboard */; };
 		8EA670C127E1CBD8007928E4 /* StickyCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA670C027E1CBD8007928E4 /* StickyCalculatorTests.swift */; };
 		8EA670CB27E1CBD8007928E4 /* StickyCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA670CA27E1CBD8007928E4 /* StickyCalculatorUITests.swift */; };
 		8EA670CD27E1CBD8007928E4 /* StickyCalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA670CC27E1CBD8007928E4 /* StickyCalculatorUITestsLaunchTests.swift */; };
+		8EE41F7627EC1B040053FA17 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE41F7427EC1B040053FA17 /* HistoryTableViewCell.swift */; };
+		8EE41F7727EC1B040053FA17 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EE41F7527EC1B040053FA17 /* HistoryTableViewCell.xib */; };
+		8EE8048127ED6BA30001C011 /* DeviceResolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE8048027ED6BA30001C011 /* DeviceResolution.swift */; };
 		ABCAD8A813DAAEB7BC975258 /* Pods_StickyCalculatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D15C59816DCC9548DF509E /* Pods_StickyCalculatorTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,11 +58,24 @@
 		73FC627BAA5F2168C92C01E9 /* Pods-StickyCalculator-StickyCalculatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyCalculator-StickyCalculatorUITests.release.xcconfig"; path = "Target Support Files/Pods-StickyCalculator-StickyCalculatorUITests/Pods-StickyCalculator-StickyCalculatorUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7EC87BF13603FD8F460454EA /* Pods_StickyCalculator_StickyCalculatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StickyCalculator_StickyCalculatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D15C59816DCC9548DF509E /* Pods_StickyCalculatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StickyCalculatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E2CC74227E969700046E314 /* UIFont+NanumSquareRound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+NanumSquareRound.swift"; sourceTree = "<group>"; };
+		8E414F5027E723A9007F0B65 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		8E414F5227E723D0007F0B65 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		8E414F5427E72453007F0B65 /* MainViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewReactor.swift; sourceTree = "<group>"; };
+		8E414F5627E72465007F0B65 /* HistoryViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewReactor.swift; sourceTree = "<group>"; };
+		8E64D96727EF547500330497 /* UITraitColleciton+Orientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITraitColleciton+Orientation.swift"; sourceTree = "<group>"; };
+		8E87761127E6FFB600ED5839 /* IconKeyPadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconKeyPadButton.swift; sourceTree = "<group>"; };
+		8E87761327E7021900ED5839 /* KeypadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeypadButton.swift; sourceTree = "<group>"; };
+		8E8EE12327F0528B00756208 /* NanumSquareRound-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumSquareRound-ExtraBold.otf"; sourceTree = "<group>"; };
+		8E8EE12427F0528B00756208 /* NanumSquareRound-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumSquareRound-Bold.otf"; sourceTree = "<group>"; };
+		8E8EE12527F0528B00756208 /* NanumSquareRound-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumSquareRound-Regular.otf"; sourceTree = "<group>"; };
+		8E8EE12627F0528B00756208 /* NanumSquareRound-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumSquareRound-Light.otf"; sourceTree = "<group>"; };
 		8E975D6927E2333A00F6C7C5 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		8E977FCE27EB81E400B91E1B /* TextKeypadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextKeypadButton.swift; sourceTree = "<group>"; };
 		8EA670A627E1CBD7007928E4 /* StickyCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StickyCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA670A927E1CBD7007928E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EA670AB27E1CBD7007928E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8EA670AD27E1CBD7007928E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8EA670AD27E1CBD7007928E4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8EA670B027E1CBD7007928E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8EA670B227E1CBD8007928E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EA670B527E1CBD8007928E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,6 +85,9 @@
 		8EA670C627E1CBD8007928E4 /* StickyCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StickyCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA670CA27E1CBD8007928E4 /* StickyCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyCalculatorUITests.swift; sourceTree = "<group>"; };
 		8EA670CC27E1CBD8007928E4 /* StickyCalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyCalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8EE41F7427EC1B040053FA17 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		8EE41F7527EC1B040053FA17 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
+		8EE8048027ED6BA30001C011 /* DeviceResolution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceResolution.swift; sourceTree = "<group>"; };
 		9963D5BFCED10531D6CE5054 /* Pods-StickyCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyCalculator.release.xcconfig"; path = "Target Support Files/Pods-StickyCalculator/Pods-StickyCalculator.release.xcconfig"; sourceTree = "<group>"; };
 		F0DECCFB688CD0551B1FE76F /* Pods-StickyCalculatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyCalculatorTests.debug.xcconfig"; path = "Target Support Files/Pods-StickyCalculatorTests/Pods-StickyCalculatorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F99B2FDA4162886EDA7F7EB3 /* Pods-StickyCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyCalculator.debug.xcconfig"; path = "Target Support Files/Pods-StickyCalculator/Pods-StickyCalculator.debug.xcconfig"; sourceTree = "<group>"; };
@@ -103,10 +131,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8E2CC73127E965F00046E314 /* NanumSquareRoundFontFamily */ = {
+			isa = PBXGroup;
+			children = (
+				8E8EE12427F0528B00756208 /* NanumSquareRound-Bold.otf */,
+				8E8EE12327F0528B00756208 /* NanumSquareRound-ExtraBold.otf */,
+				8E8EE12627F0528B00756208 /* NanumSquareRound-Light.otf */,
+				8E8EE12527F0528B00756208 /* NanumSquareRound-Regular.otf */,
+			);
+			path = NanumSquareRoundFontFamily;
+			sourceTree = "<group>";
+		};
 		8E4FE4BA27E2303F00182E4F /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				8E4FE4C027E2309300182E4F /* Storyboards */,
+				8E87761327E7021900ED5839 /* KeypadButton.swift */,
+				8E87761127E6FFB600ED5839 /* IconKeyPadButton.swift */,
+				8E977FCE27EB81E400B91E1B /* TextKeypadButton.swift */,
+				8EE41F7427EC1B040053FA17 /* HistoryTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -121,7 +164,10 @@
 		8E4FE4BC27E2304B00182E4F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8EA670AD27E1CBD7007928E4 /* ViewController.swift */,
+				8EA670AD27E1CBD7007928E4 /* MainViewController.swift */,
+				8E414F5427E72453007F0B65 /* MainViewReactor.swift */,
+				8E414F5227E723D0007F0B65 /* HistoryViewController.swift */,
+				8E414F5627E72465007F0B65 /* HistoryViewReactor.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -129,9 +175,11 @@
 		8E4FE4BD27E2305800182E4F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8E2CC73127E965F00046E314 /* NanumSquareRoundFontFamily */,
 				8EA670B427E1CBD8007928E4 /* LaunchScreen.storyboard */,
 				8EA670B227E1CBD8007928E4 /* Assets.xcassets */,
 				8E975D6927E2333A00F6C7C5 /* R.generated.swift */,
+				8E2CC74227E969700046E314 /* UIFont+NanumSquareRound.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -148,6 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				8EA670AF27E1CBD7007928E4 /* Main.storyboard */,
+				8E414F5027E723A9007F0B65 /* History.storyboard */,
+				8EE41F7527EC1B040053FA17 /* HistoryTableViewCell.xib */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -160,6 +210,7 @@
 				8E4FE4BB27E2304600182E4F /* Models */,
 				8E4FE4BC27E2304B00182E4F /* ViewControllers */,
 				8E4FE4BA27E2303F00182E4F /* Views */,
+				8EE8047F27ED6B870001C011 /* Utils */,
 				8E4FE4BD27E2305800182E4F /* Resources */,
 				8E4FE4BE27E2306100182E4F /* SupportingFiles */,
 			);
@@ -211,6 +262,15 @@
 				8EA670CC27E1CBD8007928E4 /* StickyCalculatorUITestsLaunchTests.swift */,
 			);
 			path = StickyCalculatorUITests;
+			sourceTree = "<group>";
+		};
+		8EE8047F27ED6B870001C011 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8EE8048027ED6BA30001C011 /* DeviceResolution.swift */,
+				8E64D96727EF547500330497 /* UITraitColleciton+Orientation.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		E71046B597D8C908F9A6E936 /* Pods */ = {
@@ -339,6 +399,8 @@
 				8EA670B627E1CBD8007928E4 /* LaunchScreen.storyboard in Resources */,
 				8EA670B327E1CBD8007928E4 /* Assets.xcassets in Resources */,
 				8EA670B127E1CBD7007928E4 /* Main.storyboard in Resources */,
+				8EE41F7727EC1B040053FA17 /* HistoryTableViewCell.xib in Resources */,
+				8E414F5127E723A9007F0B65 /* History.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,10 +548,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EA670AE27E1CBD7007928E4 /* ViewController.swift in Sources */,
+				8EA670AE27E1CBD7007928E4 /* MainViewController.swift in Sources */,
+				8E87761427E7021900ED5839 /* KeypadButton.swift in Sources */,
 				8EA670AA27E1CBD7007928E4 /* AppDelegate.swift in Sources */,
+				8E414F5727E72465007F0B65 /* HistoryViewReactor.swift in Sources */,
+				8E87761227E6FFB600ED5839 /* IconKeyPadButton.swift in Sources */,
 				8EA670AC27E1CBD7007928E4 /* SceneDelegate.swift in Sources */,
+				8EE41F7627EC1B040053FA17 /* HistoryTableViewCell.swift in Sources */,
+				8E64D96827EF547500330497 /* UITraitColleciton+Orientation.swift in Sources */,
+				8E414F5327E723D0007F0B65 /* HistoryViewController.swift in Sources */,
+				8E977FCF27EB81E400B91E1B /* TextKeypadButton.swift in Sources */,
 				8E975D6A27E2333A00F6C7C5 /* R.generated.swift in Sources */,
+				8EE8048127ED6BA30001C011 /* DeviceResolution.swift in Sources */,
+				8E2CC74327E969700046E314 /* UIFont+NanumSquareRound.swift in Sources */,
+				8E414F5527E72453007F0B65 /* MainViewReactor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
