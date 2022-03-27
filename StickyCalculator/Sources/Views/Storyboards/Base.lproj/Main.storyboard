@@ -1,24 +1,684 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="landscape" appearance="light"/>
+    <accessibilityOverrides dynamicTypePreference="2"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumSquareRound-Bold.otf">
+            <string>NanumSquareRoundOTFB</string>
+        </array>
+        <array key="NanumSquareRound-ExtraBold.otf">
+            <string>NanumSquareRoundOTFEB</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="StickyCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="926" height="428"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oW6-3q-VWj">
+                                <rect key="frame" x="64" y="28" width="44" height="44"/>
+                                <color key="backgroundColor" name="BackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="8DP-63-Pr1"/>
+                                    <constraint firstAttribute="height" constant="44" id="fUb-oS-6tB"/>
+                                </constraints>
+                                <color key="tintColor" name="AccentColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="folder.fill" catalog="system"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="TC6-GP-MOS">
+                                <rect key="frame" x="434.33333333333326" y="107.33333333333334" width="427.66666666666674" height="299.66666666666663"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="6VW-3S-Qs5">
+                                        <rect key="frame" x="0.0" y="0.0" width="427.66666666666669" height="50.333333333333336"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EuE-A8-a31" customClass="TextKeypadButton" customModule="StickyCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="98" height="50.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="NanumSquareRoundOTFB" family="NanumSquareRoundOTF" pointSize="28"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="c"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="24"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="colorStyle">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4f-KR-wvi" customClass="IconKeyPadButton" customModule="StickyCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="110.00000000000006" y="0.0" width="98" height="50.333333333333336"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="hi" image="plus-minus"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="24"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="colorStyle">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="imageSize">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ah8-Ua-pMQ" customClass="IconKeyPadButton" customModule="StickyCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="220.00000000000003" y="0.0" width="97.666666666666657" height="50.333333333333336"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="" image="percent"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="24"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="colorStyle">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="imageSize">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tae-i9-7SX" customClass="IconKeyPadButton" customModule="StickyCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="329.66666666666669" y="0.0" width="98" height="50.333333333333336"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button" image="divide"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="24"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="colorStyle">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="imageSize">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="RQC-2j-tsL">
+                                        <rect key="frame" x="0.0" y="62.333333333333329" width="427.66666666666669" height="50.333333333333329"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="op7-9F-O3C" customClass="TextKeypadButton" customModule="StickyCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="98" height="50.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="NanumSquareRoundOTFB" family="NanumSquareRoundOTF" pointSize="28"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="7"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="24"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="colorStyle">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDs-RV-XSd" customClass="TextKeypadButton" customModule="StickyCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="110.00000000000006" y="0.0" width="98" height="50.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="NanumSquareRoundOTFB" family="NanumSquareRoundOTF" pointSize="28"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="8"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="24"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="colorStyle">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mC9-Bm-ttp" customClass="TextKeypadButton" customModule="StickyCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="220.00000000000003" y="0.0" width="97.666666666666657" height="50.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="NanumSquareRoundOTFB" family="NanumSquareRoundOTF" pointSize="28"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="9"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="24"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="colorStyle">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDL-R0-5Nu" customClass="IconKeyPadButton" customModule="StickyCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="329.66666666666669" y="0.0" width="98" height="50.333333333333336"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="" image="multiply"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="24"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="colorStyle">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="imageSize">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="GMu-jk-UmH">
+                                        <rect key="frame" x="0.0" y="124.66666666666667" width="427.66666666666669" height="50.333333333333329"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCR-5U-s1i" customClass="TextKeypadButton" customModule="StickyCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="98" height="50.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="NanumSquareRoundOTFB" family="NanumSquareRoundOTF" pointSize="28"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="4"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="24"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="colorStyle">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srh-kS-QA7" customClass="TextKeypadButton" customModule="StickyCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="110.00000000000006" y="0.0" width="98" height="50.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="NanumSquareRoundOTFB" family="NanumSquareRoundOTF" pointSize="28"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="5"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="24"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="colorStyle">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLF-Kl-8Fq" customClass="TextKeypadButton" customModule="StickyCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="220.00000000000003" y="0.0" width="97.666666666666657" height="50.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="NanumSquareRoundOTFB" family="NanumSquareRoundOTF" pointSize="28"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="6"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="24"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="colorStyle">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROl-Cz-uw2" customClass="IconKeyPadButton" customModule="StickyCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="329.66666666666669" y="0.0" width="98" height="50.333333333333336"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="" image="minus"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="24"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="colorStyle">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="imageSize">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="189-Dg-s9e">
+                                        <rect key="frame" x="0.0" y="187" width="427.66666666666669" height="50.333333333333343"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ff6-9M-G6X" customClass="TextKeypadButton" customModule="StickyCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="98" height="50.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="NanumSquareRoundOTFB" family="NanumSquareRoundOTF" pointSize="28"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="24"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="colorStyle">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHy-X4-ZcL" customClass="TextKeypadButton" customModule="StickyCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="110.00000000000006" y="0.0" width="98" height="50.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="NanumSquareRoundOTFB" family="NanumSquareRoundOTF" pointSize="28"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="2"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="24"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="colorStyle">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="em5-ur-Qnk" customClass="TextKeypadButton" customModule="StickyCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="220.00000000000003" y="0.0" width="97.666666666666657" height="50.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="NanumSquareRoundOTFB" family="NanumSquareRoundOTF" pointSize="28"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="3"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="24"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="colorStyle">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1G-OS-kKl" customClass="IconKeyPadButton" customModule="StickyCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="329.66666666666669" y="0.0" width="98" height="50.333333333333336"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="" image="add"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="24"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="colorStyle">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="imageSize">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="fjO-l7-BHP">
+                                        <rect key="frame" x="0.0" y="249.3333333333334" width="427.66666666666669" height="50.333333333333343"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAN-q6-2F3" customClass="TextKeypadButton" customModule="StickyCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="98" height="50.333333333333336"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="EAN-q6-2F3" secondAttribute="height" multiplier="1:1" id="VlH-CY-gs3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NanumSquareRoundOTFB" family="NanumSquareRoundOTF" pointSize="28"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="0"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="24"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="colorStyle">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <exclude reference="VlH-CY-gs3"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <exclude reference="VlH-CY-gs3"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="VlH-CY-gs3"/>
+                                                    </mask>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YtU-dq-rlk" customClass="IconKeyPadButton" customModule="StickyCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="110.00000000000006" y="0.0" width="98" height="50.333333333333336"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="" image="dot"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="24"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="colorStyle">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="imageSize">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZM-xE-Nv3" customClass="IconKeyPadButton" customModule="StickyCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="220.00000000000003" y="0.0" width="97.666666666666657" height="50.333333333333336"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="" image="backspace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="24"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="colorStyle">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="imageSize">
+                                                        <real key="value" value="36"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcu-fh-mzS" customClass="IconKeyPadButton" customModule="StickyCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="329.66666666666669" y="0.0" width="98" height="50.333333333333336"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="" image="equal"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="24"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="colorStyle">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="imageSize">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="336" id="Lcu-nO-4eG"/>
+                                    <constraint firstAttribute="height" secondItem="fjO-l7-BHP" secondAttribute="height" multiplier="5" constant="48" id="luc-S7-NIl"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Lcu-nO-4eG"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="luc-S7-NIl"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="luc-S7-NIl"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="Lcu-nO-4eG"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fay-vA-fJ6">
+                                <rect key="frame" x="128" y="28" width="734" height="0.0"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="expression here" textAlignment="right" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNN-oC-HNa">
+                                        <rect key="frame" x="0.0" y="0.0" width="734" height="22.333333333333332"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareRoundOTFB" family="NanumSquareRoundOTF" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="gNN-oC-HNa" firstAttribute="height" relation="lessThanOrEqual" secondItem="fay-vA-fJ6" secondAttribute="height" id="0K2-Bg-c5n"/>
+                                    <constraint firstAttribute="height" id="49H-0y-tzS"/>
+                                    <constraint firstAttribute="trailing" secondItem="gNN-oC-HNa" secondAttribute="trailing" id="bei-Es-wu1"/>
+                                    <constraint firstItem="gNN-oC-HNa" firstAttribute="leading" secondItem="fay-vA-fJ6" secondAttribute="leading" id="lYE-aJ-wYx"/>
+                                    <constraint firstItem="gNN-oC-HNa" firstAttribute="top" secondItem="fay-vA-fJ6" secondAttribute="top" id="qAF-4E-uiQ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="49H-0y-tzS"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="49H-0y-tzS"/>
+                                        <exclude reference="0K2-Bg-c5n"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="49H-0y-tzS"/>
+                                        <exclude reference="0K2-Bg-c5n"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="49H-0y-tzS"/>
+                                        <include reference="0K2-Bg-c5n"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdE-Rf-gQI">
+                                <rect key="frame" x="44" y="0.0" width="370.33333333333331" height="428"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" id="ORo-Ur-aiB"/>
+                                    <constraint firstAttribute="width" constant="340" id="fzi-Hi-JMj"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="fzi-Hi-JMj"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="ORo-Ur-aiB"/>
+                                        <exclude reference="fzi-Hi-JMj"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="ORo-Ur-aiB"/>
+                                        <exclude reference="fzi-Hi-JMj"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="ORo-Ur-aiB"/>
+                                        <include reference="fzi-Hi-JMj"/>
+                                    </mask>
+                                </variation>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12345" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uN4-hJ-SCv">
+                                <rect key="frame" x="434.33333333333326" y="35" width="427.66666666666674" height="44.333333333333343"/>
+                                <fontDescription key="fontDescription" name="NanumSquareRoundOTFEB" family="NanumSquareRoundOTF" pointSize="40"/>
+                                <color key="textColor" name="TextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uN4-hJ-SCv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0cv-H6-tbk"/>
+                            <constraint firstItem="uN4-hJ-SCv" firstAttribute="top" secondItem="fay-vA-fJ6" secondAttribute="bottom" constant="20" id="GBt-xm-2y2"/>
+                            <constraint firstItem="oW6-3q-VWj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="GSQ-by-Nvb"/>
+                            <constraint firstItem="TC6-GP-MOS" firstAttribute="leading" secondItem="tdE-Rf-gQI" secondAttribute="trailing" constant="20" id="IWh-Ub-N9p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TC6-GP-MOS" secondAttribute="trailing" constant="20" id="KXJ-Vz-xPA"/>
+                            <constraint firstItem="uN4-hJ-SCv" firstAttribute="leading" secondItem="tdE-Rf-gQI" secondAttribute="trailing" constant="20" id="QGE-gz-0NO"/>
+                            <constraint firstItem="oW6-3q-VWj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WYz-pu-i42"/>
+                            <constraint firstItem="TC6-GP-MOS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Wub-dc-2Cu"/>
+                            <constraint firstItem="TC6-GP-MOS" firstAttribute="top" secondItem="uN4-hJ-SCv" secondAttribute="bottom" constant="28" id="Y8F-N0-4fh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fay-vA-fJ6" secondAttribute="trailing" constant="20" id="ZZe-Cc-Xuv"/>
+                            <constraint firstItem="TC6-GP-MOS" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="bSO-3M-R7p"/>
+                            <constraint firstItem="oW6-3q-VWj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="c7G-JL-P2s"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TC6-GP-MOS" secondAttribute="bottom" constant="24" id="dKG-uV-hIV"/>
+                            <constraint firstAttribute="bottom" secondItem="tdE-Rf-gQI" secondAttribute="bottom" id="ega-oG-rJA"/>
+                            <constraint firstItem="tdE-Rf-gQI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fbd-7q-WXf"/>
+                            <constraint firstItem="fay-vA-fJ6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="jfE-dD-JI8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uN4-hJ-SCv" secondAttribute="trailing" constant="20" id="muI-GD-9Ti"/>
+                            <constraint firstItem="fay-vA-fJ6" firstAttribute="leading" secondItem="oW6-3q-VWj" secondAttribute="trailing" constant="20" id="odP-Pf-kgJ"/>
+                            <constraint firstItem="tdE-Rf-gQI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ueZ-UX-W5W"/>
+                            <constraint firstItem="tdE-Rf-gQI" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="waN-5K-s4d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TC6-GP-MOS" secondAttribute="bottom" id="xt3-Te-9Gm"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="xt3-Te-9Gm"/>
+                                <exclude reference="waN-5K-s4d"/>
+                                <exclude reference="WYz-pu-i42"/>
+                                <exclude reference="QGE-gz-0NO"/>
+                                <exclude reference="IWh-Ub-N9p"/>
+                                <exclude reference="bSO-3M-R7p"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="dKG-uV-hIV"/>
+                                <include reference="xt3-Te-9Gm"/>
+                                <include reference="waN-5K-s4d"/>
+                                <include reference="WYz-pu-i42"/>
+                                <exclude reference="c7G-JL-P2s"/>
+                                <exclude reference="0cv-H6-tbk"/>
+                                <exclude reference="GBt-xm-2y2"/>
+                                <include reference="QGE-gz-0NO"/>
+                                <include reference="IWh-Ub-N9p"/>
+                                <exclude reference="Wub-dc-2Cu"/>
+                                <include reference="bSO-3M-R7p"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="dKG-uV-hIV"/>
+                                <include reference="xt3-Te-9Gm"/>
+                                <include reference="waN-5K-s4d"/>
+                                <include reference="WYz-pu-i42"/>
+                                <exclude reference="c7G-JL-P2s"/>
+                                <exclude reference="0cv-H6-tbk"/>
+                                <exclude reference="GBt-xm-2y2"/>
+                                <include reference="QGE-gz-0NO"/>
+                                <include reference="IWh-Ub-N9p"/>
+                                <exclude reference="Wub-dc-2Cu"/>
+                                <include reference="bSO-3M-R7p"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="dKG-uV-hIV"/>
+                                <exclude reference="xt3-Te-9Gm"/>
+                                <exclude reference="waN-5K-s4d"/>
+                                <include reference="WYz-pu-i42"/>
+                                <exclude reference="c7G-JL-P2s"/>
+                                <exclude reference="0cv-H6-tbk"/>
+                                <include reference="GBt-xm-2y2"/>
+                                <include reference="QGE-gz-0NO"/>
+                                <exclude reference="IWh-Ub-N9p"/>
+                                <exclude reference="Wub-dc-2Cu"/>
+                                <exclude reference="bSO-3M-R7p"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="historyContainerView" destination="tdE-Rf-gQI" id="OCm-sK-1bc"/>
+                        <outlet property="historyContainerViewWidthConstraint" destination="fzi-Hi-JMj" id="m3r-3t-xRY"/>
+                        <outlet property="iconKeypadButtonBackspace" destination="wZM-xE-Nv3" id="LUe-vX-BzH"/>
+                        <outlet property="iconKeypadButtonDivide" destination="Tae-i9-7SX" id="vHk-ZA-D1y"/>
+                        <outlet property="iconKeypadButtonEqual" destination="vcu-fh-mzS" id="DB7-Xg-uqs"/>
+                        <outlet property="iconKeypadButtonMinus" destination="ROl-Cz-uw2" id="Dzh-fi-dbB"/>
+                        <outlet property="iconKeypadButtonMultiply" destination="gDL-R0-5Nu" id="HuK-Nn-aGS"/>
+                        <outlet property="iconKeypadButtonPercent" destination="ah8-Ua-pMQ" id="XBa-aO-TJU"/>
+                        <outlet property="iconKeypadButtonPlus" destination="a1G-OS-kKl" id="egm-Cx-LDu"/>
+                        <outlet property="iconKeypadButtonPlusMinux" destination="S4f-KR-wvi" id="puN-Ba-mDQ"/>
+                        <outlet property="keypadStackViewLeadingConstraint" destination="Wub-dc-2Cu" id="MSv-k0-r9J"/>
+                        <outlet property="showHistoryButton" destination="oW6-3q-VWj" id="aRz-mf-GMV"/>
+                        <outlet property="textKeupadButtonOne" destination="ff6-9M-G6X" id="b8n-jP-VF3"/>
+                        <outlet property="textKeypadButtonCancel" destination="EuE-A8-a31" id="40E-oL-LU5"/>
+                        <outlet property="textKeypadButtonEight" destination="hDs-RV-XSd" id="694-Jn-cw5"/>
+                        <outlet property="textKeypadButtonFive" destination="srh-kS-QA7" id="KZY-wJ-F0U"/>
+                        <outlet property="textKeypadButtonFour" destination="wCR-5U-s1i" id="oKw-5M-nrC"/>
+                        <outlet property="textKeypadButtonNine" destination="mC9-Bm-ttp" id="T2F-SX-ARv"/>
+                        <outlet property="textKeypadButtonSeven" destination="op7-9F-O3C" id="tjf-46-edN"/>
+                        <outlet property="textKeypadButtonSix" destination="MLF-Kl-8Fq" id="zfZ-K6-LQh"/>
+                        <outlet property="textKeypadButtonThree" destination="em5-ur-Qnk" id="wYY-XT-Ghn"/>
+                        <outlet property="textKeypadButtonTwo" destination="JHy-X4-ZcL" id="pWk-5I-OoW"/>
+                        <outlet property="textKeypadButtonZero" destination="EAN-q6-2F3" id="G3z-D1-O0U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="78.504672897196258" y="114.68682505399569"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="EAN-q6-2F3">
+            <size key="intrinsicContentSize" width="30" height="43"/>
+        </designable>
+        <designable name="EuE-A8-a31">
+            <size key="intrinsicContentSize" width="30" height="43"/>
+        </designable>
+        <designable name="JHy-X4-ZcL">
+            <size key="intrinsicContentSize" width="30" height="43"/>
+        </designable>
+        <designable name="MLF-Kl-8Fq">
+            <size key="intrinsicContentSize" width="30" height="43"/>
+        </designable>
+        <designable name="ROl-Cz-uw2">
+            <size key="intrinsicContentSize" width="590" height="542.33333333333337"/>
+        </designable>
+        <designable name="S4f-KR-wvi">
+            <size key="intrinsicContentSize" width="603" height="542.33333333333337"/>
+        </designable>
+        <designable name="Tae-i9-7SX">
+            <size key="intrinsicContentSize" width="636" height="542.33333333333337"/>
+        </designable>
+        <designable name="YtU-dq-rlk">
+            <size key="intrinsicContentSize" width="98" height="50.333333333333336"/>
+        </designable>
+        <designable name="a1G-OS-kKl">
+            <size key="intrinsicContentSize" width="590" height="542.33333333333337"/>
+        </designable>
+        <designable name="ah8-Ua-pMQ">
+            <size key="intrinsicContentSize" width="589.66666666666663" height="542.33333333333337"/>
+        </designable>
+        <designable name="em5-ur-Qnk">
+            <size key="intrinsicContentSize" width="30" height="43"/>
+        </designable>
+        <designable name="ff6-9M-G6X">
+            <size key="intrinsicContentSize" width="30" height="43"/>
+        </designable>
+        <designable name="gDL-R0-5Nu">
+            <size key="intrinsicContentSize" width="590" height="542.33333333333337"/>
+        </designable>
+        <designable name="hDs-RV-XSd">
+            <size key="intrinsicContentSize" width="30" height="43"/>
+        </designable>
+        <designable name="mC9-Bm-ttp">
+            <size key="intrinsicContentSize" width="30" height="43"/>
+        </designable>
+        <designable name="op7-9F-O3C">
+            <size key="intrinsicContentSize" width="30" height="43"/>
+        </designable>
+        <designable name="srh-kS-QA7">
+            <size key="intrinsicContentSize" width="30" height="43"/>
+        </designable>
+        <designable name="vcu-fh-mzS">
+            <size key="intrinsicContentSize" width="590" height="542.33333333333337"/>
+        </designable>
+        <designable name="wCR-5U-s1i">
+            <size key="intrinsicContentSize" width="30" height="43"/>
+        </designable>
+        <designable name="wZM-xE-Nv3">
+            <size key="intrinsicContentSize" width="573.66666666666663" height="526.33333333333337"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="add" width="512" height="512"/>
+        <image name="backspace" width="512" height="512"/>
+        <image name="divide" width="512" height="512"/>
+        <image name="dot" width="20" height="20"/>
+        <image name="equal" width="512" height="512"/>
+        <image name="folder.fill" catalog="system" width="128" height="97"/>
+        <image name="minus" width="512" height="512"/>
+        <image name="multiply" width="512" height="512"/>
+        <image name="percent" width="512" height="512"/>
+        <image name="plus-minus" width="512" height="512"/>
+        <namedColor name="AccentColor">
+            <color red="0.3059999942779541" green="0.46700000762939453" blue="0.43500000238418579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextColor">
+            <color red="0.2199999988079071" green="0.22699999809265137" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
