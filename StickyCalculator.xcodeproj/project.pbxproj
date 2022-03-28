@@ -17,6 +17,7 @@
 		8E64D96827EF547500330497 /* UITraitColleciton+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64D96727EF547500330497 /* UITraitColleciton+Orientation.swift */; };
 		8E87761227E6FFB600ED5839 /* IconKeyPadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E87761127E6FFB600ED5839 /* IconKeyPadButton.swift */; };
 		8E87761427E7021900ED5839 /* KeypadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E87761327E7021900ED5839 /* KeypadButton.swift */; };
+		8E8EDC6A27F1DEFB005B73F6 /* UILabel+NumberSentenceAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8EDC6927F1DEFB005B73F6 /* UILabel+NumberSentenceAttribute.swift */; };
 		8E975D6A27E2333A00F6C7C5 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E975D6927E2333A00F6C7C5 /* R.generated.swift */; };
 		8E977FCF27EB81E400B91E1B /* TextKeypadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E977FCE27EB81E400B91E1B /* TextKeypadButton.swift */; };
 		8EA670AA27E1CBD7007928E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA670A927E1CBD7007928E4 /* AppDelegate.swift */; };
@@ -66,6 +67,7 @@
 		8E64D96727EF547500330497 /* UITraitColleciton+Orientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITraitColleciton+Orientation.swift"; sourceTree = "<group>"; };
 		8E87761127E6FFB600ED5839 /* IconKeyPadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconKeyPadButton.swift; sourceTree = "<group>"; };
 		8E87761327E7021900ED5839 /* KeypadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeypadButton.swift; sourceTree = "<group>"; };
+		8E8EDC6927F1DEFB005B73F6 /* UILabel+NumberSentenceAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+NumberSentenceAttribute.swift"; sourceTree = "<group>"; };
 		8E8EE12327F0528B00756208 /* NanumSquareRound-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumSquareRound-ExtraBold.otf"; sourceTree = "<group>"; };
 		8E8EE12427F0528B00756208 /* NanumSquareRound-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumSquareRound-Bold.otf"; sourceTree = "<group>"; };
 		8E8EE12527F0528B00756208 /* NanumSquareRound-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumSquareRound-Regular.otf"; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 			children = (
 				8EE8048027ED6BA30001C011 /* DeviceResolution.swift */,
 				8E64D96727EF547500330497 /* UITraitColleciton+Orientation.swift */,
+				8E8EDC6927F1DEFB005B73F6 /* UILabel+NumberSentenceAttribute.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 				8E414F5327E723D0007F0B65 /* HistoryViewController.swift in Sources */,
 				8E977FCF27EB81E400B91E1B /* TextKeypadButton.swift in Sources */,
 				8E975D6A27E2333A00F6C7C5 /* R.generated.swift in Sources */,
+				8E8EDC6A27F1DEFB005B73F6 /* UILabel+NumberSentenceAttribute.swift in Sources */,
 				8EE8048127ED6BA30001C011 /* DeviceResolution.swift in Sources */,
 				8E2CC74327E969700046E314 /* UIFont+NanumSquareRound.swift in Sources */,
 				8E414F5527E72453007F0B65 /* MainViewReactor.swift in Sources */,

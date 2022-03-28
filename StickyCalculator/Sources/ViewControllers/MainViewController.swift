@@ -16,11 +16,14 @@ class MainViewController: UIViewController, View {
     
     static let PREFERRED_KEYPAD_WIDTH: CGFloat = 336
     static let HORIZONTAL_SAFE_AREA_INSET: CGFloat = 20
+
+    // contriants
+    @IBOutlet weak var keypadStackViewLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var historyContainerViewWidthConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var showHistoryButton: UIButton!
     @IBOutlet weak var historyContainerView: UIView!
-    @IBOutlet weak var keypadStackViewLeadingConstraint: NSLayoutConstraint!
-    @IBOutlet weak var historyContainerViewWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var numberSentenceLabel: UILabel!
     
     // number keypad buttons
     @IBOutlet weak var textKeypadButtonZero: TextKeypadButton!
