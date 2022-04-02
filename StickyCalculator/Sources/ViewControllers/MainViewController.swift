@@ -24,6 +24,7 @@ class MainViewController: UIViewController, View {
     @IBOutlet weak var showHistoryButton: UIButton!
     @IBOutlet weak var historyContainerView: UIView!
     @IBOutlet weak var numberSentenceLabel: UILabel!
+    @IBOutlet weak var resultLabel: UILabel!
     
     // number keypad buttons
     @IBOutlet weak var textKeypadButtonZero: TextKeypadButton!
@@ -38,13 +39,14 @@ class MainViewController: UIViewController, View {
     @IBOutlet weak var textKeypadButtonNine: IconKeyPadButton!
     
     // operator keypad buttons
-    @IBOutlet weak var iconKeypadButtonPlusMinux: IconKeyPadButton!
+    @IBOutlet weak var iconKeypadButtonPositiveNegative: IconKeyPadButton!
     @IBOutlet weak var iconKeypadButtonPercent: IconKeyPadButton!
     @IBOutlet weak var iconKeypadButtonDivide: IconKeyPadButton!
     @IBOutlet weak var iconKeypadButtonMultiply: IconKeyPadButton!
     @IBOutlet weak var iconKeypadButtonMinus: IconKeyPadButton!
     @IBOutlet weak var iconKeypadButtonPlus: IconKeyPadButton!
     @IBOutlet weak var iconKeypadButtonEqual: IconKeyPadButton!
+    @IBOutlet weak var iconKeypadButtonDecimal: IconKeyPadButton!
     
     // etc keypad buttons
     @IBOutlet weak var iconKeypadButtonBackspace: IconKeyPadButton!
@@ -130,6 +132,121 @@ class MainViewController: UIViewController, View {
             .drive(with: self, onNext: { vc, _ in
                 vc.presentHistoryVC()
             }).disposed(by: disposeBag)
+        
+        textKeypadButtonZero.rx.tap
+            .map { MainViewReactor.Action.didTapNumberKeypad(0) }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        textKeupadButtonOne.rx.tap
+            .map { MainViewReactor.Action.didTapNumberKeypad(1) }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        textKeypadButtonTwo.rx.tap
+            .map { MainViewReactor.Action.didTapNumberKeypad(2) }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        textKeypadButtonThree.rx.tap
+            .map { MainViewReactor.Action.didTapNumberKeypad(3) }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        textKeypadButtonFour.rx.tap
+            .map { MainViewReactor.Action.didTapNumberKeypad(4) }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        textKeypadButtonFive.rx.tap
+            .map { MainViewReactor.Action.didTapNumberKeypad(5) }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        textKeypadButtonSix.rx.tap
+            .map { MainViewReactor.Action.didTapNumberKeypad(6) }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        textKeypadButtonSeven.rx.tap
+            .map { MainViewReactor.Action.didTapNumberKeypad(7) }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        textKeypadButtonEight.rx.tap
+            .map { MainViewReactor.Action.didTapNumberKeypad(8) }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        textKeypadButtonNine.rx.tap
+            .map { MainViewReactor.Action.didTapNumberKeypad(9) }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        iconKeypadButtonPlus.rx.tap
+            .map { MainViewReactor.Action.didTapOperator(.addition) }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        iconKeypadButtonMinus.rx.tap
+            .map { MainViewReactor.Action.didTapOperator(.subtraction) }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        iconKeypadButtonMultiply.rx.tap
+            .map { MainViewReactor.Action.didTapOperator(.multiplication) }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        iconKeypadButtonDivide.rx.tap
+            .map { MainViewReactor.Action.didTapOperator(.division) }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        iconKeypadButtonDecimal.rx.tap
+            .map { MainViewReactor.Action.didTapDecimal }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        iconKeypadButtonPercent.rx.tap
+            .map { MainViewReactor.Action.didTapPercent }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        textKeypadButtonCancel.rx.tap
+            .map { MainViewReactor.Action.didTapCancel }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        iconKeypadButtonBackspace.rx.tap
+            .map { MainViewReactor.Action.didTapBackspace }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        iconKeypadButtonPositiveNegative.rx.tap
+            .map { MainViewReactor.Action.didTapPositivieNegative }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        iconKeypadButtonEqual.rx.tap
+            .map { MainViewReactor.Action.didTapEqual }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        
+        // State
+        reactor.state.map { $0.resultValue }
+            .distinctUntilChanged()
+            .bind(to: resultLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        reactor.state.map { $0.numberSentence }
+            .distinctUntilChanged()
+            .bind(with: self, onNext: { vc, newValue in
+                vc.numberSentenceLabel.text = newValue
+                vc.numberSentenceLabel.makeAsAttributedNumberSentenceLabel(R.color.accentYellow()!, R.color.accentColor()!)
+            })
+            .disposed(by: disposeBag)
     }
     
     
