@@ -141,7 +141,7 @@ class MainViewReactor: Reactor {
                 state.resultValue.clear(with: "0")
             } else {
                 let backspacedResult = state.resultValue.description.dropLast().description
-                state.resultValue = backspacedResult.description
+                state.resultValue = backspacedResult.toFormattedNumber(with: numberFormatter)
             }
             
         case .updateResultPrefix:
