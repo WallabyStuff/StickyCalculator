@@ -15,7 +15,7 @@ extension UILabel {
         
         do {
             /// Highlight the four rule symbols
-            let pattern = "[+\\-x÷]"
+            let pattern = "( \\+ | \\- | x | ÷ )"
             let regex = try NSRegularExpression(pattern: pattern, options: [.caseInsensitive])
             let attributedString = NSMutableAttributedString(string: text)
             

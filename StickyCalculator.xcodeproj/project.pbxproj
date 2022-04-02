@@ -29,6 +29,8 @@
 		8EA670C127E1CBD8007928E4 /* StickyCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA670C027E1CBD8007928E4 /* StickyCalculatorTests.swift */; };
 		8EA670CB27E1CBD8007928E4 /* StickyCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA670CA27E1CBD8007928E4 /* StickyCalculatorUITests.swift */; };
 		8EA670CD27E1CBD8007928E4 /* StickyCalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA670CC27E1CBD8007928E4 /* StickyCalculatorUITestsLaunchTests.swift */; };
+		8EDA316F27F44A5C0077B0F0 /* String+Calculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA316E27F44A5C0077B0F0 /* String+Calculation.swift */; };
+		8EDA317127F45EFD0077B0F0 /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA317027F45EFD0077B0F0 /* Operator.swift */; };
 		8EE41F7627EC1B040053FA17 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE41F7427EC1B040053FA17 /* HistoryTableViewCell.swift */; };
 		8EE41F7727EC1B040053FA17 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EE41F7527EC1B040053FA17 /* HistoryTableViewCell.xib */; };
 		8EE8048127ED6BA30001C011 /* DeviceResolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE8048027ED6BA30001C011 /* DeviceResolution.swift */; };
@@ -87,6 +89,8 @@
 		8EA670C627E1CBD8007928E4 /* StickyCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StickyCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA670CA27E1CBD8007928E4 /* StickyCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyCalculatorUITests.swift; sourceTree = "<group>"; };
 		8EA670CC27E1CBD8007928E4 /* StickyCalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyCalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8EDA316E27F44A5C0077B0F0 /* String+Calculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Calculation.swift"; sourceTree = "<group>"; };
+		8EDA317027F45EFD0077B0F0 /* Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Operator.swift; path = StickyCalculator/Sources/Utils/Operator.swift; sourceTree = SOURCE_ROOT; };
 		8EE41F7427EC1B040053FA17 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		8EE41F7527EC1B040053FA17 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
 		8EE8048027ED6BA30001C011 /* DeviceResolution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceResolution.swift; sourceTree = "<group>"; };
@@ -159,6 +163,7 @@
 		8E4FE4BB27E2304600182E4F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8EDA317027F45EFD0077B0F0 /* Operator.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -272,6 +277,7 @@
 				8EE8048027ED6BA30001C011 /* DeviceResolution.swift */,
 				8E64D96727EF547500330497 /* UITraitColleciton+Orientation.swift */,
 				8E8EDC6927F1DEFB005B73F6 /* UILabel+NumberSentenceAttribute.swift */,
+				8EDA316E27F44A5C0077B0F0 /* String+Calculation.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -558,10 +564,12 @@
 				8E87761227E6FFB600ED5839 /* IconKeyPadButton.swift in Sources */,
 				8EA670AC27E1CBD7007928E4 /* SceneDelegate.swift in Sources */,
 				8EE41F7627EC1B040053FA17 /* HistoryTableViewCell.swift in Sources */,
+				8EDA316F27F44A5C0077B0F0 /* String+Calculation.swift in Sources */,
 				8E64D96827EF547500330497 /* UITraitColleciton+Orientation.swift in Sources */,
 				8E414F5327E723D0007F0B65 /* HistoryViewController.swift in Sources */,
 				8E977FCF27EB81E400B91E1B /* TextKeypadButton.swift in Sources */,
 				8E975D6A27E2333A00F6C7C5 /* R.generated.swift in Sources */,
+				8EDA317127F45EFD0077B0F0 /* Operator.swift in Sources */,
 				8E8EDC6A27F1DEFB005B73F6 /* UILabel+NumberSentenceAttribute.swift in Sources */,
 				8EE8048127ED6BA30001C011 /* DeviceResolution.swift in Sources */,
 				8E2CC74327E969700046E314 /* UIFont+NanumSquareRound.swift in Sources */,
