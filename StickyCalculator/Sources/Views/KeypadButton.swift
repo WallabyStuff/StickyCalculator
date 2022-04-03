@@ -47,6 +47,7 @@ class KeypadButton: UIButton {
     static let COMPACT_CORNER_RADIUS: CGFloat = 18
     private var compactThreshold: CGFloat = 4
     private var _colorStyle: ColorStyle = .default
+    var isPressed: Bool = false
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -70,7 +71,7 @@ class KeypadButton: UIButton {
         }
         
         setupActions()
-        configureColor()
+        configureColor(alpha: 1)
     }
     
     private func setupActions() {
@@ -80,9 +81,9 @@ class KeypadButton: UIButton {
         addTarget(self, action: #selector(buttonReleased(_:)), for: .touchDragOutside)
     }
     
-    private func configureColor() {
-        backgroundColor = _colorStyle.backgroundColor
-        tintColor = _colorStyle.foregroundColor
+    private func configureColor(alpha: CGFloat) {
+        backgroundColor = _colorStyle.backgroundColor.withAlphaComponent(alpha)
+        tintColor = _colorStyle.foregroundColor.withAlphaComponent(alpha)
     }
     
     private func configureCornerRadius() {
@@ -92,6 +93,22 @@ class KeypadButton: UIButton {
         } else {
             // on regular & regular mode
             cornerRadius = frame.width / KeypadButton.REGULAR_CORNER_RADIUS_MULTIPLIER
+        }
+    }
+    
+    func setPressed(_ state: Bool) {
+        if state {
+            UIView.animate(withDuration: 0.2) {
+                self.configureColor(alpha: 0.5)
+            }
+            
+            isPressed = true
+        } else {
+            UIView.animate(withDuration: 0.2) {
+                self.configureColor(alpha: 1)
+            }
+            
+            isPressed = false
         }
     }
 }
@@ -131,7 +148,7 @@ extension KeypadButton {
         
         set {
             self._colorStyle = ColorStyle(rawValue: newValue) ?? .default
-            configureColor()
+            configureColor(alpha: 1)
         }
     }
 }

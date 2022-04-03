@@ -247,6 +247,28 @@ class MainViewController: UIViewController, View {
                 vc.numberSentenceLabel.makeAsAttributedNumberSentenceLabel(R.color.accentYellow()!, R.color.accentColor()!)
             })
             .disposed(by: disposeBag)
+        
+        reactor.state.map { $0.workingState }
+            .subscribe(with: self, onNext: { vc, workingState in
+                vc.releaseOperatorButtons()
+                if workingState.isWorking {
+                    if let `operator` = workingState.`operator` {
+                        switch `operator` {
+                        case .addition:
+                            vc.iconKeypadButtonPlus.setPressed(true)
+                        case .subtraction:
+                            vc.iconKeypadButtonMinus.setPressed(true)
+                        case .multiplication:
+                            vc.iconKeypadButtonMultiply.setPressed(true)
+                        case .division:
+                            vc.iconKeypadButtonDivide.setPressed(true)
+                        default:
+                            vc.releaseOperatorButtons()
+                        }
+                    }
+                }
+            })
+            .disposed(by: disposeBag)
     }
     
     
@@ -285,6 +307,13 @@ class MainViewController: UIViewController, View {
         }
         
         return viewController
+    }
+    
+    private func releaseOperatorButtons() {
+        iconKeypadButtonPlus.setPressed(false)
+        iconKeypadButtonMinus.setPressed(false)
+        iconKeypadButtonMultiply.setPressed(false)
+        iconKeypadButtonDivide.setPressed(false)
     }
 }
 
