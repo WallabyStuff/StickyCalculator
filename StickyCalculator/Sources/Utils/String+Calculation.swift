@@ -47,8 +47,13 @@ extension String {
 
 /// NumberSentence modification logics
 extension String {
-    mutating func pushOperator(_ newOperator: Operator) {
-        self = "\(self)\(newOperator.withWhiteSpace)"
+    @discardableResult
+    mutating func pushOperator(_ newOperator: Operator) -> String {
+        if !self.contains(Operator.equal.rawValue) {
+            self = "\(self)\(newOperator.withWhiteSpace)"
+        }
+        
+        return self
     }
     
     @discardableResult
@@ -58,7 +63,11 @@ extension String {
     }
     
     mutating func appendNumber(_ oldNumber: String, _ newNumber: String, with: NumberFormatter) {
-        self = "\(oldNumber)\(newNumber)".toFormattedNumber(with: with)
+        if self.isDecimal {
+            self = "\(oldNumber)\(newNumber)"
+        } else {
+            self = "\(oldNumber)\(newNumber)".toFormattedNumber(with: with)
+        }
     }
     
     mutating func appendWhiteSpace() {
@@ -99,7 +108,7 @@ extension String {
     }
     
     var isZero: Bool {
-        if self == "0" || self == "0." {
+        if self == "0" {
             return true
         } else {
             return false
@@ -122,8 +131,28 @@ extension String {
         }
     }
     
+    var isUncompletedDecimal: Bool {
+        if self.hasSuffix(".") {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    var isNegativeValue: Bool {
+        if self.hasPrefix("-") {
+            return true
+        } else {
+            return false
+        }
+    }
+    
     func removeCommas() -> String {
         return self.replacingOccurrences(of: ",", with: "")
+    }
+    
+    func removeDots() -> String {
+        return self.replacingOccurrences(of: ".", with: "")
     }
     
     var whiteSpace: String {
