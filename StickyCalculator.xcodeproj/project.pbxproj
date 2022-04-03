@@ -91,7 +91,7 @@
 		8EA670CA27E1CBD8007928E4 /* StickyCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyCalculatorUITests.swift; sourceTree = "<group>"; };
 		8EA670CC27E1CBD8007928E4 /* StickyCalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyCalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8EDA316E27F44A5C0077B0F0 /* String+Calculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Calculation.swift"; sourceTree = "<group>"; };
-		8EDA317027F45EFD0077B0F0 /* Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Operator.swift; path = StickyCalculator/Sources/Utils/Operator.swift; sourceTree = SOURCE_ROOT; };
+		8EDA317027F45EFD0077B0F0 /* Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Operator.swift; path = StickyCalculator/Sources/Models/Operator.swift; sourceTree = SOURCE_ROOT; };
 		8EE41F7427EC1B040053FA17 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		8EE41F7527EC1B040053FA17 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
 		8EE8048027ED6BA30001C011 /* DeviceResolution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceResolution.swift; sourceTree = "<group>"; };
@@ -162,14 +162,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		8E4FE4BB27E2304600182E4F /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				8EDA317027F45EFD0077B0F0 /* Operator.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		8E4FE4BC27E2304B00182E4F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,7 +208,7 @@
 			children = (
 				8EA670A927E1CBD7007928E4 /* AppDelegate.swift */,
 				8EA670AB27E1CBD7007928E4 /* SceneDelegate.swift */,
-				8E4FE4BB27E2304600182E4F /* Models */,
+				8EEEBBC727F98FB8009D3FED /* Models */,
 				8E4FE4BC27E2304B00182E4F /* ViewControllers */,
 				8E4FE4BA27E2303F00182E4F /* Views */,
 				8EE8047F27ED6B870001C011 /* Utils */,
@@ -283,6 +275,14 @@
 				8EEEBBC527F96FF6009D3FED /* FeedbackManager.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		8EEEBBC727F98FB8009D3FED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8EDA317027F45EFD0077B0F0 /* Operator.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E71046B597D8C908F9A6E936 /* Pods */ = {
