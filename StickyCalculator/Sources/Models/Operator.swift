@@ -13,9 +13,14 @@ enum Operator: String, CaseIterable {
     case multiplication = "x"
     case division = "÷"
     case equal = "="
+    case other = ""
     
     var withWhiteSpace: String {
-        return " \(self.rawValue) "
+        if self == .other {
+            return ""
+        } else {
+            return " \(self.rawValue) "
+        }
     }
     
     var formattableString: String {
@@ -30,6 +35,8 @@ enum Operator: String, CaseIterable {
             return "/"
         case .equal:
             return "="
+        case .other:
+            return ""
         }
     }
 }

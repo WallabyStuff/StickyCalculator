@@ -98,13 +98,17 @@ class KeypadButton: UIButton {
     
     func setPressed(_ state: Bool) {
         if state {
-            UIView.animate(withDuration: 0.2) {
+            UIView.animate(withDuration: 0.2,
+                           delay: 0,
+                           options: [.allowUserInteraction]) {
                 self.configureColor(alpha: 0.5)
             }
             
             isPressed = true
         } else {
-            UIView.animate(withDuration: 0.2) {
+            UIView.animate(withDuration: 0.2,
+                           delay: 0,
+                           options: [.allowUserInteraction]) {
                 self.configureColor(alpha: 1)
             }
             

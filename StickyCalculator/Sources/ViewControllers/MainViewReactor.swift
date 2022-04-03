@@ -34,6 +34,7 @@ class MainViewReactor: Reactor {
         case calculate
         case makeHapticFeedback(style: UIImpactFeedbackGenerator.FeedbackStyle)
         case makeSoundFeedback(_ soundID: SystemSound)
+        case updateCahce
     }
     
     struct State {
@@ -49,12 +50,14 @@ class MainViewReactor: Reactor {
     var initialState: State
     let numberFormatter = NumberFormatter()
     let feedbackManager = FeedbackManager()
+    let calculationCacheManager = CalculationCacheManager()
     
     init() {
-        self.initialState = State(numberSentence: "",
-                                  resultValue: "0",
-                                  workingState: WorkingState(false, nil),
-                                  onResult: false)
+        let cache = calculationCacheManager.getCache()
+        self.initialState = State(numberSentence: cache.numberSentence,
+                                  resultValue: cache.resultValue,
+                                  workingState: cache.workingState,
+                                  onResult: cache.onResult)
         
         numberFormatter.numberStyle = .decimal
         numberFormatter.maximumFractionDigits = 99
@@ -67,7 +70,8 @@ class MainViewReactor: Reactor {
             return Observable.concat([
                 Observable.just(Mutation.makeSoundFeedback(.systemGeneralKeySoundID)),
                 Observable.just(Mutation.updateResult(value.description)),
-                Observable.just(Mutation.updateWorkingState(falseWorkingState))
+                Observable.just(Mutation.updateWorkingState(falseWorkingState)),
+                Observable.just(Mutation.updateCahce)
             ])
             
         case .didTapOperator(let `operator`):
@@ -75,19 +79,22 @@ class MainViewReactor: Reactor {
                 Observable.just(Mutation.makeSoundFeedback(.systemGeneralKeySoundID)),
                 Observable.just(Mutation.makeHapticFeedback(style: .light)),
                 Observable.just(Mutation.updateNumberSentence(`operator`)),
-                Observable.just(Mutation.updateWorkingState(WorkingState(true, `operator`)))
+                Observable.just(Mutation.updateWorkingState(WorkingState(true, `operator`))),
+                Observable.just(Mutation.updateCahce)
             ])
             
         case .didTapDecimal:
             return Observable.concat([
                 Observable.just(Mutation.makeSoundFeedback(.systemGeneralKeySoundID)),
-                Observable.just(Mutation.makeResultDecimal)
+                Observable.just(Mutation.makeResultDecimal),
+                Observable.just(Mutation.updateCahce)
             ])
             
         case .didTapPercent:
             return Observable.concat([
                 Observable.just(Mutation.makeSoundFeedback(.systemGeneralKeySoundID)),
-                Observable.just(Mutation.makeResultPercent)
+                Observable.just(Mutation.makeResultPercent),
+                Observable.just(Mutation.updateCahce)
             ])
             
         case .didTapCancel:
@@ -95,26 +102,30 @@ class MainViewReactor: Reactor {
                 Observable.just(Mutation.makeSoundFeedback(.systemGeneralKeySoundID)),
                 Observable.just(Mutation.makeHapticFeedback(style: .light)),
                 Observable.just(Mutation.resetResult("0")),
-                Observable.just(Mutation.updateWorkingState(falseWorkingState))
+                Observable.just(Mutation.updateWorkingState(falseWorkingState)),
+                Observable.just(Mutation.updateCahce)
             ])
             
         case .didTapBackspace:
             return Observable.concat([
                 Observable.just(Mutation.makeSoundFeedback(.systemBackspaceKeySoundID)),
-                Observable.just(Mutation.backspaceResult)
+                Observable.just(Mutation.backspaceResult),
+                Observable.just(Mutation.updateCahce)
             ])
             
         case .didTapPositivieNegative:
             return Observable.concat([
                 Observable.just(Mutation.makeSoundFeedback(.systemGeneralKeySoundID)),
-                Observable.just(Mutation.updateResultPrefix)
+                Observable.just(Mutation.updateResultPrefix),
+                Observable.just(Mutation.updateCahce)
             ])
             
         case .didTapEqual:
             return Observable.concat([
                 Observable.just(Mutation.makeSoundFeedback(.systemGeneralKeySoundID)),
                 Observable.just(Mutation.makeHapticFeedback(style: .light)),
-                Observable.just(Mutation.calculate)
+                Observable.just(Mutation.calculate),
+                Observable.just(Mutation.updateCahce)
             ])
             
         case .never:
@@ -222,6 +233,11 @@ class MainViewReactor: Reactor {
         case .makeSoundFeedback(let systemSoundID):
             feedbackManager.makeSoundFeedback(systemSoundID)
             
+        case .updateCahce:
+            calculationCacheManager.updateCache(numberSentence: state.numberSentence,
+                                                resultValue: state.resultValue,
+                                                workingState: state.workingState,
+                                                onResult: state.onResult)
         }
         
         return state
