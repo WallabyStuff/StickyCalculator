@@ -30,7 +30,7 @@ class MainViewReactor: Reactor {
         case backspaceResult
         case resetResult(String)
         case updateResultPrefix
-        case updateWorkingState(Bool)
+        case updateWorkingState(WorkingState)
         case calculate
         case makeHapticFeedback(style: UIImpactFeedbackGenerator.FeedbackStyle)
         case makeSoundFeedback(_ soundID: SystemSound)
@@ -39,16 +39,22 @@ class MainViewReactor: Reactor {
     struct State {
         var numberSentence: String
         var resultValue: String
-        var isWorking: Bool
+        var workingState: WorkingState
         var onResult: Bool
     }
+    
+    typealias WorkingState = (isWorking: Bool, `operator`: Operator?)
+    let falseWorkingState = WorkingState(false, nil)
     
     var initialState: State
     let numberFormatter = NumberFormatter()
     let feedbackManager = FeedbackManager()
     
     init() {
-        self.initialState = State(numberSentence: "", resultValue: "0", isWorking: false, onResult: false)
+        self.initialState = State(numberSentence: "",
+                                  resultValue: "0",
+                                  workingState: WorkingState(false, nil),
+                                  onResult: false)
         
         numberFormatter.numberStyle = .decimal
         numberFormatter.maximumFractionDigits = 99
@@ -61,7 +67,7 @@ class MainViewReactor: Reactor {
             return Observable.concat([
                 Observable.just(Mutation.makeSoundFeedback(.systemGeneralKeySoundID)),
                 Observable.just(Mutation.updateResult(value.description)),
-                Observable.just(Mutation.updateWorkingState(false))
+                Observable.just(Mutation.updateWorkingState(falseWorkingState))
             ])
             
         case .didTapOperator(let `operator`):
@@ -69,7 +75,7 @@ class MainViewReactor: Reactor {
                 Observable.just(Mutation.makeSoundFeedback(.systemGeneralKeySoundID)),
                 Observable.just(Mutation.makeHapticFeedback(style: .light)),
                 Observable.just(Mutation.updateNumberSentence(`operator`)),
-                Observable.just(Mutation.updateWorkingState(true))
+                Observable.just(Mutation.updateWorkingState(WorkingState(true, `operator`)))
             ])
             
         case .didTapDecimal:
@@ -89,7 +95,7 @@ class MainViewReactor: Reactor {
                 Observable.just(Mutation.makeSoundFeedback(.systemGeneralKeySoundID)),
                 Observable.just(Mutation.makeHapticFeedback(style: .light)),
                 Observable.just(Mutation.resetResult("0")),
-                Observable.just(Mutation.updateWorkingState(false))
+                Observable.just(Mutation.updateWorkingState(falseWorkingState))
             ])
             
         case .didTapBackspace:
@@ -120,16 +126,16 @@ class MainViewReactor: Reactor {
         var state = state
         switch mutation {
         case .updateResult(let newNumber):
-            if state.resultValue.isZero || state.isWorking || state.onResult {
+            if state.resultValue.isZero || state.workingState.isWorking || state.onResult {
                 state.resultValue.clear(with: newNumber)
                 state.onResult = false
-                state.isWorking = false
+                state.workingState = WorkingState(false, nil)
             } else {
                 state.resultValue.appendNumber(state.resultValue, newNumber, with: numberFormatter)
             }
             
         case .updateNumberSentence(let newOperator):
-            if state.isWorking {
+            if state.workingState.isWorking {
                 if state.numberSentence.hasOperatorSuffix {
                     state.numberSentence = state.numberSentence.replaceOperatorSuffix(with: newOperator)
                 }
@@ -145,10 +151,10 @@ class MainViewReactor: Reactor {
             }
             
         case .makeResultDecimal:
-            if state.isWorking || state.onResult {
+            if state.workingState.isWorking || state.onResult {
                 state.resultValue.clear(with: "0")
                 state.onResult = false
-                state.isWorking = false
+                state.workingState = falseWorkingState
             }
             
             if state.resultValue.isDecimal == false {
@@ -188,11 +194,11 @@ class MainViewReactor: Reactor {
                     state.resultValue = state.resultValue.multiply(-1, with: numberFormatter)
                 }
                 
-                state.isWorking = false
+                state.workingState = WorkingState(false, nil)
             }
             
-        case .updateWorkingState(let newValue):
-            state.isWorking = newValue
+        case .updateWorkingState(let newWorkingState):
+            state.workingState = newWorkingState
             
         case .calculate:
             if state.onResult || state.numberSentence.isCompletedNumberSentence {
@@ -207,7 +213,7 @@ class MainViewReactor: Reactor {
                 state.resultValue = newNumberSentence.calculate(with: numberFormatter)
             }
             
-            state.isWorking = false
+            state.workingState = falseWorkingState
             state.onResult = true
             
         case .makeHapticFeedback(let style):
