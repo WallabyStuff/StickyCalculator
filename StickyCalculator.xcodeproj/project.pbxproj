@@ -34,6 +34,7 @@
 		8EE41F7627EC1B040053FA17 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE41F7427EC1B040053FA17 /* HistoryTableViewCell.swift */; };
 		8EE41F7727EC1B040053FA17 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EE41F7527EC1B040053FA17 /* HistoryTableViewCell.xib */; };
 		8EE8048127ED6BA30001C011 /* DeviceResolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE8048027ED6BA30001C011 /* DeviceResolution.swift */; };
+		8EEEBBC627F96FF6009D3FED /* FeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEBBC527F96FF6009D3FED /* FeedbackManager.swift */; };
 		ABCAD8A813DAAEB7BC975258 /* Pods_StickyCalculatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D15C59816DCC9548DF509E /* Pods_StickyCalculatorTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +95,7 @@
 		8EE41F7427EC1B040053FA17 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		8EE41F7527EC1B040053FA17 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
 		8EE8048027ED6BA30001C011 /* DeviceResolution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceResolution.swift; sourceTree = "<group>"; };
+		8EEEBBC527F96FF6009D3FED /* FeedbackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackManager.swift; sourceTree = "<group>"; };
 		9963D5BFCED10531D6CE5054 /* Pods-StickyCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyCalculator.release.xcconfig"; path = "Target Support Files/Pods-StickyCalculator/Pods-StickyCalculator.release.xcconfig"; sourceTree = "<group>"; };
 		F0DECCFB688CD0551B1FE76F /* Pods-StickyCalculatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyCalculatorTests.debug.xcconfig"; path = "Target Support Files/Pods-StickyCalculatorTests/Pods-StickyCalculatorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F99B2FDA4162886EDA7F7EB3 /* Pods-StickyCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyCalculator.debug.xcconfig"; path = "Target Support Files/Pods-StickyCalculator/Pods-StickyCalculator.debug.xcconfig"; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				8E64D96727EF547500330497 /* UITraitColleciton+Orientation.swift */,
 				8E8EDC6927F1DEFB005B73F6 /* UILabel+NumberSentenceAttribute.swift */,
 				8EDA316E27F44A5C0077B0F0 /* String+Calculation.swift */,
+				8EEEBBC527F96FF6009D3FED /* FeedbackManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -563,6 +566,7 @@
 				8E414F5727E72465007F0B65 /* HistoryViewReactor.swift in Sources */,
 				8E87761227E6FFB600ED5839 /* IconKeyPadButton.swift in Sources */,
 				8EA670AC27E1CBD7007928E4 /* SceneDelegate.swift in Sources */,
+				8EEEBBC627F96FF6009D3FED /* FeedbackManager.swift in Sources */,
 				8EE41F7627EC1B040053FA17 /* HistoryTableViewCell.swift in Sources */,
 				8EDA316F27F44A5C0077B0F0 /* String+Calculation.swift in Sources */,
 				8E64D96827EF547500330497 /* UITraitColleciton+Orientation.swift in Sources */,
