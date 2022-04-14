@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--History View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="historyStoryboard" id="Y6W-OH-hqX" customClass="HistoryViewController" customModule="StickyCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tf9-zj-ica">
+                                <rect key="frame" x="0.0" y="64" width="414" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueg-xX-Wgi">
+                                        <rect key="frame" x="334" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="uXn-QT-YUd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Hide">
+                                            <color key="titleColor" name="AccentColor"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIA-QP-ifM">
+                                        <rect key="frame" x="20" y="15.5" width="82" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" name="TextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="rIA-QP-ifM" firstAttribute="centerY" secondItem="Tf9-zj-ica" secondAttribute="centerY" id="3n4-Ro-FRl"/>
+                                    <constraint firstAttribute="trailing" secondItem="ueg-xX-Wgi" secondAttribute="trailing" constant="20" id="Hj3-vs-oXL"/>
+                                    <constraint firstItem="ueg-xX-Wgi" firstAttribute="top" secondItem="Tf9-zj-ica" secondAttribute="top" id="dVe-mH-URC"/>
+                                    <constraint firstAttribute="bottom" secondItem="ueg-xX-Wgi" secondAttribute="bottom" id="l2h-8d-z1m"/>
+                                    <constraint firstAttribute="height" constant="60" id="mtH-Ky-WqA"/>
+                                    <constraint firstItem="rIA-QP-ifM" firstAttribute="leading" secondItem="Tf9-zj-ica" secondAttribute="leading" constant="20" id="oNL-On-euI"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="144" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Sok-Z6-8OH">
+                                <rect key="frame" x="0.0" y="124" width="414" height="678"/>
+                                <color key="backgroundColor" name="BackgroundGray"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bs0-vB-P7s">
+                                <rect key="frame" x="0.0" y="802" width="414" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3go-LL-MJ5">
+                                        <rect key="frame" x="350" y="8" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="5Qu-Tj-eRN"/>
+                                            <constraint firstAttribute="height" constant="44" id="vVW-wc-i7P"/>
+                                        </constraints>
+                                        <color key="tintColor" name="AccentPink"/>
+                                        <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="trash.fill" catalog="system" symbolScale="large"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="3go-LL-MJ5" firstAttribute="centerY" secondItem="bs0-vB-P7s" secondAttribute="centerY" id="RFf-eq-A38"/>
+                                    <constraint firstAttribute="height" constant="60" id="qsy-iT-181"/>
+                                    <constraint firstAttribute="trailing" secondItem="3go-LL-MJ5" secondAttribute="trailing" constant="20" id="rZM-kf-UVY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="BackgroundGray"/>
+                        <constraints>
+                            <constraint firstItem="bs0-vB-P7s" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="2XQ-Cu-yDs"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Tf9-zj-ica" secondAttribute="trailing" id="2va-Ss-yia"/>
+                            <constraint firstItem="Tf9-zj-ica" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="4Le-o2-d1V"/>
+                            <constraint firstItem="Sok-Z6-8OH" firstAttribute="top" secondItem="Tf9-zj-ica" secondAttribute="bottom" id="Nhf-RW-HUU"/>
+                            <constraint firstItem="bs0-vB-P7s" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="PgJ-oA-HAa"/>
+                            <constraint firstItem="Sok-Z6-8OH" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="V15-uz-KdF"/>
+                            <constraint firstItem="Tf9-zj-ica" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="bar-X6-8Xf"/>
+                            <constraint firstItem="bs0-vB-P7s" firstAttribute="top" secondItem="Sok-Z6-8OH" secondAttribute="bottom" id="oOV-YZ-1Xb"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="bs0-vB-P7s" secondAttribute="bottom" id="wDu-FQ-jfp"/>
+                            <constraint firstItem="Sok-Z6-8OH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="yX1-Gs-xs0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="clearHistoryButton" destination="3go-LL-MJ5" id="sfV-jK-DQ8"/>
+                        <outlet property="hideButton" destination="ueg-xX-Wgi" id="Ox7-Ak-9Py"/>
+                        <outlet property="historyTableView" destination="Sok-Z6-8OH" id="oaJ-0t-aux"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="85.714285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="trash.fill" catalog="system" width="121" height="128"/>
+        <namedColor name="AccentColor">
+            <color red="0.3059999942779541" green="0.46700000762939453" blue="0.43500000238418579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AccentPink">
+            <color red="1" green="0.40400001406669617" blue="0.50999999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BackgroundGray">
+            <color red="0.94099998474121094" green="0.94099998474121094" blue="0.94099998474121094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextColor">
+            <color red="0.2199999988079071" green="0.22699999809265137" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
