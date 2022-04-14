@@ -9,6 +9,8 @@ target 'StickyCalculator' do
   pod 'ReactorKit', '~> 3.2.0'
   pod 'RxCocoa', '~> 6.5.0'
   pod 'R.swift', '~> 6.1.0'
+  pod 'RealmSwift', '~> 10'
+  pod 'RxDataSources', '~> 5.0'
 
   target 'StickyCalculatorTests' do
     inherit! :search_paths

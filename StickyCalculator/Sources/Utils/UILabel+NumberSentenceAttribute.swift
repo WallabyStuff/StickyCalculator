@@ -8,10 +8,13 @@
 import UIKit
 
 extension UILabel {
-    func makeAsAttributedNumberSentenceLabel(_ fourRulesOperationColor: UIColor, _ equalOperationColor: UIColor) {
+    func makeAsAttributedNumberSentenceLabel() {
         guard let text = text else {
             return
         }
+        
+        let fourRulesOperatorColor = R.color.accentYellow() ?? .label
+        let equalOperatorColor = R.color.accentColor() ?? .label
         
         do {
             /// Highlight the four rule symbols
@@ -21,12 +24,12 @@ extension UILabel {
             
             let matches = regex.matches(in: text, range: text.fullRange)
             matches.forEach {
-                attributedString.addAttribute(.foregroundColor, value: fourRulesOperationColor, range: $0.range)
+                attributedString.addAttribute(.foregroundColor, value: fourRulesOperatorColor, range: $0.range)
             }
             
             /// Highlight the equal symbol
             let equalSymbolRange = NSString(string: text).range(of: "=")
-            attributedString.addAttribute(.foregroundColor, value: equalOperationColor, range: equalSymbolRange)
+            attributedString.addAttribute(.foregroundColor, value: equalOperatorColor, range: equalSymbolRange)
             
             self.attributedText = attributedString
         } catch {

@@ -8,12 +8,18 @@
 import UIKit
 
 class HistoryTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var expressionLabel: UILabel!
+    
+    @IBOutlet weak var numberSentenceLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var dateTimeLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
+    
+    override func prepareForReuse() {
+        numberSentenceLabel.text = ""
+        dateTimeLabel.text = ""
+        resultLabel.text = ""
+    }
 }
