@@ -640,6 +640,156 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
+  /// This `R.string` struct is generated, and contains static references to 2 localization tables.
+  struct string {
+    /// This `R.string.history` struct is generated, and contains static references to 2 localization keys.
+    struct history {
+      /// ja translation: ヒストリー
+      ///
+      /// Locales: ja, ko
+      static let rIAQPIfMText = Rswift.StringResource(key: "rIA-QP-ifM.text", tableName: "History", bundle: R.hostingBundle, locales: ["ja", "ko"], comment: nil)
+      /// ja translation: 隠す
+      ///
+      /// Locales: ja, ko
+      static let uegXXWgiNormalTitle = Rswift.StringResource(key: "ueg-xX-Wgi.normalTitle", tableName: "History", bundle: R.hostingBundle, locales: ["ja", "ko"], comment: nil)
+
+      /// ja translation: ヒストリー
+      ///
+      /// Locales: ja, ko
+      static func rIAQPIfMText(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("rIA-QP-ifM.text", tableName: "History", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "History", preferredLanguages: preferredLanguages) else {
+          return "rIA-QP-ifM.text"
+        }
+
+        return NSLocalizedString("rIA-QP-ifM.text", tableName: "History", bundle: bundle, comment: "")
+      }
+
+      /// ja translation: 隠す
+      ///
+      /// Locales: ja, ko
+      static func uegXXWgiNormalTitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("ueg-xX-Wgi.normalTitle", tableName: "History", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "History", preferredLanguages: preferredLanguages) else {
+          return "ueg-xX-Wgi.normalTitle"
+        }
+
+        return NSLocalizedString("ueg-xX-Wgi.normalTitle", tableName: "History", bundle: bundle, comment: "")
+      }
+
+      fileprivate init() {}
+    }
+
+    /// This `R.string.localizable` struct is generated, and contains static references to 5 localization keys.
+    struct localizable {
+      /// en translation: Are you sure you want to clear all histories
+      ///
+      /// Locales: en, ko, ja
+      static let confirm_message = Rswift.StringResource(key: "confirm_message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
+      /// en translation: Cancel
+      ///
+      /// Locales: en, ko, ja
+      static let cancel = Rswift.StringResource(key: "cancel", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
+      /// en translation: Clear
+      ///
+      /// Locales: en, ko, ja
+      static let clear = Rswift.StringResource(key: "clear", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
+      /// en translation: Confirm
+      ///
+      /// Locales: en, ko, ja
+      static let confirm = Rswift.StringResource(key: "confirm", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
+      /// en translation: Delete
+      ///
+      /// Locales: en, ko, ja
+      static let delete = Rswift.StringResource(key: "delete", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
+
+      /// en translation: Are you sure you want to clear all histories
+      ///
+      /// Locales: en, ko, ja
+      static func confirm_message(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("confirm_message", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "confirm_message"
+        }
+
+        return NSLocalizedString("confirm_message", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Cancel
+      ///
+      /// Locales: en, ko, ja
+      static func cancel(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("cancel", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "cancel"
+        }
+
+        return NSLocalizedString("cancel", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Clear
+      ///
+      /// Locales: en, ko, ja
+      static func clear(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("clear", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "clear"
+        }
+
+        return NSLocalizedString("clear", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Confirm
+      ///
+      /// Locales: en, ko, ja
+      static func confirm(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("confirm", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "confirm"
+        }
+
+        return NSLocalizedString("confirm", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Delete
+      ///
+      /// Locales: en, ko, ja
+      static func delete(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("delete", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "delete"
+        }
+
+        return NSLocalizedString("delete", bundle: bundle, comment: "")
+      }
+
+      fileprivate init() {}
+    }
+
+    fileprivate init() {}
+  }
+
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
       try _R.validate()

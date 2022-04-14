@@ -411,7 +411,7 @@
                                 <rect key="frame" x="84" y="71.999999999999986" width="324" height="215.66666666666663"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="expression here" textAlignment="right" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNN-oC-HNa">
-                                        <rect key="frame" x="0.0" y="0.0" width="324" height="23.333333333333332"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="324" height="22.333333333333332"/>
                                         <fontDescription key="fontDescription" name="NanumSquareRoundOTFB" family="NanumSquareRoundOTF" pointSize="20"/>
                                         <color key="textColor" name="TextGray"/>
                                         <nil key="highlightedColor"/>
@@ -606,16 +606,16 @@
     </scenes>
     <designables>
         <designable name="EAN-q6-2F3">
-            <size key="intrinsicContentSize" width="30" height="45"/>
+            <size key="intrinsicContentSize" width="30" height="43"/>
         </designable>
         <designable name="EuE-A8-a31">
-            <size key="intrinsicContentSize" width="30" height="45"/>
+            <size key="intrinsicContentSize" width="30" height="43"/>
         </designable>
         <designable name="JHy-X4-ZcL">
-            <size key="intrinsicContentSize" width="30" height="45"/>
+            <size key="intrinsicContentSize" width="30" height="43"/>
         </designable>
         <designable name="MLF-Kl-8Fq">
-            <size key="intrinsicContentSize" width="30" height="45"/>
+            <size key="intrinsicContentSize" width="30" height="43"/>
         </designable>
         <designable name="ROl-Cz-uw2">
             <size key="intrinsicContentSize" width="580" height="580"/>
@@ -636,31 +636,31 @@
             <size key="intrinsicContentSize" width="580" height="580"/>
         </designable>
         <designable name="em5-ur-Qnk">
-            <size key="intrinsicContentSize" width="30" height="45"/>
+            <size key="intrinsicContentSize" width="30" height="43"/>
         </designable>
         <designable name="ff6-9M-G6X">
-            <size key="intrinsicContentSize" width="30" height="45"/>
+            <size key="intrinsicContentSize" width="30" height="43"/>
         </designable>
         <designable name="gDL-R0-5Nu">
             <size key="intrinsicContentSize" width="580" height="580"/>
         </designable>
         <designable name="hDs-RV-XSd">
-            <size key="intrinsicContentSize" width="30" height="45"/>
+            <size key="intrinsicContentSize" width="30" height="43"/>
         </designable>
         <designable name="mC9-Bm-ttp">
-            <size key="intrinsicContentSize" width="30" height="45"/>
+            <size key="intrinsicContentSize" width="30" height="43"/>
         </designable>
         <designable name="op7-9F-O3C">
-            <size key="intrinsicContentSize" width="30" height="45"/>
+            <size key="intrinsicContentSize" width="30" height="43"/>
         </designable>
         <designable name="srh-kS-QA7">
-            <size key="intrinsicContentSize" width="30" height="45"/>
+            <size key="intrinsicContentSize" width="30" height="43"/>
         </designable>
         <designable name="vcu-fh-mzS">
             <size key="intrinsicContentSize" width="580" height="580"/>
         </designable>
         <designable name="wCR-5U-s1i">
-            <size key="intrinsicContentSize" width="30" height="45"/>
+            <size key="intrinsicContentSize" width="30" height="43"/>
         </designable>
         <designable name="wZM-xE-Nv3">
             <size key="intrinsicContentSize" width="564" height="564"/>

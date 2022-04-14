@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		672DF9315352C4B18CEEBEDE /* Pods_StickyCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03FC691FBB29DBE47FCD51FA /* Pods_StickyCalculator.framework */; };
 		74A945C056E17FA964627C7E /* Pods_StickyCalculator_StickyCalculatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC1ACB0554144B324A94FF5 /* Pods_StickyCalculator_StickyCalculatorUITests.framework */; };
+		8E2A462A28081BA2008D79C5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E2A462C28081BA2008D79C5 /* Localizable.strings */; };
+		8E2A463028081CF1008D79C5 /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2A462F28081CF1008D79C5 /* String+Localizable.swift */; };
+		8E2A463128081F91008D79C5 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E2A463328081F91008D79C5 /* History.storyboard */; };
 		8E2CC74327E969700046E314 /* UIFont+NanumSquareRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2CC74227E969700046E314 /* UIFont+NanumSquareRound.swift */; };
-		8E414F5127E723A9007F0B65 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E414F5027E723A9007F0B65 /* History.storyboard */; };
 		8E414F5327E723D0007F0B65 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E414F5227E723D0007F0B65 /* HistoryViewController.swift */; };
 		8E414F5527E72453007F0B65 /* MainViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E414F5427E72453007F0B65 /* MainViewReactor.swift */; };
 		8E414F5727E72465007F0B65 /* HistoryViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E414F5627E72465007F0B65 /* HistoryViewReactor.swift */; };
@@ -68,8 +70,14 @@
 		03FC691FBB29DBE47FCD51FA /* Pods_StickyCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StickyCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49AFF7E64118017C02E3BEFD /* Pods-StickyCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyCalculator.release.xcconfig"; path = "Target Support Files/Pods-StickyCalculator/Pods-StickyCalculator.release.xcconfig"; sourceTree = "<group>"; };
 		8468E067878320C753DCCAD2 /* Pods-StickyCalculator-StickyCalculatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyCalculator-StickyCalculatorUITests.debug.xcconfig"; path = "Target Support Files/Pods-StickyCalculator-StickyCalculatorUITests/Pods-StickyCalculator-StickyCalculatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8E2A462B28081BA2008D79C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8E2A462D28081BAA008D79C5 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8E2A462E28081BB0008D79C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8E2A462F28081CF1008D79C5 /* String+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
+		8E2A463928082344008D79C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/History.strings; sourceTree = "<group>"; };
+		8E2A463A28082349008D79C5 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/History.strings; sourceTree = "<group>"; };
+		8E2A463B2808234B008D79C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/History.storyboard; sourceTree = "<group>"; };
 		8E2CC74227E969700046E314 /* UIFont+NanumSquareRound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+NanumSquareRound.swift"; sourceTree = "<group>"; };
-		8E414F5027E723A9007F0B65 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		8E414F5227E723D0007F0B65 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		8E414F5427E72453007F0B65 /* MainViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewReactor.swift; sourceTree = "<group>"; };
 		8E414F5627E72465007F0B65 /* HistoryViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewReactor.swift; sourceTree = "<group>"; };
@@ -185,6 +193,7 @@
 				8EA670B227E1CBD8007928E4 /* Assets.xcassets */,
 				8E975D6927E2333A00F6C7C5 /* R.generated.swift */,
 				8E2CC74227E969700046E314 /* UIFont+NanumSquareRound.swift */,
+				8E2A462C28081BA2008D79C5 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -201,7 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				8EA670AF27E1CBD7007928E4 /* Main.storyboard */,
-				8E414F5027E723A9007F0B65 /* History.storyboard */,
+				8E2A463328081F91008D79C5 /* History.storyboard */,
 				8EE41F7527EC1B040053FA17 /* HistoryTableViewCell.xib */,
 			);
 			path = Storyboards;
@@ -280,6 +289,7 @@
 				8EDA316E27F44A5C0077B0F0 /* String+Calculation.swift */,
 				8EEEBBC527F96FF6009D3FED /* FeedbackManager.swift */,
 				8EEEBBD527FA9083009D3FED /* Date+DateFormatter.swift */,
+				8E2A462F28081CF1008D79C5 /* String+Localizable.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -425,6 +435,8 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
+				ja,
 			);
 			mainGroup = 8EA6709D27E1CBD7007928E4;
 			productRefGroup = 8EA670A727E1CBD7007928E4 /* Products */;
@@ -448,10 +460,11 @@
 				8EEEBBD427FA07A9009D3FED /* NanumSquareRound-Light.otf in Resources */,
 				8EEEBBD327FA07A9009D3FED /* NanumSquareRound-Regular.otf in Resources */,
 				8EA670B127E1CBD7007928E4 /* Main.storyboard in Resources */,
+				8E2A462A28081BA2008D79C5 /* Localizable.strings in Resources */,
 				8EEEBBD127FA07A9009D3FED /* NanumSquareRound-ExtraBold.otf in Resources */,
 				8EEEBBD227FA07A9009D3FED /* NanumSquareRound-Bold.otf in Resources */,
 				8EE41F7727EC1B040053FA17 /* HistoryTableViewCell.xib in Resources */,
-				8E414F5127E723A9007F0B65 /* History.storyboard in Resources */,
+				8E2A463128081F91008D79C5 /* History.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,6 +635,7 @@
 				8EE8048127ED6BA30001C011 /* DeviceResolution.swift in Sources */,
 				8E2CC74327E969700046E314 /* UIFont+NanumSquareRound.swift in Sources */,
 				8E414F5527E72453007F0B65 /* MainViewReactor.swift in Sources */,
+				8E2A463028081CF1008D79C5 /* String+Localizable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,6 +672,26 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		8E2A462C28081BA2008D79C5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E2A462B28081BA2008D79C5 /* en */,
+				8E2A462D28081BAA008D79C5 /* ko */,
+				8E2A462E28081BB0008D79C5 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		8E2A463328081F91008D79C5 /* History.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E2A463928082344008D79C5 /* ja */,
+				8E2A463A28082349008D79C5 /* ko */,
+				8E2A463B2808234B008D79C5 /* Base */,
+			);
+			name = History.storyboard;
+			sourceTree = "<group>";
+		};
 		8EA670AF27E1CBD7007928E4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -681,6 +715,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -741,6 +776,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

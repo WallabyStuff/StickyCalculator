@@ -145,17 +145,17 @@ class HistoryViewController: UIViewController, View {
     // MARK: - Methods
     
     private func showClearHistoryAlert() {
-        let alert = UIAlertController(title: "Clear",
-                                      message: "Are you sure you want to clear all histories?",
+        let alert = UIAlertController(title: "clear".localized(),
+                                      message: "confirm_message".localized(),
                                       preferredStyle: .actionSheet)
         
-        let confirmAction = UIAlertAction(title: "Confirm", style: .destructive) { action in
+        let confirmAction = UIAlertAction(title: "confirm".localized(), style: .destructive) { action in
             guard let reactor = self.reactor else { return }
             Observable.just(HistoryViewReactor.Action.clear)
                 .bind(to: reactor.action)
                 .dispose()
         }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        let cancelAction = UIAlertAction(title: "cancel".localized(), style: .cancel)
         alert.addAction(confirmAction)
         alert.addAction(cancelAction)
         
@@ -183,7 +183,7 @@ extension HistoryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action = UIContextualAction(
             style: .destructive,
-            title: "delete") { [weak self] action, view, completion in
+            title: "delete".localized()) { [weak self] action, view, completion in
                 self?.removeHistoryItem(indexPath)
             }
         
