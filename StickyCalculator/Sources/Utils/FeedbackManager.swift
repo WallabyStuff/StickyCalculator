@@ -8,25 +8,32 @@
 import AVFoundation
 import UIKit
 
-enum SystemSound: UInt32 {
-    case systemGeneralKeySoundID = 1104
-    case systemBackspaceKeySoundID = 1155
-}
-
 class FeedbackManager {
+    
+    enum SystemSound: UInt32 {
+        case systemGeneralKeySoundID = 1104
+        case systemBackspaceKeySoundID = 1155
+    }
+    
+    enum FeedbackStyle {
+        case light
+        case selection
+    }
+    
     let lightImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: .light)
-    let mediumImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
+    let selectionFeedbackGenerator = UISelectionFeedbackGenerator()
     
     func prepareImpactFeedbackGenerator() {
         lightImpactFeedbackGenerator.prepare()
-        mediumImpactFeedbackGenerator.prepare()
+        selectionFeedbackGenerator.prepare()
     }
     
-    func makeImpactFeedback(_ style: UIImpactFeedbackGenerator.FeedbackStyle) {
-        if style == .light {
+    func makeHapticFeedback(_ style: FeedbackStyle) {
+        switch style {
+        case .light:
             lightImpactFeedbackGenerator.impactOccurred()
-        } else {
-            mediumImpactFeedbackGenerator.impactOccurred()
+        case .selection:
+            selectionFeedbackGenerator.selectionChanged()
         }
     }
     

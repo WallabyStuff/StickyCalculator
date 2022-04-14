@@ -52,6 +52,8 @@ class MainViewController: UIViewController, View {
     @IBOutlet weak var iconKeypadButtonBackspace: IconKeyPadButton!
     @IBOutlet weak var textKeypadButtonCancel: TextKeypadButton!
     
+    typealias Reactor = MainViewReactor
+    
     var disposeBag = DisposeBag()
     private var historyViewController = HistoryViewController()
     
@@ -79,6 +81,8 @@ class MainViewController: UIViewController, View {
                 hideHistoryContainerView(false)
             }
         }
+        
+        reloadHistoryTableView()
     }
     
     override func viewDidLayoutSubviews() {
@@ -125,7 +129,7 @@ class MainViewController: UIViewController, View {
     
     // MARK: - Configuring
     
-    func bind(reactor: MainViewReactor) {
+    func bind(reactor: Reactor) {
         // Action
         showHistoryButton.rx.tap
             .asDriver()
@@ -233,6 +237,11 @@ class MainViewController: UIViewController, View {
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
+        iconKeypadButtonEqual.rx.tap.asDriver()
+            .drive(with: self, onNext: { vc, _ in
+                vc.historyViewController.reloadHistoryTableView()
+            }).disposed(by: disposeBag)
+        
         
         // State
         reactor.state.map { $0.resultValue }
@@ -244,7 +253,7 @@ class MainViewController: UIViewController, View {
             .distinctUntilChanged()
             .bind(with: self, onNext: { vc, newValue in
                 vc.numberSentenceLabel.text = newValue
-                vc.numberSentenceLabel.makeAsAttributedNumberSentenceLabel(R.color.accentYellow()!, R.color.accentColor()!)
+                vc.numberSentenceLabel.makeAsAttributedNumberSentenceLabel()
             })
             .disposed(by: disposeBag)
         
@@ -302,7 +311,8 @@ class MainViewController: UIViewController, View {
     
     private func instantiateHistoryViewController() -> HistoryViewController? {
         let storyboard = UIStoryboard(name: R.storyboard.history.name, bundle: nil)
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: R.storyboard.history.historyStoryboard.identifier) as? HistoryViewController else {
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: R.storyboard.history.historyStoryboard.identifier)
+                as? HistoryViewController else {
             return nil
         }
         
@@ -314,6 +324,10 @@ class MainViewController: UIViewController, View {
         iconKeypadButtonMinus.setPressed(false)
         iconKeypadButtonMultiply.setPressed(false)
         iconKeypadButtonDivide.setPressed(false)
+    }
+    
+    private func reloadHistoryTableView() {
+        historyViewController.reloadHistoryTableView()
     }
 }
 
@@ -340,5 +354,11 @@ extension MainViewController: HistoryViewDelegate {
     
     func didDismissByTransition() {
         hideHistoryContainerView(false)
+    }
+    
+    func didHistoryItemSelected(item: CalculationHistory) {
+        numberSentenceLabel.text = item.numberSentence
+        resultLabel.text = item.resultValue
+        numberSentenceLabel.makeAsAttributedNumberSentenceLabel()
     }
 }

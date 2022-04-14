@@ -85,6 +85,7 @@ struct R: Rswift.Validatable {
   }
 
   static func validate() throws {
+    try font.validate()
     try intern.validate()
   }
 
@@ -123,7 +124,7 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.color` struct is generated, and contains static references to 13 colors.
+  /// This `R.color` struct is generated, and contains static references to 15 colors.
   struct color {
     /// Color `AccentBlack-light`.
     static let accentBlackLight = Rswift.ColorResource(bundle: R.hostingBundle, name: "AccentBlack-light")
@@ -151,6 +152,10 @@ struct R: Rswift.Validatable {
     static let lineGray = Rswift.ColorResource(bundle: R.hostingBundle, name: "LineGray")
     /// Color `TextColor`.
     static let textColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "TextColor")
+    /// Color `TextGray-light`.
+    static let textGrayLight = Rswift.ColorResource(bundle: R.hostingBundle, name: "TextGray-light")
+    /// Color `TextGray`.
+    static let textGray = Rswift.ColorResource(bundle: R.hostingBundle, name: "TextGray")
 
     #if os(iOS) || os(tvOS)
     /// `UIColor(named: "AccentBlack-light", bundle: ..., traitCollection: ...)`
@@ -269,6 +274,24 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "TextGray", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func textGray(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.textGray, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "TextGray-light", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func textGrayLight(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.textGrayLight, compatibleWith: traitCollection)
+    }
+    #endif
+
     #if os(watchOS)
     /// `UIColor(named: "AccentBlack-light", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
@@ -372,6 +395,101 @@ struct R: Rswift.Validatable {
       return UIKit.UIColor(named: R.color.textColor.name)
     }
     #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "TextGray", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func textGray(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.textGray.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "TextGray-light", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func textGrayLight(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.textGrayLight.name)
+    }
+    #endif
+
+    fileprivate init() {}
+  }
+
+  /// This `R.file` struct is generated, and contains static references to 4 files.
+  struct file {
+    /// Resource file `NanumSquareRound-Bold.otf`.
+    static let nanumSquareRoundBoldOtf = Rswift.FileResource(bundle: R.hostingBundle, name: "NanumSquareRound-Bold", pathExtension: "otf")
+    /// Resource file `NanumSquareRound-ExtraBold.otf`.
+    static let nanumSquareRoundExtraBoldOtf = Rswift.FileResource(bundle: R.hostingBundle, name: "NanumSquareRound-ExtraBold", pathExtension: "otf")
+    /// Resource file `NanumSquareRound-Light.otf`.
+    static let nanumSquareRoundLightOtf = Rswift.FileResource(bundle: R.hostingBundle, name: "NanumSquareRound-Light", pathExtension: "otf")
+    /// Resource file `NanumSquareRound-Regular.otf`.
+    static let nanumSquareRoundRegularOtf = Rswift.FileResource(bundle: R.hostingBundle, name: "NanumSquareRound-Regular", pathExtension: "otf")
+
+    /// `bundle.url(forResource: "NanumSquareRound-Bold", withExtension: "otf")`
+    static func nanumSquareRoundBoldOtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.nanumSquareRoundBoldOtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "NanumSquareRound-ExtraBold", withExtension: "otf")`
+    static func nanumSquareRoundExtraBoldOtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.nanumSquareRoundExtraBoldOtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "NanumSquareRound-Light", withExtension: "otf")`
+    static func nanumSquareRoundLightOtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.nanumSquareRoundLightOtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "NanumSquareRound-Regular", withExtension: "otf")`
+    static func nanumSquareRoundRegularOtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.nanumSquareRoundRegularOtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    fileprivate init() {}
+  }
+
+  /// This `R.font` struct is generated, and contains static references to 4 fonts.
+  struct font: Rswift.Validatable {
+    /// Font `NanumSquareRoundOTFB`.
+    static let nanumSquareRoundOTFB = Rswift.FontResource(fontName: "NanumSquareRoundOTFB")
+    /// Font `NanumSquareRoundOTFEB`.
+    static let nanumSquareRoundOTFEB = Rswift.FontResource(fontName: "NanumSquareRoundOTFEB")
+    /// Font `NanumSquareRoundOTFL`.
+    static let nanumSquareRoundOTFL = Rswift.FontResource(fontName: "NanumSquareRoundOTFL")
+    /// Font `NanumSquareRoundOTFR`.
+    static let nanumSquareRoundOTFR = Rswift.FontResource(fontName: "NanumSquareRoundOTFR")
+
+    /// `UIFont(name: "NanumSquareRoundOTFB", size: ...)`
+    static func nanumSquareRoundOTFB(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: nanumSquareRoundOTFB, size: size)
+    }
+
+    /// `UIFont(name: "NanumSquareRoundOTFEB", size: ...)`
+    static func nanumSquareRoundOTFEB(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: nanumSquareRoundOTFEB, size: size)
+    }
+
+    /// `UIFont(name: "NanumSquareRoundOTFL", size: ...)`
+    static func nanumSquareRoundOTFL(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: nanumSquareRoundOTFL, size: size)
+    }
+
+    /// `UIFont(name: "NanumSquareRoundOTFR", size: ...)`
+    static func nanumSquareRoundOTFR(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: nanumSquareRoundOTFR, size: size)
+    }
+
+    static func validate() throws {
+      if R.font.nanumSquareRoundOTFB(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'NanumSquareRoundOTFB' could not be loaded, is 'NanumSquareRound-Bold.otf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.nanumSquareRoundOTFEB(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'NanumSquareRoundOTFEB' could not be loaded, is 'NanumSquareRound-ExtraBold.otf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.nanumSquareRoundOTFL(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'NanumSquareRoundOTFL' could not be loaded, is 'NanumSquareRound-Light.otf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.nanumSquareRoundOTFR(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'NanumSquareRoundOTFR' could not be loaded, is 'NanumSquareRound-Regular.otf' added to the UIAppFonts array in this targets Info.plist?") }
+    }
 
     fileprivate init() {}
   }
@@ -624,7 +742,12 @@ struct _R: Rswift.Validatable {
       typealias InitialController = MainViewController
 
       let bundle = R.hostingBundle
+      let mainStoryboard = StoryboardViewControllerResource<MainViewController>(identifier: "mainStoryboard")
       let name = "Main"
+
+      func mainStoryboard(_: Void = ()) -> MainViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: mainStoryboard)
+      }
 
       static func validate() throws {
         if UIKit.UIImage(named: "add", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'add' is used in storyboard 'Main', but couldn't be loaded.") }
@@ -641,7 +764,9 @@ struct _R: Rswift.Validatable {
           if UIKit.UIColor(named: "AccentColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'AccentColor' is used in storyboard 'Main', but couldn't be loaded.") }
           if UIKit.UIColor(named: "BackgroundColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'BackgroundColor' is used in storyboard 'Main', but couldn't be loaded.") }
           if UIKit.UIColor(named: "TextColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'TextColor' is used in storyboard 'Main', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "TextGray", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'TextGray' is used in storyboard 'Main', but couldn't be loaded.") }
         }
+        if _R.storyboard.main().mainStoryboard() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'mainStoryboard' could not be loaded from storyboard 'Main' as 'MainViewController'.") }
       }
 
       fileprivate init() {}
