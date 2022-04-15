@@ -7,20 +7,40 @@
 
 import UIKit
 
+extension UITextView {
+    
+}
+
 extension UILabel {
     func makeAsAttributedNumberSentenceLabel() {
-        guard let text = text else {
-            return
-        }
+        self.attributedText = NSMutableAttributedString(string: text ?? "").attributedNumberSentenceString()
+    }
+}
+
+extension UITextView {
+    func makeAsAttributedNumberSentenceText() {
+        self.attributedText = NSMutableAttributedString(string: text).attributedNumberSentenceString()
+        self.font = UIFont.nanumSquareRound(type: .bold, size: 20)
+        self.textAlignment = .right
+    }
+}
+
+extension NSMutableAttributedString {
+    func attributedNumberSentenceString() -> NSMutableAttributedString {
+        let text = self.string
         
+        let defaultTextColor = R.color.textGray() ?? .label
         let fourRulesOperatorColor = R.color.accentYellow() ?? .label
         let equalOperatorColor = R.color.accentColor() ?? .label
+        let attributedString = NSMutableAttributedString(string: text)
+        
+        /// Set default text color first
+        attributedString.addAttribute(.foregroundColor, value: defaultTextColor, range: text.fullRange)
         
         do {
             /// Highlight the four rule symbols
             let pattern = "( \\+ | \\- | x | ÷ )"
             let regex = try NSRegularExpression(pattern: pattern, options: [.caseInsensitive])
-            let attributedString = NSMutableAttributedString(string: text)
             
             let matches = regex.matches(in: text, range: text.fullRange)
             matches.forEach {
@@ -31,9 +51,10 @@ extension UILabel {
             let equalSymbolRange = NSString(string: text).range(of: "=")
             attributedString.addAttribute(.foregroundColor, value: equalOperatorColor, range: equalSymbolRange)
             
-            self.attributedText = attributedString
+            return attributedString
         } catch {
             print(error.localizedDescription)
+            return NSMutableAttributedString()
         }
     }
 }
