@@ -48,10 +48,12 @@ class HistoryViewReactor: Reactor {
         let calculationHistoryManager = CalculationHistoryManager()
         calculationHistoryManager
             .fetchData()
-            .subscribe(onSuccess: { historyItems in
-                let section = CalculationHistorySection(header: CalculationHistorySection.singleSectionName,
-                                                        items: historyItems)
-                sections.append(section)
+            .subscribe(onSuccess: { historyItemsByDate in
+                historyItemsByDate.forEach { items in
+                    let section = CalculationHistorySection(header: items.date,
+                                                            items: items.historyArray.reversed())
+                    sections.append(section)
+                }
             }).dispose()
         
         return sections
@@ -86,12 +88,7 @@ class HistoryViewReactor: Reactor {
                 .disposed(by: disposeBag)
             
         case .fetchHistory:
-            calculationHistoryManager.fetchData()
-                .subscribe(onSuccess: { items in
-                    let section = CalculationHistorySection(header: CalculationHistorySection.singleSectionName,
-                                                            items: items)
-                    state.calculationHistories = [section]
-                }).disposed(by: disposeBag)
+            state.calculationHistories = HistoryViewReactor.configureSections()
             
         case .clearHistory:
             calculationHistoryManager.deleteAll()
