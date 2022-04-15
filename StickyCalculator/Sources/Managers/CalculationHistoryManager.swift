@@ -12,11 +12,20 @@ import RealmSwift
 
 class CalculationHistoryManager {
     func addData(_ calculationHistory: CalculationHistory) -> Completable {
-        return Completable.create { observer in
+        return Completable.create { [weak self] observer in
+            guard let self = self else {
+                return Disposables.create()
+            }
+            
             do {
                 let realmInstance = try Realm()
                 try realmInstance.write {
-                    realmInstance.add(calculationHistory)
+                    if let object = self.fetchObject(by: CalculationHistoryByDate.formattedDate()) {
+                        object.historyList.append(calculationHistory)
+                    } else {
+                        let newItem = CalculationHistoryByDate(calculationHistory)
+                        realmInstance.add(newItem)
+                    }
                 }
                 
                 observer(.completed)
@@ -28,12 +37,12 @@ class CalculationHistoryManager {
         }
     }
     
-    func fetchData() -> Single<[CalculationHistory]> {
+    func fetchData() -> Single<[CalculationHistoryByDate]> {
         return Single.create { observer in
             do {
                 let realmInstance = try Realm()
-                let calculationHistoryies = Array(realmInstance.objects(CalculationHistory.self))
-                observer(.success(calculationHistoryies.reversed()))
+                let historiesByDate = Array(realmInstance.objects(CalculationHistoryByDate.self))
+                observer(.success(historiesByDate.reversed()))
             } catch {
                 observer(.failure(error))
             }
@@ -94,5 +103,16 @@ class CalculationHistoryManager {
             }
             return Disposables.create()
         }
+    }
+    
+    func fetchObject(by primaryKey: Any) -> CalculationHistoryByDate? {
+        do {
+            let realmInstance = try Realm()
+            return realmInstance.object(ofType: CalculationHistoryByDate.self, forPrimaryKey: primaryKey)
+        } catch {
+            print(error)
+        }
+        
+        return nil
     }
 }

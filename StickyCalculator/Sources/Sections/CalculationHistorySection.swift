@@ -13,7 +13,6 @@ struct CalculationHistorySection: Equatable, AnimatableSectionModelType {
     typealias Identity = String
     
     // MARK: - Properties
-    static let singleSectionName = "HistorySection"
     var items: [Item]
     var header: String
     var identity: String {

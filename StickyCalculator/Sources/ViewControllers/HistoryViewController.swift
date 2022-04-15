@@ -61,6 +61,14 @@ class HistoryViewController: UIViewController, View {
             return true
         }
         
+        dataSource.titleForHeaderInSection = { dataSource, index in
+            return dataSource.sectionModels[index].header
+        }
+        
+        dataSource.animationConfiguration = .init(insertAnimation: .fade,
+                                                  reloadAnimation: .fade,
+                                                  deleteAnimation: .fade)
+        
         return dataSource
     }
     
