@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <accessibilityOverrides dynamicTypePreference="2"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -23,7 +23,7 @@
             <objects>
                 <viewController storyboardIdentifier="mainStoryboard" id="BYZ-38-t0r" customClass="MainViewController" customModule="StickyCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oW6-3q-VWj">
@@ -38,13 +38,13 @@
                                 <state key="normal" image="folder.fill" catalog="system"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="TC6-GP-MOS">
-                                <rect key="frame" x="20" y="380" width="388" height="488"/>
+                                <rect key="frame" x="20" y="345.66666666666674" width="350" height="440.33333333333326"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="6VW-3S-Qs5">
-                                        <rect key="frame" x="0.0" y="0.0" width="388" height="88"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="78.333333333333329"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EuE-A8-a31" customClass="TextKeypadButton" customModule="StickyCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="88" height="88"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="78.666666666666671" height="78.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareRoundOTFB" family="NanumSquareRoundOTF" pointSize="28"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="c"/>
@@ -58,7 +58,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4f-KR-wvi" customClass="IconKeyPadButton" customModule="StickyCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="100" y="0.0" width="88" height="88"/>
+                                                <rect key="frame" x="90.666666666666686" y="0.0" width="78.333333333333314" height="78.333333333333329"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="hi" image="plus-minus"/>
                                                 <userDefinedRuntimeAttributes>
@@ -74,7 +74,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ah8-Ua-pMQ" customClass="IconKeyPadButton" customModule="StickyCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="200" y="0.0" width="88" height="88"/>
+                                                <rect key="frame" x="181" y="0.0" width="78.666666666666686" height="78.333333333333329"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="" image="percent"/>
                                                 <userDefinedRuntimeAttributes>
@@ -90,7 +90,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tae-i9-7SX" customClass="IconKeyPadButton" customModule="StickyCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="300" y="0.0" width="88" height="88"/>
+                                                <rect key="frame" x="271.66666666666669" y="0.0" width="78.333333333333314" height="78.333333333333329"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button" image="divide"/>
                                                 <userDefinedRuntimeAttributes>
@@ -108,10 +108,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="RQC-2j-tsL">
-                                        <rect key="frame" x="0.0" y="100" width="388" height="88"/>
+                                        <rect key="frame" x="0.0" y="90.333333333333314" width="350" height="78.666666666666686"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="op7-9F-O3C" customClass="TextKeypadButton" customModule="StickyCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="88" height="88"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="78.666666666666671" height="78.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareRoundOTFB" family="NanumSquareRoundOTF" pointSize="28"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="7"/>
@@ -125,7 +125,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDs-RV-XSd" customClass="TextKeypadButton" customModule="StickyCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="100" y="0.0" width="88" height="88"/>
+                                                <rect key="frame" x="90.666666666666686" y="0.0" width="78.333333333333314" height="78.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareRoundOTFB" family="NanumSquareRoundOTF" pointSize="28"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="8"/>
@@ -139,7 +139,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mC9-Bm-ttp" customClass="TextKeypadButton" customModule="StickyCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="200" y="0.0" width="88" height="88"/>
+                                                <rect key="frame" x="181" y="0.0" width="78.666666666666686" height="78.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareRoundOTFB" family="NanumSquareRoundOTF" pointSize="28"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="9"/>
@@ -153,7 +153,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDL-R0-5Nu" customClass="IconKeyPadButton" customModule="StickyCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="300" y="0.0" width="88" height="88"/>
+                                                <rect key="frame" x="271.66666666666669" y="0.0" width="78.333333333333314" height="78.666666666666671"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="" image="multiply"/>
                                                 <userDefinedRuntimeAttributes>
@@ -171,10 +171,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="GMu-jk-UmH">
-                                        <rect key="frame" x="0.0" y="200" width="388" height="88"/>
+                                        <rect key="frame" x="0.0" y="180.99999999999994" width="350" height="78.333333333333314"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCR-5U-s1i" customClass="TextKeypadButton" customModule="StickyCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="88" height="88"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="78.666666666666671" height="78.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareRoundOTFB" family="NanumSquareRoundOTF" pointSize="28"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="4"/>
@@ -188,7 +188,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srh-kS-QA7" customClass="TextKeypadButton" customModule="StickyCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="100" y="0.0" width="88" height="88"/>
+                                                <rect key="frame" x="90.666666666666686" y="0.0" width="78.333333333333314" height="78.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareRoundOTFB" family="NanumSquareRoundOTF" pointSize="28"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="5"/>
@@ -202,7 +202,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLF-Kl-8Fq" customClass="TextKeypadButton" customModule="StickyCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="200" y="0.0" width="88" height="88"/>
+                                                <rect key="frame" x="181" y="0.0" width="78.666666666666686" height="78.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareRoundOTFB" family="NanumSquareRoundOTF" pointSize="28"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="6"/>
@@ -216,7 +216,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROl-Cz-uw2" customClass="IconKeyPadButton" customModule="StickyCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="300" y="0.0" width="88" height="88"/>
+                                                <rect key="frame" x="271.66666666666669" y="0.0" width="78.333333333333314" height="78.333333333333329"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="" image="minus"/>
                                                 <userDefinedRuntimeAttributes>
@@ -234,10 +234,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="189-Dg-s9e">
-                                        <rect key="frame" x="0.0" y="300" width="388" height="88"/>
+                                        <rect key="frame" x="0.0" y="271.33333333333331" width="350" height="78.666666666666686"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ff6-9M-G6X" customClass="TextKeypadButton" customModule="StickyCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="88" height="88"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="78.666666666666671" height="78.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareRoundOTFB" family="NanumSquareRoundOTF" pointSize="28"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="1"/>
@@ -251,7 +251,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHy-X4-ZcL" customClass="TextKeypadButton" customModule="StickyCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="100" y="0.0" width="88" height="88"/>
+                                                <rect key="frame" x="90.666666666666686" y="0.0" width="78.333333333333314" height="78.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareRoundOTFB" family="NanumSquareRoundOTF" pointSize="28"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="2"/>
@@ -265,7 +265,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="em5-ur-Qnk" customClass="TextKeypadButton" customModule="StickyCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="200" y="0.0" width="88" height="88"/>
+                                                <rect key="frame" x="181" y="0.0" width="78.666666666666686" height="78.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="NanumSquareRoundOTFB" family="NanumSquareRoundOTF" pointSize="28"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="3"/>
@@ -279,7 +279,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1G-OS-kKl" customClass="IconKeyPadButton" customModule="StickyCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="300" y="0.0" width="88" height="88"/>
+                                                <rect key="frame" x="271.66666666666669" y="0.0" width="78.333333333333314" height="78.666666666666671"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="" image="add"/>
                                                 <userDefinedRuntimeAttributes>
@@ -297,10 +297,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="fjO-l7-BHP">
-                                        <rect key="frame" x="0.0" y="400" width="388" height="88"/>
+                                        <rect key="frame" x="0.0" y="361.99999999999994" width="350" height="78.333333333333314"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAN-q6-2F3" customClass="TextKeypadButton" customModule="StickyCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="88" height="88"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="78.666666666666671" height="78.333333333333329"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="EAN-q6-2F3" secondAttribute="height" multiplier="1:1" id="VlH-CY-gs3"/>
                                                 </constraints>
@@ -332,7 +332,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YtU-dq-rlk" customClass="IconKeyPadButton" customModule="StickyCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="100" y="0.0" width="88" height="88"/>
+                                                <rect key="frame" x="90.666666666666686" y="0.0" width="78.333333333333314" height="78.333333333333329"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="" image="dot"/>
                                                 <userDefinedRuntimeAttributes>
@@ -348,7 +348,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZM-xE-Nv3" customClass="IconKeyPadButton" customModule="StickyCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="200" y="0.0" width="88" height="88"/>
+                                                <rect key="frame" x="181" y="0.0" width="78.666666666666686" height="78.333333333333329"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="" image="backspace"/>
                                                 <userDefinedRuntimeAttributes>
@@ -364,7 +364,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcu-fh-mzS" customClass="IconKeyPadButton" customModule="StickyCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="300" y="0.0" width="88" height="88"/>
+                                                <rect key="frame" x="271.66666666666669" y="0.0" width="78.333333333333314" height="78.333333333333329"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="" image="equal"/>
                                                 <userDefinedRuntimeAttributes>
@@ -407,50 +407,8 @@
                                     </mask>
                                 </variation>
                             </stackView>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fay-vA-fJ6">
-                                <rect key="frame" x="84" y="71.999999999999986" width="324" height="215.66666666666663"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="expression here" textAlignment="right" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNN-oC-HNa">
-                                        <rect key="frame" x="0.0" y="0.0" width="324" height="22.333333333333332"/>
-                                        <fontDescription key="fontDescription" name="NanumSquareRoundOTFB" family="NanumSquareRoundOTF" pointSize="20"/>
-                                        <color key="textColor" name="TextGray"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="gNN-oC-HNa" firstAttribute="height" relation="lessThanOrEqual" secondItem="fay-vA-fJ6" secondAttribute="height" id="0K2-Bg-c5n"/>
-                                    <constraint firstAttribute="height" id="49H-0y-tzS"/>
-                                    <constraint firstAttribute="trailing" secondItem="gNN-oC-HNa" secondAttribute="trailing" id="bei-Es-wu1"/>
-                                    <constraint firstItem="gNN-oC-HNa" firstAttribute="leading" secondItem="fay-vA-fJ6" secondAttribute="leading" id="lYE-aJ-wYx"/>
-                                    <constraint firstItem="gNN-oC-HNa" firstAttribute="top" secondItem="fay-vA-fJ6" secondAttribute="top" id="qAF-4E-uiQ"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="49H-0y-tzS"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="49H-0y-tzS"/>
-                                        <exclude reference="0K2-Bg-c5n"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="49H-0y-tzS"/>
-                                        <exclude reference="0K2-Bg-c5n"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <mask key="constraints">
-                                        <exclude reference="49H-0y-tzS"/>
-                                        <include reference="0K2-Bg-c5n"/>
-                                    </mask>
-                                </variation>
-                            </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdE-Rf-gQI">
-                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="926"/>
+                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="844"/>
                                 <constraints>
                                     <constraint firstAttribute="width" id="ORo-Ur-aiB"/>
                                     <constraint firstAttribute="width" constant="340" id="fzi-Hi-JMj"/>
@@ -479,61 +437,82 @@
                                     </mask>
                                 </variation>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12345" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uN4-hJ-SCv">
-                                <rect key="frame" x="20" y="307.66666666666669" width="388" height="44.333333333333314"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHP-sD-jr9">
+                                <rect key="frame" x="20" y="269.66666666666669" width="350" height="64"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T5v-8z-Tcx">
+                                        <rect key="frame" x="0.0" y="0.0" width="124" height="64"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12345" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uN4-hJ-SCv">
+                                                <rect key="frame" x="0.0" y="9.6666666666666288" width="124" height="44.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="NanumSquareRoundOTFEB" family="NanumSquareRoundOTF" pointSize="40"/>
+                                                <color key="textColor" name="TextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="uN4-hJ-SCv" secondAttribute="width" id="2hq-cr-2gv"/>
+                                            <constraint firstItem="uN4-hJ-SCv" firstAttribute="leading" secondItem="T5v-8z-Tcx" secondAttribute="leading" id="HCR-5t-oai"/>
+                                            <constraint firstItem="uN4-hJ-SCv" firstAttribute="centerY" secondItem="T5v-8z-Tcx" secondAttribute="centerY" id="Obw-Da-Vpr"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44.5" id="C1P-dN-YE2"/>
+                                    <constraint firstAttribute="height" constant="64" id="6ee-kb-eeH"/>
+                                    <constraint firstAttribute="bottom" secondItem="T5v-8z-Tcx" secondAttribute="bottom" id="GlM-i7-AgR"/>
+                                    <constraint firstItem="T5v-8z-Tcx" firstAttribute="leading" secondItem="eHP-sD-jr9" secondAttribute="leading" id="VQs-Xu-IBX"/>
+                                    <constraint firstItem="T5v-8z-Tcx" firstAttribute="height" secondItem="eHP-sD-jr9" secondAttribute="height" id="WKm-h6-s2s"/>
+                                    <constraint firstAttribute="trailing" secondItem="T5v-8z-Tcx" secondAttribute="trailing" id="hqa-iG-jpT"/>
+                                    <constraint firstItem="T5v-8z-Tcx" firstAttribute="top" secondItem="eHP-sD-jr9" secondAttribute="top" id="sN6-u6-rsc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="NanumSquareRoundOTFEB" family="NanumSquareRoundOTF" pointSize="40"/>
-                                <color key="textColor" name="TextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </scrollView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Number Sentence" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="ENA-b9-vaL">
+                                <rect key="frame" x="76" y="71.999999999999986" width="294" height="185.66666666666663"/>
+                                <color key="textColor" name="TextGray"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="uN4-hJ-SCv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0cv-H6-tbk"/>
-                            <constraint firstItem="uN4-hJ-SCv" firstAttribute="top" secondItem="fay-vA-fJ6" secondAttribute="bottom" constant="20" id="GBt-xm-2y2"/>
                             <constraint firstItem="oW6-3q-VWj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="GSQ-by-Nvb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eHP-sD-jr9" secondAttribute="trailing" constant="20" id="IOS-3k-q8Z"/>
                             <constraint firstItem="TC6-GP-MOS" firstAttribute="leading" secondItem="tdE-Rf-gQI" secondAttribute="trailing" constant="20" id="IWh-Ub-N9p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ENA-b9-vaL" secondAttribute="trailing" constant="20" id="KEp-x9-YCP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TC6-GP-MOS" secondAttribute="trailing" constant="20" id="KXJ-Vz-xPA"/>
-                            <constraint firstItem="uN4-hJ-SCv" firstAttribute="leading" secondItem="tdE-Rf-gQI" secondAttribute="trailing" constant="20" id="QGE-gz-0NO"/>
+                            <constraint firstItem="eHP-sD-jr9" firstAttribute="top" secondItem="ENA-b9-vaL" secondAttribute="bottom" constant="12" id="LEX-R5-Byt"/>
+                            <constraint firstItem="TC6-GP-MOS" firstAttribute="top" secondItem="eHP-sD-jr9" secondAttribute="bottom" constant="12" id="Nou-9n-Gb8"/>
+                            <constraint firstItem="eHP-sD-jr9" firstAttribute="leading" secondItem="tdE-Rf-gQI" secondAttribute="trailing" constant="20" id="OrE-nH-iCd"/>
                             <constraint firstItem="oW6-3q-VWj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WYz-pu-i42"/>
                             <constraint firstItem="TC6-GP-MOS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Wub-dc-2Cu"/>
-                            <constraint firstItem="TC6-GP-MOS" firstAttribute="top" secondItem="uN4-hJ-SCv" secondAttribute="bottom" constant="28" id="Y8F-N0-4fh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fay-vA-fJ6" secondAttribute="trailing" constant="20" id="ZZe-Cc-Xuv"/>
                             <constraint firstItem="TC6-GP-MOS" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="bSO-3M-R7p"/>
                             <constraint firstItem="oW6-3q-VWj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="c7G-JL-P2s"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TC6-GP-MOS" secondAttribute="bottom" constant="24" id="dKG-uV-hIV"/>
                             <constraint firstAttribute="bottom" secondItem="tdE-Rf-gQI" secondAttribute="bottom" id="ega-oG-rJA"/>
                             <constraint firstItem="tdE-Rf-gQI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fbd-7q-WXf"/>
-                            <constraint firstItem="fay-vA-fJ6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="jfE-dD-JI8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uN4-hJ-SCv" secondAttribute="trailing" constant="20" id="muI-GD-9Ti"/>
-                            <constraint firstItem="fay-vA-fJ6" firstAttribute="leading" secondItem="oW6-3q-VWj" secondAttribute="trailing" constant="20" id="odP-Pf-kgJ"/>
                             <constraint firstItem="tdE-Rf-gQI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ueZ-UX-W5W"/>
                             <constraint firstItem="tdE-Rf-gQI" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="waN-5K-s4d"/>
+                            <constraint firstItem="ENA-b9-vaL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="x9P-n7-an6"/>
+                            <constraint firstItem="ENA-b9-vaL" firstAttribute="leading" secondItem="oW6-3q-VWj" secondAttribute="trailing" constant="12" id="xPX-M8-B0g"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TC6-GP-MOS" secondAttribute="bottom" id="xt3-Te-9Gm"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="xt3-Te-9Gm"/>
                                 <exclude reference="waN-5K-s4d"/>
+                                <exclude reference="xt3-Te-9Gm"/>
                                 <exclude reference="WYz-pu-i42"/>
-                                <exclude reference="QGE-gz-0NO"/>
                                 <exclude reference="IWh-Ub-N9p"/>
                                 <exclude reference="bSO-3M-R7p"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=compact">
                             <mask key="constraints">
+                                <include reference="waN-5K-s4d"/>
                                 <exclude reference="dKG-uV-hIV"/>
                                 <include reference="xt3-Te-9Gm"/>
-                                <include reference="waN-5K-s4d"/>
                                 <include reference="WYz-pu-i42"/>
                                 <exclude reference="c7G-JL-P2s"/>
-                                <exclude reference="0cv-H6-tbk"/>
-                                <exclude reference="GBt-xm-2y2"/>
-                                <include reference="QGE-gz-0NO"/>
                                 <include reference="IWh-Ub-N9p"/>
                                 <exclude reference="Wub-dc-2Cu"/>
                                 <include reference="bSO-3M-R7p"/>
@@ -541,14 +520,11 @@
                         </variation>
                         <variation key="heightClass=compact-widthClass=regular">
                             <mask key="constraints">
+                                <include reference="waN-5K-s4d"/>
                                 <exclude reference="dKG-uV-hIV"/>
                                 <include reference="xt3-Te-9Gm"/>
-                                <include reference="waN-5K-s4d"/>
                                 <include reference="WYz-pu-i42"/>
                                 <exclude reference="c7G-JL-P2s"/>
-                                <exclude reference="0cv-H6-tbk"/>
-                                <exclude reference="GBt-xm-2y2"/>
-                                <include reference="QGE-gz-0NO"/>
                                 <include reference="IWh-Ub-N9p"/>
                                 <exclude reference="Wub-dc-2Cu"/>
                                 <include reference="bSO-3M-R7p"/>
@@ -556,14 +532,11 @@
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="constraints">
+                                <exclude reference="waN-5K-s4d"/>
                                 <include reference="dKG-uV-hIV"/>
                                 <exclude reference="xt3-Te-9Gm"/>
-                                <exclude reference="waN-5K-s4d"/>
                                 <include reference="WYz-pu-i42"/>
                                 <exclude reference="c7G-JL-P2s"/>
-                                <exclude reference="0cv-H6-tbk"/>
-                                <include reference="GBt-xm-2y2"/>
-                                <include reference="QGE-gz-0NO"/>
                                 <exclude reference="IWh-Ub-N9p"/>
                                 <exclude reference="Wub-dc-2Cu"/>
                                 <exclude reference="bSO-3M-R7p"/>
@@ -583,8 +556,9 @@
                         <outlet property="iconKeypadButtonPlus" destination="a1G-OS-kKl" id="egm-Cx-LDu"/>
                         <outlet property="iconKeypadButtonPositiveNegative" destination="S4f-KR-wvi" id="puN-Ba-mDQ"/>
                         <outlet property="keypadStackViewLeadingConstraint" destination="Wub-dc-2Cu" id="MSv-k0-r9J"/>
-                        <outlet property="numberSentenceLabel" destination="gNN-oC-HNa" id="Z05-VW-eau"/>
+                        <outlet property="numberSentenceTextView" destination="ENA-b9-vaL" id="OCP-85-fxG"/>
                         <outlet property="resultLabel" destination="uN4-hJ-SCv" id="Hdb-sD-Rp3"/>
+                        <outlet property="resultScrollView" destination="eHP-sD-jr9" id="h9v-Ty-Cvc"/>
                         <outlet property="showHistoryButton" destination="oW6-3q-VWj" id="aRz-mf-GMV"/>
                         <outlet property="textKeupadButtonOne" destination="ff6-9M-G6X" id="b8n-jP-VF3"/>
                         <outlet property="textKeypadButtonCancel" destination="EuE-A8-a31" id="40E-oL-LU5"/>
@@ -601,7 +575,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="78.504672897196258" y="114.68682505399569"/>
+            <point key="canvasLocation" x="78.461538461538453" y="114.45497630331754"/>
         </scene>
     </scenes>
     <designables>
@@ -618,22 +592,22 @@
             <size key="intrinsicContentSize" width="30" height="43"/>
         </designable>
         <designable name="ROl-Cz-uw2">
-            <size key="intrinsicContentSize" width="580" height="580"/>
+            <size key="intrinsicContentSize" width="570.33333333333337" height="570.33333333333337"/>
         </designable>
         <designable name="S4f-KR-wvi">
-            <size key="intrinsicContentSize" width="593" height="580"/>
+            <size key="intrinsicContentSize" width="583.33333333333337" height="570.33333333333337"/>
         </designable>
         <designable name="Tae-i9-7SX">
-            <size key="intrinsicContentSize" width="626" height="580"/>
+            <size key="intrinsicContentSize" width="616.33333333333337" height="570.33333333333337"/>
         </designable>
         <designable name="YtU-dq-rlk">
-            <size key="intrinsicContentSize" width="88" height="88"/>
+            <size key="intrinsicContentSize" width="78.333333333333329" height="78.333333333333329"/>
         </designable>
         <designable name="a1G-OS-kKl">
-            <size key="intrinsicContentSize" width="580" height="580"/>
+            <size key="intrinsicContentSize" width="570.33333333333337" height="570.66666666666663"/>
         </designable>
         <designable name="ah8-Ua-pMQ">
-            <size key="intrinsicContentSize" width="580" height="580"/>
+            <size key="intrinsicContentSize" width="570.66666666666663" height="570.33333333333337"/>
         </designable>
         <designable name="em5-ur-Qnk">
             <size key="intrinsicContentSize" width="30" height="43"/>
@@ -642,7 +616,7 @@
             <size key="intrinsicContentSize" width="30" height="43"/>
         </designable>
         <designable name="gDL-R0-5Nu">
-            <size key="intrinsicContentSize" width="580" height="580"/>
+            <size key="intrinsicContentSize" width="570.33333333333337" height="570.66666666666663"/>
         </designable>
         <designable name="hDs-RV-XSd">
             <size key="intrinsicContentSize" width="30" height="43"/>
@@ -657,13 +631,13 @@
             <size key="intrinsicContentSize" width="30" height="43"/>
         </designable>
         <designable name="vcu-fh-mzS">
-            <size key="intrinsicContentSize" width="580" height="580"/>
+            <size key="intrinsicContentSize" width="570.33333333333337" height="570.33333333333337"/>
         </designable>
         <designable name="wCR-5U-s1i">
             <size key="intrinsicContentSize" width="30" height="43"/>
         </designable>
         <designable name="wZM-xE-Nv3">
-            <size key="intrinsicContentSize" width="564" height="564"/>
+            <size key="intrinsicContentSize" width="554.66666666666663" height="554.33333333333337"/>
         </designable>
     </designables>
     <resources>

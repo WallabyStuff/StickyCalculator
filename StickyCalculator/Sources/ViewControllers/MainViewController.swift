@@ -20,11 +20,11 @@ class MainViewController: UIViewController, View {
     // contriants
     @IBOutlet weak var keypadStackViewLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var historyContainerViewWidthConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var showHistoryButton: UIButton!
     @IBOutlet weak var historyContainerView: UIView!
-    @IBOutlet weak var numberSentenceLabel: UILabel!
+    @IBOutlet weak var numberSentenceTextView: UITextView!
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var resultScrollView: UIScrollView!
     
     // number keypad buttons
     @IBOutlet weak var textKeypadButtonZero: TextKeypadButton!
@@ -97,6 +97,8 @@ class MainViewController: UIViewController, View {
         setupShowHistoryButton()
         setupHistoryViewController()
         setupHistoryContainerView()
+        setupResultScrollView()
+        setupNumberSentenceTextView()
     }
     
     private func setupShowHistoryButton() {
@@ -124,6 +126,17 @@ class MainViewController: UIViewController, View {
         historyViewController.view.trailingAnchor.constraint(equalTo: historyContainerView.trailingAnchor).isActive = true
         historyViewController.view.bottomAnchor.constraint(equalTo: historyContainerView.bottomAnchor).isActive = true
         historyViewController.didMove(toParent: self)
+    }
+    
+    private func setupResultScrollView() {
+        /// Change rotation of resultScrollView to make content view RightToLeft
+        resultScrollView.transform = CGAffineTransform(rotationAngle: .pi)
+        resultLabel.transform = CGAffineTransform(rotationAngle: .pi)
+    }
+    
+    private func setupNumberSentenceTextView() {
+        numberSentenceTextView.isEditable = false
+        numberSentenceTextView.isSelectable = true
     }
     
     
@@ -252,8 +265,9 @@ class MainViewController: UIViewController, View {
         reactor.state.map { $0.numberSentence }
             .distinctUntilChanged()
             .bind(with: self, onNext: { vc, newValue in
-                vc.numberSentenceLabel.text = newValue
-                vc.numberSentenceLabel.makeAsAttributedNumberSentenceLabel()
+                vc.numberSentenceTextView.text = newValue
+                vc.numberSentenceTextView.makeAsAttributedNumberSentenceText()
+                vc.numberSentenceTextView.scrollToBottom()
             })
             .disposed(by: disposeBag)
         
@@ -357,8 +371,8 @@ extension MainViewController: HistoryViewDelegate {
     }
     
     func didHistoryItemSelected(item: CalculationHistory) {
-        numberSentenceLabel.text = item.numberSentence
+        numberSentenceTextView.text = item.numberSentence
         resultLabel.text = item.resultValue
-        numberSentenceLabel.makeAsAttributedNumberSentenceLabel()
+        numberSentenceTextView.makeAsAttributedNumberSentenceText()
     }
 }
