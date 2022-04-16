@@ -20,10 +20,10 @@ class CalculationHistoryManager {
             do {
                 let realmInstance = try Realm()
                 try realmInstance.write {
-                    if let object = self.fetchObject(by: CalculationHistoryByDate.formattedDate()) {
+                    if let object = self.fetchObject(by: CalculationHistories.getSectionHeaderString(Date())) {
                         object.historyList.append(calculationHistory)
                     } else {
-                        let newItem = CalculationHistoryByDate(calculationHistory)
+                        let newItem = CalculationHistories(calculationHistory)
                         realmInstance.add(newItem)
                     }
                 }
@@ -37,11 +37,11 @@ class CalculationHistoryManager {
         }
     }
     
-    func fetchData() -> Single<[CalculationHistoryByDate]> {
+    func fetchData() -> Single<[CalculationHistories]> {
         return Single.create { observer in
             do {
                 let realmInstance = try Realm()
-                let historiesByDate = Array(realmInstance.objects(CalculationHistoryByDate.self))
+                let historiesByDate = Array(realmInstance.objects(CalculationHistories.self))
                 observer(.success(historiesByDate.reversed()))
             } catch {
                 observer(.failure(error))
@@ -52,33 +52,20 @@ class CalculationHistoryManager {
     }
     
     func deleteData(_ object: CalculationHistory) -> Completable {
-        return Completable.create { observer in
+        return Completable.create { [weak self] observer in
+            guard let self = self else {
+                return Disposables.create()
+            }
+            
             do {
                 let realmInstance = try Realm()
+                let date = object.date
+                
                 try realmInstance.write {
                     realmInstance.delete(object)
                 }
                 
-                observer(.completed)
-            } catch {
-                observer(.error(error))
-            }
-            
-            return Disposables.create()
-        }
-    }
-    
-    func deleteData(with identifier: String) -> Completable {
-        return Completable.create { observer in
-            do {
-                let realmInstance = try Realm()
-                let items = realmInstance.objects(CalculationHistory.self)
-                
-                try realmInstance.write {
-                    if items.filter({ $0.id == identifier }).first != nil {
-                        realmInstance.delete(items)
-                    }
-                }
+                self.deleteParentDataIfNeeded(date)
                 
                 observer(.completed)
             } catch {
@@ -104,11 +91,30 @@ class CalculationHistoryManager {
             return Disposables.create()
         }
     }
+}
+
+extension CalculationHistoryManager {
+    func deleteParentDataIfNeeded(_ date: Date) {
+        if let object = fetchObject(by: CalculationHistories.getSectionHeaderString(date)) {
+            if !object.historyList.isEmpty {
+                return
+            }
+            
+            do {
+                let realmInstance = try Realm()
+                try realmInstance.write {
+                    realmInstance.delete(object)
+                }
+            } catch {
+                print(error)
+            }
+        }
+    }
     
-    func fetchObject(by primaryKey: Any) -> CalculationHistoryByDate? {
+    func fetchObject(by primaryKey: Any) -> CalculationHistories? {
         do {
             let realmInstance = try Realm()
-            return realmInstance.object(ofType: CalculationHistoryByDate.self, forPrimaryKey: primaryKey)
+            return realmInstance.object(ofType: CalculationHistories.self, forPrimaryKey: primaryKey)
         } catch {
             print(error)
         }

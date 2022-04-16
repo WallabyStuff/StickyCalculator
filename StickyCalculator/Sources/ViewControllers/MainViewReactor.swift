@@ -36,6 +36,7 @@ class MainViewReactor: Reactor {
         case makeSoundFeedback(_ soundID: FeedbackManager.SystemSound)
         case updateCahce
         case saveHistory
+        case updateResultState(Bool)
     }
     
     struct State {
@@ -43,14 +44,13 @@ class MainViewReactor: Reactor {
         var resultValue: String
         var workingState: WorkingState
         var onResult: Bool
+        var updateHistory: Int
     }
     
     
     // MARK: - Properties
     
-    typealias WorkingState = (isWorking: Bool, `operator`: Operator?)
     let falseWorkingState = WorkingState(false, nil)
-    
     var initialState: State
     private var disposeBag = DisposeBag()
     private let numberFormatter = NumberFormatter()
@@ -66,7 +66,8 @@ class MainViewReactor: Reactor {
         self.initialState = State(numberSentence: cache.numberSentence,
                                   resultValue: cache.resultValue,
                                   workingState: cache.workingState,
-                                  onResult: cache.onResult)
+                                  onResult: cache.onResult,
+                                  updateHistory: 0)
         
         numberFormatter.numberStyle = .decimal
         numberFormatter.maximumFractionDigits = 99
@@ -135,7 +136,8 @@ class MainViewReactor: Reactor {
                 Observable.just(Mutation.makeHapticFeedback(style: .light)),
                 Observable.just(Mutation.calculate),
                 Observable.just(Mutation.updateCahce),
-                Observable.just(Mutation.saveHistory)
+                Observable.just(Mutation.saveHistory),
+                Observable.just(Mutation.updateResultState(true))
             ])
             
         case .never:
@@ -235,7 +237,6 @@ class MainViewReactor: Reactor {
             }
             
             state.workingState = falseWorkingState
-            state.onResult = true
             
         case .makeHapticFeedback(let style):
             feedbackManager.makeHapticFeedback(style)
@@ -250,11 +251,18 @@ class MainViewReactor: Reactor {
                                                 onResult: state.onResult)
             
         case .saveHistory:
-            let item = CalculationHistory(numberSentence: state.numberSentence,
-                                          resultValue: state.resultValue)
-            calculationHistoryManager.addData(item)
-                .subscribe()
-                .disposed(by: disposeBag)
+            if state.onResult == false {
+                let item = CalculationHistory(numberSentence: state.numberSentence,
+                                              resultValue: state.resultValue)
+                calculationHistoryManager.addData(item)
+                    .subscribe(onCompleted: {
+                        state.updateHistory += 1
+                    })
+                    .disposed(by: disposeBag)
+            }
+            
+        case .updateResultState(let bool):
+            state.onResult = bool
             
         }
         

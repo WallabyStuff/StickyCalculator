@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2121A97425D4F4C8F446C4E8 /* Pods_StickyCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06EE2761449D26C0963F0856 /* Pods_StickyCalculator.framework */; };
-		8E2789DA280844D4009A81D0 /* CalculationHistoryByDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2789D9280844D4009A81D0 /* CalculationHistoryByDate.swift */; };
+		8E2789DA280844D4009A81D0 /* CalculationHistories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2789D9280844D4009A81D0 /* CalculationHistories.swift */; };
 		8E2A462A28081BA2008D79C5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E2A462C28081BA2008D79C5 /* Localizable.strings */; };
 		8E2A463028081CF1008D79C5 /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2A462F28081CF1008D79C5 /* String+Localizable.swift */; };
 		8E2A463128081F91008D79C5 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E2A463328081F91008D79C5 /* History.storyboard */; };
@@ -17,6 +17,7 @@
 		8E414F5527E72453007F0B65 /* MainViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E414F5427E72453007F0B65 /* MainViewReactor.swift */; };
 		8E414F5727E72465007F0B65 /* HistoryViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E414F5627E72465007F0B65 /* HistoryViewReactor.swift */; };
 		8E529C2F2809A908004868FB /* UIScrollView+AutoScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529C2E2809A908004868FB /* UIScrollView+AutoScroll.swift */; };
+		8E529C6D280B3476004868FB /* WorkingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529C6C280B3476004868FB /* WorkingState.swift */; };
 		8E64D96827EF547500330497 /* UITraitColleciton+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64D96727EF547500330497 /* UITraitColleciton+Orientation.swift */; };
 		8E87761227E6FFB600ED5839 /* IconKeyPadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E87761127E6FFB600ED5839 /* IconKeyPadButton.swift */; };
 		8E87761427E7021900ED5839 /* KeypadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E87761327E7021900ED5839 /* KeypadButton.swift */; };
@@ -80,7 +81,7 @@
 		8717EE1067339CD6C1E8ECDF /* Pods-StickyCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyCalculator.release.xcconfig"; path = "Target Support Files/Pods-StickyCalculator/Pods-StickyCalculator.release.xcconfig"; sourceTree = "<group>"; };
 		8E2789D62808283B009A81D0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/History.strings; sourceTree = "<group>"; };
 		8E2789D82808286A009A81D0 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/History.strings; sourceTree = "<group>"; };
-		8E2789D9280844D4009A81D0 /* CalculationHistoryByDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationHistoryByDate.swift; sourceTree = "<group>"; };
+		8E2789D9280844D4009A81D0 /* CalculationHistories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationHistories.swift; sourceTree = "<group>"; };
 		8E2A462B28081BA2008D79C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8E2A462D28081BAA008D79C5 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8E2A462E28081BB0008D79C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -91,6 +92,7 @@
 		8E414F5427E72453007F0B65 /* MainViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewReactor.swift; sourceTree = "<group>"; };
 		8E414F5627E72465007F0B65 /* HistoryViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewReactor.swift; sourceTree = "<group>"; };
 		8E529C2E2809A908004868FB /* UIScrollView+AutoScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+AutoScroll.swift"; sourceTree = "<group>"; };
+		8E529C6C280B3476004868FB /* WorkingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingState.swift; sourceTree = "<group>"; };
 		8E64D96727EF547500330497 /* UITraitColleciton+Orientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITraitColleciton+Orientation.swift"; sourceTree = "<group>"; };
 		8E87761127E6FFB600ED5839 /* IconKeyPadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconKeyPadButton.swift; sourceTree = "<group>"; };
 		8E87761327E7021900ED5839 /* KeypadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeypadButton.swift; sourceTree = "<group>"; };
@@ -314,7 +316,8 @@
 			children = (
 				8EDA317027F45EFD0077B0F0 /* Operator.swift */,
 				8EEEBBCA27F9CD8E009D3FED /* CalculationHistory.swift */,
-				8E2789D9280844D4009A81D0 /* CalculationHistoryByDate.swift */,
+				8E2789D9280844D4009A81D0 /* CalculationHistories.swift */,
+				8E529C6C280B3476004868FB /* WorkingState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -637,13 +640,14 @@
 				8EEEBBC927F99046009D3FED /* CalculationCacheManager.swift in Sources */,
 				8EEEBBCE27F9CF5F009D3FED /* CalculationHistoryManager.swift in Sources */,
 				8EDA317127F45EFD0077B0F0 /* Operator.swift in Sources */,
-				8E2789DA280844D4009A81D0 /* CalculationHistoryByDate.swift in Sources */,
+				8E2789DA280844D4009A81D0 /* CalculationHistories.swift in Sources */,
 				8E8EDC6A27F1DEFB005B73F6 /* Stirng+NumberSentenceAttribute.swift in Sources */,
 				8EEEBBD927FC3E32009D3FED /* CalculationHistorySection.swift in Sources */,
 				8EE8048127ED6BA30001C011 /* DeviceResolution.swift in Sources */,
 				8E2CC74327E969700046E314 /* UIFont+NanumSquareRound.swift in Sources */,
 				8E414F5527E72453007F0B65 /* MainViewReactor.swift in Sources */,
 				8E2A463028081CF1008D79C5 /* String+Localizable.swift in Sources */,
+				8E529C6D280B3476004868FB /* WorkingState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

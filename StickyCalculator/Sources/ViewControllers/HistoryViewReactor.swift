@@ -84,7 +84,11 @@ class HistoryViewReactor: Reactor {
             state.calculationHistories[indexPath.section].items.remove(at: indexPath.row)
 
             calculationHistoryManager.deleteData(item)
-                .subscribe()
+                .subscribe(onCompleted: {
+                    /// Remove section if there is no item in section
+                    let newSections = state.calculationHistories.filter { !$0.items.isEmpty }
+                    state.calculationHistories = newSections
+                })
                 .disposed(by: disposeBag)
             
         case .fetchHistory:
@@ -93,9 +97,13 @@ class HistoryViewReactor: Reactor {
         case .clearHistory:
             calculationHistoryManager.deleteAll()
                 .subscribe(onCompleted: {
+                    /// Separate item removal and section removal to make cell editing animation natural
+                    /// If you only call removeAll() method, it will be animated unnaturally
                     for section in 0..<state.calculationHistories.count {
                         state.calculationHistories[section].items.removeAll()
                     }
+                    
+                    state.calculationHistories.removeAll()
                 })
                 .disposed(by: disposeBag)
             
