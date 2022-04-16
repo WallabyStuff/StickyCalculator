@@ -250,12 +250,6 @@ class MainViewController: UIViewController, View {
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
-        iconKeypadButtonEqual.rx.tap.asDriver()
-            .drive(with: self, onNext: { vc, _ in
-                vc.historyViewController.reloadHistoryTableView()
-            }).disposed(by: disposeBag)
-        
-        
         // State
         reactor.state.map { $0.resultValue }
             .distinctUntilChanged()
@@ -272,6 +266,7 @@ class MainViewController: UIViewController, View {
             .disposed(by: disposeBag)
         
         reactor.state.map { $0.workingState }
+            .distinctUntilChanged()
             .subscribe(with: self, onNext: { vc, workingState in
                 vc.releaseOperatorButtons()
                 if workingState.isWorking {
@@ -292,6 +287,13 @@ class MainViewController: UIViewController, View {
                 }
             })
             .disposed(by: disposeBag)
+        
+        reactor.state.map { $0.updateHistory }
+            .distinctUntilChanged()
+            .observe(on: ConcurrentMainScheduler.instance)
+            .subscribe(with: self, onNext: { vc, _ in
+                vc.historyViewController.reloadHistoryTableView()
+            }).disposed(by: disposeBag)
     }
     
     

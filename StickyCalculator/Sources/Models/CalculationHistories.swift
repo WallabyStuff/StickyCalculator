@@ -9,11 +9,12 @@ import Foundation
 import RealmSwift
 import RxDataSources
 
-class CalculationHistoryByDate: Object {
+class CalculationHistories: Object {
     
     
     // MARK: - Properties
     
+    static let sectionHeaderDateFormat = "yyyy-MM-dd"
     @objc dynamic var date: String = ""
     let historyList = List<CalculationHistory>()
     var historyArray: [CalculationHistory] {
@@ -31,7 +32,7 @@ class CalculationHistoryByDate: Object {
     
     convenience init(_ newItem: CalculationHistory) {
         self.init()
-        self.date = CalculationHistoryByDate.formattedDate()
+        self.date = CalculationHistories.getSectionHeaderString(Date())
         self.historyArray.append(newItem)
     }
     
@@ -42,12 +43,13 @@ class CalculationHistoryByDate: Object {
         return "date"
     }
     
-    static func formattedDate() -> String {
-        return Date().formattedDateString(format: "yyyy-MM-dd")
+    static func getSectionHeaderString(_ date: Date) -> String {
+        let format = CalculationHistories.sectionHeaderDateFormat
+        return date.formattedDateString(format: format)
     }
 }
 
-extension CalculationHistoryByDate: IdentifiableType {
+extension CalculationHistories: IdentifiableType {
     typealias Identity = String
     
     var identity: String {

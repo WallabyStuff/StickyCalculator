@@ -14,9 +14,9 @@ class CalculationCacheManager {
     static let IS_WORKING_STATE_KEY = "IS_WORKING"
     static let WORKING_STATE_OPERATOR_KEY = "IS_WORKING_OPERATOR"
     static let ON_RESULT_STATE_KEY = "ON_RESULT"
-    typealias Cache = (numberSentence: String, resultValue: String, workingState: MainViewReactor.WorkingState, onResult: Bool)
+    typealias Cache = (numberSentence: String, resultValue: String, workingState: WorkingState, onResult: Bool)
     
-    func updateCache(numberSentence: String, resultValue: String, workingState: MainViewReactor.WorkingState, onResult: Bool) {
+    func updateCache(numberSentence: String, resultValue: String, workingState: WorkingState, onResult: Bool) {
         UserDefaults.standard.set(numberSentence, forKey: CalculationCacheManager.NUMBER_SENTENCE_KEY)
         UserDefaults.standard.set(resultValue, forKey: CalculationCacheManager.RESULT_VALUE_KEY)
         UserDefaults.standard.set(workingState.isWorking, forKey: CalculationCacheManager.IS_WORKING_STATE_KEY)
@@ -31,6 +31,6 @@ class CalculationCacheManager {
         let `operator`: Operator? = Operator(rawValue: UserDefaults.standard.string(forKey: CalculationCacheManager.WORKING_STATE_OPERATOR_KEY) ?? "")
         let onResult = UserDefaults.standard.bool(forKey: CalculationCacheManager.ON_RESULT_STATE_KEY)
         
-        return Cache(numberSentence, resultValue, MainViewReactor.WorkingState(isWorking, `operator`), onResult)
+        return Cache(numberSentence, resultValue, WorkingState(isWorking, `operator`), onResult)
     }
 }
