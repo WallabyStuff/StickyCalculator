@@ -22,7 +22,10 @@ class MainViewController: UIViewController, View {
     @IBOutlet weak var historyContainerViewWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var showHistoryButton: UIButton!
     @IBOutlet weak var historyContainerView: UIView!
+    @IBOutlet weak var numberSentenceContainerView: UIView!
     @IBOutlet weak var numberSentenceTextView: UITextView!
+    
+    @IBOutlet weak var resultLabelContainerView: UIView!
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var resultScrollView: UIScrollView!
     
@@ -56,6 +59,8 @@ class MainViewController: UIViewController, View {
     
     var disposeBag = DisposeBag()
     private var historyViewController = HistoryViewController()
+    private var numberSentenceGradientView = GradientSmootherView()
+    private var resultLabelGradientView = GradientSmootherView()
     
     
     // MARK: - LifeCycle
@@ -97,8 +102,10 @@ class MainViewController: UIViewController, View {
         setupShowHistoryButton()
         setupHistoryViewController()
         setupHistoryContainerView()
-        setupResultScrollView()
         setupNumberSentenceTextView()
+        setupResultScrollView()
+        configureNumberSentenceGradientSmootherView()
+        configureResultLabelGradientSmootherView()
     }
     
     private func setupShowHistoryButton() {
@@ -128,15 +135,33 @@ class MainViewController: UIViewController, View {
         historyViewController.didMove(toParent: self)
     }
     
+    private func setupNumberSentenceTextView() {
+        numberSentenceTextView.isEditable = false
+        numberSentenceTextView.isSelectable = true
+        
+        numberSentenceGradientView = GradientSmootherView(frame: numberSentenceContainerView.frame,
+                                                orientation: .vertical)
+        numberSentenceContainerView.addSubview(numberSentenceGradientView)
+        numberSentenceGradientView.translatesAutoresizingMaskIntoConstraints = false
+        numberSentenceGradientView.topAnchor.constraint(equalTo: numberSentenceContainerView.topAnchor).isActive = true
+        numberSentenceGradientView.leadingAnchor.constraint(equalTo: numberSentenceContainerView.leadingAnchor).isActive = true
+        numberSentenceGradientView.bottomAnchor.constraint(equalTo: numberSentenceContainerView.bottomAnchor).isActive = true
+        numberSentenceGradientView.trailingAnchor.constraint(equalTo: numberSentenceContainerView.trailingAnchor).isActive = true
+    }
+    
     private func setupResultScrollView() {
         /// Change rotation of resultScrollView to make content view RightToLeft
         resultScrollView.transform = CGAffineTransform(rotationAngle: .pi)
         resultLabel.transform = CGAffineTransform(rotationAngle: .pi)
-    }
-    
-    private func setupNumberSentenceTextView() {
-        numberSentenceTextView.isEditable = false
-        numberSentenceTextView.isSelectable = true
+        
+        resultLabelGradientView = GradientSmootherView(frame: resultLabelContainerView.frame,
+                                                orientation: .horizontal)
+        resultLabelContainerView.addSubview(resultLabelGradientView)
+        resultLabelGradientView.translatesAutoresizingMaskIntoConstraints = false
+        resultLabelGradientView.topAnchor.constraint(equalTo: resultLabelContainerView.topAnchor).isActive = true
+        resultLabelGradientView.leadingAnchor.constraint(equalTo: resultLabelContainerView.leadingAnchor).isActive = true
+        resultLabelGradientView.bottomAnchor.constraint(equalTo: resultLabelContainerView.bottomAnchor).isActive = true
+        resultLabelGradientView.trailingAnchor.constraint(equalTo: resultLabelContainerView.trailingAnchor).isActive = true
     }
     
     
@@ -253,7 +278,10 @@ class MainViewController: UIViewController, View {
         // State
         reactor.state.map { $0.resultValue }
             .distinctUntilChanged()
-            .bind(to: resultLabel.rx.text)
+            .bind(with: self, onNext: { vc, newValue in
+                vc.resultLabel.text = newValue
+                vc.configureResultLabelGradientSmootherView()
+            })
             .disposed(by: disposeBag)
         
         reactor.state.map { $0.numberSentence }
@@ -262,6 +290,7 @@ class MainViewController: UIViewController, View {
                 vc.numberSentenceTextView.text = newValue
                 vc.numberSentenceTextView.makeAsAttributedNumberSentenceText()
                 vc.numberSentenceTextView.scrollToBottom()
+                vc.configureNumberSentenceGradientSmootherView()
             })
             .disposed(by: disposeBag)
         
@@ -345,6 +374,37 @@ class MainViewController: UIViewController, View {
     private func reloadHistoryTableView() {
         historyViewController.reloadHistoryTableView()
     }
+    
+    private func configureNumberSentenceGradientSmootherView() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            
+            /// adjust actual width
+            self.numberSentenceTextView.sizeToFit()
+            
+            print(self.numberSentenceTextView.contentSize.height)
+            if self.numberSentenceTextView.contentSize.height >= self.numberSentenceContainerView.frame.height {
+                self.numberSentenceGradientView.fadeIn()
+            } else {
+                self.numberSentenceGradientView.fadeOut()
+            }
+        }
+    }
+    
+    private func configureResultLabelGradientSmootherView() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            
+            /// adjust actual width
+            self.resultLabel.sizeToFit()
+            
+            if self.resultLabel.frame.width >= self.resultScrollView.frame.width {
+                self.resultLabelGradientView.fadeIn()
+            } else {
+                self.resultLabelGradientView.fadeOut()
+            }
+        }
+    }
 }
 
 extension MainViewController {
@@ -376,5 +436,7 @@ extension MainViewController: HistoryViewDelegate {
         numberSentenceTextView.text = item.numberSentence
         resultLabel.text = item.resultValue
         numberSentenceTextView.makeAsAttributedNumberSentenceText()
+        configureNumberSentenceGradientSmootherView()
+        configureResultLabelGradientSmootherView()
     }
 }
