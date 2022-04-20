@@ -379,10 +379,6 @@ class MainViewController: UIViewController, View {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             
-            /// adjust actual width
-            self.numberSentenceTextView.sizeToFit()
-            
-            print(self.numberSentenceTextView.contentSize.height)
             if self.numberSentenceTextView.contentSize.height >= self.numberSentenceContainerView.frame.height {
                 self.numberSentenceGradientView.fadeIn()
             } else {
