@@ -73,7 +73,7 @@ class GradientSmootherView: UIView {
                                 R.color.backgroundColor()!.withAlphaComponent(0).cgColor,
                                 R.color.backgroundColor()!.withAlphaComponent(0).cgColor,
                                 R.color.backgroundColor()!.cgColor]
-        gradientLayer.locations = [0, 0.1, 0.9, 1.0]
+        gradientLayer.locations = [0, 0.05, 0.95, 1.0]
         configureFrame()
     }
     
