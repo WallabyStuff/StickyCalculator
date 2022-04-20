@@ -3,3 +3,6 @@
 "confirm" = "確認";
 "cancel" = "キャンセル";
 "delete" = "削除";
+
+// Toast messages
+"copy_message" = "クリップボードにコピーされました。";

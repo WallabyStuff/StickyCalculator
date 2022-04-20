@@ -14,6 +14,14 @@ extension UIView {
         }
     }
     
+    func fadeOut(duration: CGFloat = 0.2, completion: @escaping () -> Void) {
+        UIView.animate(withDuration: duration) {
+            self.alpha = 0
+        } completion: { _ in
+            completion()
+        }
+    }
+    
     func fadeOut(duration: CGFloat = 0.2) {
         UIView.animate(withDuration: duration) {
             self.alpha = 0

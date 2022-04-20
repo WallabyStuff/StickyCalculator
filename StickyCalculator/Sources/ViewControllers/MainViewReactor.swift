@@ -19,7 +19,7 @@ class MainViewReactor: Reactor {
         case didTapBackspace
         case didTapPositivieNegative
         case didTapEqual
-        case never
+        case didLongPressResult
     }
     
     enum Mutation {
@@ -37,6 +37,7 @@ class MainViewReactor: Reactor {
         case updateCahce
         case saveHistory
         case updateResultState(Bool)
+        case copyResult
     }
     
     struct State {
@@ -45,6 +46,7 @@ class MainViewReactor: Reactor {
         var workingState: WorkingState
         var onResult: Bool
         var updateHistory: Int
+        var resultValueCopied: Int
     }
     
     
@@ -67,7 +69,8 @@ class MainViewReactor: Reactor {
                                   resultValue: cache.resultValue,
                                   workingState: cache.workingState,
                                   onResult: cache.onResult,
-                                  updateHistory: 0)
+                                  updateHistory: 0,
+                                  resultValueCopied: 0)
         
         numberFormatter.numberStyle = .decimal
         numberFormatter.maximumFractionDigits = 99
@@ -140,8 +143,8 @@ class MainViewReactor: Reactor {
                 Observable.just(Mutation.updateResultState(true))
             ])
             
-        case .never:
-            return Observable.never()
+        case .didLongPressResult:
+            return Observable.just(Mutation.copyResult)
         }
     }
     
@@ -263,7 +266,10 @@ class MainViewReactor: Reactor {
             
         case .updateResultState(let bool):
             state.onResult = bool
-            
+         
+        case .copyResult:
+            UIPasteboard.general.string = state.resultValue
+            state.resultValueCopied += 1
         }
         
         return state

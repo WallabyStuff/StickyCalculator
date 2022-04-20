@@ -6,8 +6,10 @@
 //
 
 import UIKit
+
 import ReactorKit
 import RxCocoa
+import RxGesture
 
 class MainViewController: UIViewController, View {
 
@@ -104,6 +106,8 @@ class MainViewController: UIViewController, View {
         setupHistoryContainerView()
         setupNumberSentenceTextView()
         setupResultScrollView()
+        setupToastStyle()
+        
         configureNumberSentenceGradientSmootherView()
         configureResultLabelGradientSmootherView()
     }
@@ -162,6 +166,17 @@ class MainViewController: UIViewController, View {
         resultLabelGradientView.leadingAnchor.constraint(equalTo: resultLabelContainerView.leadingAnchor).isActive = true
         resultLabelGradientView.bottomAnchor.constraint(equalTo: resultLabelContainerView.bottomAnchor).isActive = true
         resultLabelGradientView.trailingAnchor.constraint(equalTo: resultLabelContainerView.trailingAnchor).isActive = true
+    }
+    
+    private func setupToastStyle() {
+        let style = ToastStyle()
+        style.borderWidth = 1
+        style.borderColor = R.color.lineGrayReversed()!
+        style.backgroundColor = R.color.backgroundColorReversed()!
+        style.messageColor = R.color.backgroundColor()!
+        style.font = UIFont.nanumSquareRound(type: .bold, size: 14) ?? UIFont.systemFont(ofSize: 15)
+        
+        ToastManager.shared.style = style
     }
     
     
@@ -275,6 +290,12 @@ class MainViewController: UIViewController, View {
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
+        resultLabel.rx.gesture(.longPress())
+            .when(.began)
+            .map { _ in MainViewReactor.Action.didLongPressResult }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
         // State
         reactor.state.map { $0.resultValue }
             .distinctUntilChanged()
@@ -323,6 +344,14 @@ class MainViewController: UIViewController, View {
             .subscribe(with: self, onNext: { vc, _ in
                 vc.historyViewController.reloadHistoryTableView()
             }).disposed(by: disposeBag)
+        
+        reactor.state.map { $0.resultValueCopied }
+            .distinctUntilChanged()
+            .skip(1)
+            .bind(with: self, onNext: { vc, _ in
+                vc.view.makeToast(message: "copy_message".localized())
+            })
+            .disposed(by: disposeBag)
     }
     
     
