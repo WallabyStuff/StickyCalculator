@@ -37,8 +37,16 @@ class GradientSmootherView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    // MARK: - Update
+    
     override func layoutSublayers(of layer: CALayer) {
         configureFrame()
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        /// Update CG stuffs when trait collection is changed
+        configureView()
     }
     
     

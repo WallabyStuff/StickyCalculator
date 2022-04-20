@@ -11,6 +11,7 @@ target 'StickyCalculator' do
   pod 'R.swift', '~> 6.1.0'
   pod 'RealmSwift', '~> 10'
   pod 'RxDataSources', '~> 5.0'
+  pod 'RxGesture'
 
   target 'StickyCalculatorTests' do
     inherit! :search_paths

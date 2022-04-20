@@ -124,7 +124,7 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.color` struct is generated, and contains static references to 15 colors.
+  /// This `R.color` struct is generated, and contains static references to 16 colors.
   struct color {
     /// Color `AccentBlack-light`.
     static let accentBlackLight = Rswift.ColorResource(bundle: R.hostingBundle, name: "AccentBlack-light")
@@ -148,6 +148,8 @@ struct R: Rswift.Validatable {
     static let iconColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "IconColor")
     /// Color `IconWhite`.
     static let iconWhite = Rswift.ColorResource(bundle: R.hostingBundle, name: "IconWhite")
+    /// Color `LineGray-reversed`.
+    static let lineGrayReversed = Rswift.ColorResource(bundle: R.hostingBundle, name: "LineGray-reversed")
     /// Color `LineGray`.
     static let lineGray = Rswift.ColorResource(bundle: R.hostingBundle, name: "LineGray")
     /// Color `TextColor`.
@@ -262,6 +264,15 @@ struct R: Rswift.Validatable {
     @available(iOS 11.0, *)
     static func lineGray(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.lineGray, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "LineGray-reversed", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func lineGrayReversed(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.lineGrayReversed, compatibleWith: traitCollection)
     }
     #endif
 
@@ -385,6 +396,14 @@ struct R: Rswift.Validatable {
     @available(watchOSApplicationExtension 4.0, *)
     static func lineGray(_: Void = ()) -> UIKit.UIColor? {
       return UIKit.UIColor(named: R.color.lineGray.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "LineGray-reversed", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func lineGrayReversed(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.lineGrayReversed.name)
     }
     #endif
 
@@ -686,7 +705,7 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
 
-    /// This `R.string.localizable` struct is generated, and contains static references to 5 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 6 localization keys.
     struct localizable {
       /// en translation: Are you sure you want to clear all histories
       ///
@@ -708,6 +727,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, ko, ja
       static let delete = Rswift.StringResource(key: "delete", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
+      /// en translation: Result value copied to clipboard
+      ///
+      /// Locales: en, ko, ja
+      static let copy_message = Rswift.StringResource(key: "copy_message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
 
       /// en translation: Are you sure you want to clear all histories
       ///
@@ -782,6 +805,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("delete", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Result value copied to clipboard
+      ///
+      /// Locales: en, ko, ja
+      static func copy_message(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("copy_message", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "copy_message"
+        }
+
+        return NSLocalizedString("copy_message", bundle: bundle, comment: "")
       }
 
       fileprivate init() {}

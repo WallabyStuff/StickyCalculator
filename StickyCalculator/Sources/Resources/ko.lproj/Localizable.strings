@@ -3,3 +3,6 @@
 "confirm" = "확인";
 "cancel" = "취소";
 "delete" = "삭제";
+
+// Toast messages
+"copy_message" = "결과값이 클립보드에 복사되었습니다.";

@@ -36,6 +36,8 @@
 		8EA670C127E1CBD8007928E4 /* StickyCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA670C027E1CBD8007928E4 /* StickyCalculatorTests.swift */; };
 		8EA670CB27E1CBD8007928E4 /* StickyCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA670CA27E1CBD8007928E4 /* StickyCalculatorUITests.swift */; };
 		8EA670CD27E1CBD8007928E4 /* StickyCalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA670CC27E1CBD8007928E4 /* StickyCalculatorUITestsLaunchTests.swift */; };
+		8EBDB44F280FFF0600243E61 /* UIView+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBDB44E280FFF0600243E61 /* UIView+Toast.swift */; };
+		8EBDB4512810037B00243E61 /* ToastStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBDB4502810037B00243E61 /* ToastStyle.swift */; };
 		8EDA316F27F44A5C0077B0F0 /* String+Calculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA316E27F44A5C0077B0F0 /* String+Calculation.swift */; };
 		8EDA317127F45EFD0077B0F0 /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA317027F45EFD0077B0F0 /* Operator.swift */; };
 		8EE41F7627EC1B040053FA17 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE41F7427EC1B040053FA17 /* HistoryTableViewCell.swift */; };
@@ -122,6 +124,8 @@
 		8EA670C627E1CBD8007928E4 /* StickyCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StickyCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA670CA27E1CBD8007928E4 /* StickyCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyCalculatorUITests.swift; sourceTree = "<group>"; };
 		8EA670CC27E1CBD8007928E4 /* StickyCalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyCalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8EBDB44E280FFF0600243E61 /* UIView+Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Toast.swift"; sourceTree = "<group>"; };
+		8EBDB4502810037B00243E61 /* ToastStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastStyle.swift; sourceTree = "<group>"; };
 		8EDA316E27F44A5C0077B0F0 /* String+Calculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Calculation.swift"; sourceTree = "<group>"; };
 		8EDA317027F45EFD0077B0F0 /* Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Operator.swift; path = StickyCalculator/Sources/Models/Operator.swift; sourceTree = SOURCE_ROOT; };
 		8EE41F7427EC1B040053FA17 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 				8E977FCE27EB81E400B91E1B /* TextKeypadButton.swift */,
 				8EE41F7427EC1B040053FA17 /* HistoryTableViewCell.swift */,
 				8E529C6E280BCF7C004868FB /* GradientSmootherView.swift */,
+				8EBDB4502810037B00243E61 /* ToastStyle.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -316,6 +321,7 @@
 				8E529C2E2809A908004868FB /* UIScrollView+AutoScroll.swift */,
 				8E529C70280BEAA3004868FB /* CALayer+Animation.swift */,
 				8E529C74280BFA36004868FB /* UIView+Animation.swift */,
+				8EBDB44E280FFF0600243E61 /* UIView+Toast.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -637,6 +643,7 @@
 				8E414F5727E72465007F0B65 /* HistoryViewReactor.swift in Sources */,
 				8E87761227E6FFB600ED5839 /* IconKeyPadButton.swift in Sources */,
 				8EA670AC27E1CBD7007928E4 /* SceneDelegate.swift in Sources */,
+				8EBDB4512810037B00243E61 /* ToastStyle.swift in Sources */,
 				8E529C6F280BCF7C004868FB /* GradientSmootherView.swift in Sources */,
 				8EEEBBC627F96FF6009D3FED /* FeedbackManager.swift in Sources */,
 				8EEEBBD627FA9083009D3FED /* Date+DateFormatter.swift in Sources */,
@@ -645,6 +652,7 @@
 				8EDA316F27F44A5C0077B0F0 /* String+Calculation.swift in Sources */,
 				8E64D96827EF547500330497 /* UITraitColleciton+Orientation.swift in Sources */,
 				8E414F5327E723D0007F0B65 /* HistoryViewController.swift in Sources */,
+				8EBDB44F280FFF0600243E61 /* UIView+Toast.swift in Sources */,
 				8E529C71280BEAA3004868FB /* CALayer+Animation.swift in Sources */,
 				8E977FCF27EB81E400B91E1B /* TextKeypadButton.swift in Sources */,
 				8E529C75280BFA36004868FB /* UIView+Animation.swift in Sources */,
