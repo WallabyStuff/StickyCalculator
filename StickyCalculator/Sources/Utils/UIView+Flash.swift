@@ -12,7 +12,7 @@ extension UIView {
         let oldColor = self.backgroundColor
         self.backgroundColor = flashColor
         
-        UIView.animate(withDuration: 1,
+        UIView.animate(withDuration: 0.5,
                        delay: 0,
                        options: [.allowUserInteraction, .curveEaseInOut]) {
             self.backgroundColor = oldColor
