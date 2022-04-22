@@ -296,6 +296,11 @@ class MainViewController: UIViewController, View {
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
+        iconKeypadButtonEqual.rx.tap
+            .bind(with: self, onNext: { vc, _ in
+                vc.view.flash(with: R.color.backgroundGrayLightest()!)
+            }).disposed(by: disposeBag)
+        
         // State
         reactor.state.map { $0.resultValue }
             .distinctUntilChanged()

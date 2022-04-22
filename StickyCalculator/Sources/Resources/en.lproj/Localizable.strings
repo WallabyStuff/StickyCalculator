@@ -8,6 +8,6 @@
 "copy_message" = "Result value copied to clipboard";
 
 // Date format
-"hour" = " :";
-"minute" = " :";
+"hour" = ":";
+"minute" = ":";
 "second" = "";

@@ -711,11 +711,11 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, ko, ja
       static let second = Rswift.StringResource(key: "second", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
-      /// en translation:  :
+      /// en translation: :
       ///
       /// Locales: en, ko, ja
       static let hour = Rswift.StringResource(key: "hour", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
-      /// en translation:  :
+      /// en translation: :
       ///
       /// Locales: en, ko, ja
       static let minute = Rswift.StringResource(key: "minute", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
@@ -759,7 +759,7 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("second", bundle: bundle, comment: "")
       }
 
-      /// en translation:  :
+      /// en translation: :
       ///
       /// Locales: en, ko, ja
       static func hour(preferredLanguages: [String]? = nil) -> String {
@@ -774,7 +774,7 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("hour", bundle: bundle, comment: "")
       }
 
-      /// en translation:  :
+      /// en translation: :
       ///
       /// Locales: en, ko, ja
       static func minute(preferredLanguages: [String]? = nil) -> String {

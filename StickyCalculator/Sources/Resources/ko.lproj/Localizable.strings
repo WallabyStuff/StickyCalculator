@@ -8,6 +8,6 @@
 "copy_message" = "결과값이 클립보드에 복사되었습니다.";
 
 // Date format
-"hour" = "시";
-"minute" = "분";
+"hour" = "시 ";
+"minute" = "분 ";
 "second" = "초";

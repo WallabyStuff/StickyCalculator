@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2121A97425D4F4C8F446C4E8 /* Pods_StickyCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06EE2761449D26C0963F0856 /* Pods_StickyCalculator.framework */; };
+		8E11CD752812DCCE0043B8E9 /* UIView+Flash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E11CD742812DCCE0043B8E9 /* UIView+Flash.swift */; };
 		8E2789DA280844D4009A81D0 /* CalculationHistories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2789D9280844D4009A81D0 /* CalculationHistories.swift */; };
 		8E2A462A28081BA2008D79C5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E2A462C28081BA2008D79C5 /* Localizable.strings */; };
 		8E2A463028081CF1008D79C5 /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2A462F28081CF1008D79C5 /* String+Localizable.swift */; };
@@ -84,6 +85,7 @@
 		78B38F88C20E4880BE99C9CA /* Pods_StickyCalculatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StickyCalculatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B40A20A79596EDCE33CB364 /* Pods-StickyCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyCalculator.debug.xcconfig"; path = "Target Support Files/Pods-StickyCalculator/Pods-StickyCalculator.debug.xcconfig"; sourceTree = "<group>"; };
 		8717EE1067339CD6C1E8ECDF /* Pods-StickyCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyCalculator.release.xcconfig"; path = "Target Support Files/Pods-StickyCalculator/Pods-StickyCalculator.release.xcconfig"; sourceTree = "<group>"; };
+		8E11CD742812DCCE0043B8E9 /* UIView+Flash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Flash.swift"; sourceTree = "<group>"; };
 		8E2789D62808283B009A81D0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/History.strings; sourceTree = "<group>"; };
 		8E2789D82808286A009A81D0 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/History.strings; sourceTree = "<group>"; };
 		8E2789D9280844D4009A81D0 /* CalculationHistories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationHistories.swift; sourceTree = "<group>"; };
@@ -322,6 +324,7 @@
 				8E529C70280BEAA3004868FB /* CALayer+Animation.swift */,
 				8E529C74280BFA36004868FB /* UIView+Animation.swift */,
 				8EBDB44E280FFF0600243E61 /* UIView+Toast.swift */,
+				8E11CD742812DCCE0043B8E9 /* UIView+Flash.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -666,6 +669,7 @@
 				8EE8048127ED6BA30001C011 /* DeviceResolution.swift in Sources */,
 				8E2CC74327E969700046E314 /* UIFont+NanumSquareRound.swift in Sources */,
 				8E414F5527E72453007F0B65 /* MainViewReactor.swift in Sources */,
+				8E11CD752812DCCE0043B8E9 /* UIView+Flash.swift in Sources */,
 				8E2A463028081CF1008D79C5 /* String+Localizable.swift in Sources */,
 				8E529C6D280B3476004868FB /* WorkingState.swift in Sources */,
 			);

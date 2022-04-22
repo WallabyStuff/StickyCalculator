@@ -47,7 +47,7 @@ class HistoryViewController: UIViewController, View {
                 return UITableViewCell()
             }
             
-            let dateFormat = "a  hh\("hour".localized()) mm\("minute".localized()) ss\("second".localized())"
+            let dateFormat = "a  hh\("hour".localized())mm\("minute".localized())ss\("second".localized())"
             cell.dateTimeLabel.text = item.date.formattedDateString(format: dateFormat)
             
             cell.resultLabel.text = item.resultValue

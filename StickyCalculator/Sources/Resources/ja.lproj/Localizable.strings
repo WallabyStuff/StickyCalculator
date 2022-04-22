@@ -8,6 +8,6 @@
 "copy_message" = "クリップボードにコピーされました。";
 
 // Date format
-"hour" = "時";
-"minute" = "分";
+"hour" = "時 ";
+"minute" = "分 ";
 "second" = "秒";
