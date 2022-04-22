@@ -705,8 +705,20 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
 
-    /// This `R.string.localizable` struct is generated, and contains static references to 6 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 9 localization keys.
     struct localizable {
+      /// en translation: 
+      ///
+      /// Locales: en, ko, ja
+      static let second = Rswift.StringResource(key: "second", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
+      /// en translation:  :
+      ///
+      /// Locales: en, ko, ja
+      static let hour = Rswift.StringResource(key: "hour", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
+      /// en translation:  :
+      ///
+      /// Locales: en, ko, ja
+      static let minute = Rswift.StringResource(key: "minute", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
       /// en translation: Are you sure you want to clear all histories
       ///
       /// Locales: en, ko, ja
@@ -731,6 +743,51 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, ko, ja
       static let copy_message = Rswift.StringResource(key: "copy_message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
+
+      /// en translation: 
+      ///
+      /// Locales: en, ko, ja
+      static func second(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("second", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "second"
+        }
+
+        return NSLocalizedString("second", bundle: bundle, comment: "")
+      }
+
+      /// en translation:  :
+      ///
+      /// Locales: en, ko, ja
+      static func hour(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("hour", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "hour"
+        }
+
+        return NSLocalizedString("hour", bundle: bundle, comment: "")
+      }
+
+      /// en translation:  :
+      ///
+      /// Locales: en, ko, ja
+      static func minute(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("minute", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "minute"
+        }
+
+        return NSLocalizedString("minute", bundle: bundle, comment: "")
+      }
 
       /// en translation: Are you sure you want to clear all histories
       ///
