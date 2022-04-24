@@ -470,3 +470,104 @@ extension MainViewController: HistoryViewDelegate {
         configureResultLabelGradientSmootherView()
     }
 }
+
+
+// MARK: - Keyboard inputs
+
+extension MainViewController {
+    override func pressesBegan(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
+        guard let key = presses.first?.key else { return }
+        guard let reactor = self.reactor else { return }
+        
+        switch key.characters {
+        case "0":
+            Observable.just(MainViewReactor.Action.didTapNumberKeypad(0))
+                .bind(to: reactor.action)
+                .dispose()
+        case "1":
+            Observable.just(MainViewReactor.Action.didTapNumberKeypad(1))
+                .bind(to: reactor.action)
+                .dispose()
+        case "2":
+            Observable.just(MainViewReactor.Action.didTapNumberKeypad(2))
+                .bind(to: reactor.action)
+                .dispose()
+        case "3":
+            Observable.just(MainViewReactor.Action.didTapNumberKeypad(3))
+                .bind(to: reactor.action)
+                .dispose()
+        case "4":
+            Observable.just(MainViewReactor.Action.didTapNumberKeypad(4))
+                .bind(to: reactor.action)
+                .dispose()
+        case "5":
+            Observable.just(MainViewReactor.Action.didTapNumberKeypad(5))
+                .bind(to: reactor.action)
+                .dispose()
+        case "6":
+            Observable.just(MainViewReactor.Action.didTapNumberKeypad(6))
+                .bind(to: reactor.action)
+                .dispose()
+        case "7":
+            Observable.just(MainViewReactor.Action.didTapNumberKeypad(7))
+                .bind(to: reactor.action)
+                .dispose()
+        case "8":
+            Observable.just(MainViewReactor.Action.didTapNumberKeypad(8))
+                .bind(to: reactor.action)
+                .dispose()
+        case "9":
+            Observable.just(MainViewReactor.Action.didTapNumberKeypad(9))
+                .bind(to: reactor.action)
+                .dispose()
+        case "+":
+            Observable.just(MainViewReactor.Action.didTapOperator(.addition))
+                .bind(to: reactor.action)
+                .dispose()
+        case "-":
+            Observable.just(MainViewReactor.Action.didTapOperator(.subtraction))
+                .bind(to: reactor.action)
+                .dispose()
+        case "x", "*":
+            Observable.just(MainViewReactor.Action.didTapOperator(.multiplication))
+                .bind(to: reactor.action)
+                .dispose()
+        case "/", "÷":
+            Observable.just(MainViewReactor.Action.didTapOperator(.division))
+                .bind(to: reactor.action)
+                .dispose()
+        case "=":
+            Observable.just(MainViewReactor.Action.didTapEqual)
+                .bind(to: reactor.action)
+                .dispose()
+        case ".":
+            Observable.just(MainViewReactor.Action.didTapDecimal)
+                .bind(to: reactor.action)
+                .dispose()
+        case "%":
+            Observable.just(MainViewReactor.Action.didTapPercent)
+                .bind(to: reactor.action)
+                .dispose()
+        default:
+            break
+        }
+        
+        switch key.keyCode {
+        case .keyboardEscape:
+            Observable.just(MainViewReactor.Action.didTapCancel)
+                .bind(to: reactor.action)
+                .dispose()
+        case .keyboardDeleteOrBackspace:
+            Observable.just(MainViewReactor.Action.didTapBackspace)
+                .bind(to: reactor.action)
+                .dispose()
+        case .keyboardReturnOrEnter:
+            Observable.just(MainViewReactor.Action.didTapEqual)
+                .bind(to: reactor.action)
+                .dispose()
+        default:
+            super.pressesBegan(presses, with: event)
+        }
+    }
+    
+}
