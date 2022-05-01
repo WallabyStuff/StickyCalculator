@@ -116,6 +116,13 @@ extension SettingItem {
                               iconcolor: R.color.itemBlue()!,
                               title: "about".localized(),
                               actionHandler: { vc in
+                let storyboard = UIStoryboard(name: R.storyboard.setting.name, bundle: nil)
+                guard let destVC = storyboard.instantiateViewController(withIdentifier: R.storyboard.setting.aboutAppStoryboard.identifier)
+                        as? AboutAppViewController else {
+                    return
+                }
+                
+                vc.navigationController?.pushViewController(destVC, animated: true)
             })
         }
     }

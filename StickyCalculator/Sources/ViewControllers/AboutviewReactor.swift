@@ -1,16 +1,16 @@
 //
-//  AppearanceSelectorViewReactor.swift
+//  AboutviewReactor.swift
 //  StickyCalculator
 //
 //  Created by 이승기 on 2022/05/01.
 //
 
-import UIKit
+import Foundation
 
 import ReactorKit
 
-class AppearnaceSelectorViewReactor: Reactor {
-    
+class AboutAppViewReactor: Reactor {
+
     typealias Action = NoAction
     
     enum Mutation {
@@ -18,7 +18,7 @@ class AppearnaceSelectorViewReactor: Reactor {
     }
     
     struct State {
-        let appearanceItems = Appearance.allCases
+        
     }
     
     var initialState: State

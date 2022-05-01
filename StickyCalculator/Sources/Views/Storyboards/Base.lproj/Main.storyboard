@@ -637,22 +637,22 @@
             <size key="intrinsicContentSize" width="30" height="43"/>
         </designable>
         <designable name="ROl-Cz-uw2">
-            <size key="intrinsicContentSize" width="580" height="580"/>
+            <size key="intrinsicContentSize" width="512" height="512"/>
         </designable>
         <designable name="S4f-KR-wvi">
-            <size key="intrinsicContentSize" width="593" height="580"/>
+            <size key="intrinsicContentSize" width="525" height="512"/>
         </designable>
         <designable name="Tae-i9-7SX">
-            <size key="intrinsicContentSize" width="626" height="580"/>
+            <size key="intrinsicContentSize" width="558" height="512"/>
         </designable>
         <designable name="YtU-dq-rlk">
-            <size key="intrinsicContentSize" width="88" height="88"/>
+            <size key="intrinsicContentSize" width="20" height="20"/>
         </designable>
         <designable name="a1G-OS-kKl">
-            <size key="intrinsicContentSize" width="580" height="580"/>
+            <size key="intrinsicContentSize" width="512" height="512"/>
         </designable>
         <designable name="ah8-Ua-pMQ">
-            <size key="intrinsicContentSize" width="580" height="580"/>
+            <size key="intrinsicContentSize" width="512" height="512"/>
         </designable>
         <designable name="em5-ur-Qnk">
             <size key="intrinsicContentSize" width="30" height="43"/>
@@ -661,7 +661,7 @@
             <size key="intrinsicContentSize" width="30" height="43"/>
         </designable>
         <designable name="gDL-R0-5Nu">
-            <size key="intrinsicContentSize" width="580" height="580"/>
+            <size key="intrinsicContentSize" width="512" height="512"/>
         </designable>
         <designable name="hDs-RV-XSd">
             <size key="intrinsicContentSize" width="30" height="43"/>
@@ -676,13 +676,13 @@
             <size key="intrinsicContentSize" width="30" height="43"/>
         </designable>
         <designable name="vcu-fh-mzS">
-            <size key="intrinsicContentSize" width="580" height="580"/>
+            <size key="intrinsicContentSize" width="512" height="512"/>
         </designable>
         <designable name="wCR-5U-s1i">
             <size key="intrinsicContentSize" width="30" height="43"/>
         </designable>
         <designable name="wZM-xE-Nv3">
-            <size key="intrinsicContentSize" width="564" height="564"/>
+            <size key="intrinsicContentSize" width="512" height="512"/>
         </designable>
     </designables>
     <resources>
