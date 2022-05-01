@@ -636,8 +636,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 16 images.
+  /// This `R.image` struct is generated, and contains static references to 17 images.
   struct image {
+    /// Image `AppIcon_rounded`.
+    static let appIcon_rounded = Rswift.ImageResource(bundle: R.hostingBundle, name: "AppIcon_rounded")
     /// Image `add`.
     static let add = Rswift.ImageResource(bundle: R.hostingBundle, name: "add")
     /// Image `backspace`.
@@ -670,6 +672,13 @@ struct R: Rswift.Validatable {
     static let plusMinus = Rswift.ImageResource(bundle: R.hostingBundle, name: "plus-minus")
     /// Image `right-chevron`.
     static let rightChevron = Rswift.ImageResource(bundle: R.hostingBundle, name: "right-chevron")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "AppIcon_rounded", bundle: ..., traitCollection: ...)`
+    static func appIcon_rounded(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.appIcon_rounded, compatibleWith: traitCollection)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "add", bundle: ..., traitCollection: ...)`
@@ -1539,10 +1548,15 @@ struct _R: Rswift.Validatable {
     struct setting: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
       typealias InitialController = UIKit.UINavigationController
 
+      let aboutAppStoryboard = StoryboardViewControllerResource<AboutAppViewController>(identifier: "aboutAppStoryboard")
       let bundle = R.hostingBundle
       let name = "Setting"
       let settingStoryboard = StoryboardViewControllerResource<SettingViewController>(identifier: "settingStoryboard")
       let themeSelectorStoryboard = StoryboardViewControllerResource<AppearanceSelectorViewController>(identifier: "themeSelectorStoryboard")
+
+      func aboutAppStoryboard(_: Void = ()) -> AboutAppViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: aboutAppStoryboard)
+      }
 
       func settingStoryboard(_: Void = ()) -> SettingViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: settingStoryboard)
@@ -1557,7 +1571,9 @@ struct _R: Rswift.Validatable {
           if UIKit.UIColor(named: "AccentPink", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'AccentPink' is used in storyboard 'Setting', but couldn't be loaded.") }
           if UIKit.UIColor(named: "BackgroundColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'BackgroundColor' is used in storyboard 'Setting', but couldn't be loaded.") }
           if UIKit.UIColor(named: "TextColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'TextColor' is used in storyboard 'Setting', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "TextGray", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'TextGray' is used in storyboard 'Setting', but couldn't be loaded.") }
         }
+        if _R.storyboard.setting().aboutAppStoryboard() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'aboutAppStoryboard' could not be loaded from storyboard 'Setting' as 'AboutAppViewController'.") }
         if _R.storyboard.setting().settingStoryboard() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'settingStoryboard' could not be loaded from storyboard 'Setting' as 'SettingViewController'.") }
         if _R.storyboard.setting().themeSelectorStoryboard() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'themeSelectorStoryboard' could not be loaded from storyboard 'Setting' as 'AppearanceSelectorViewController'.") }
       }

@@ -36,6 +36,9 @@
 		8E8699A4281DB87900F18BE9 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8699A3281DB87900F18BE9 /* Appearance.swift */; };
 		8E8699A6281DBA5900F18BE9 /* AppearanceSelectorViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8699A5281DBA5900F18BE9 /* AppearanceSelectorViewReactor.swift */; };
 		8E8699A8281DD4D600F18BE9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8699A7281DD4D600F18BE9 /* BaseViewController.swift */; };
+		8E8699AA281E934600F18BE9 /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8699A9281E934600F18BE9 /* AboutAppViewController.swift */; };
+		8E8699AC281E936C00F18BE9 /* AboutviewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8699AB281E936C00F18BE9 /* AboutviewReactor.swift */; };
+		8E8699AE281E980200F18BE9 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8699AD281E980200F18BE9 /* AppInfo.swift */; };
 		8E87761227E6FFB600ED5839 /* IconKeyPadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E87761127E6FFB600ED5839 /* IconKeyPadButton.swift */; };
 		8E87761427E7021900ED5839 /* KeypadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E87761327E7021900ED5839 /* KeypadButton.swift */; };
 		8E8EDC6A27F1DEFB005B73F6 /* Stirng+NumberSentenceAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8EDC6927F1DEFB005B73F6 /* Stirng+NumberSentenceAttribute.swift */; };
@@ -133,6 +136,9 @@
 		8E8699A3281DB87900F18BE9 /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		8E8699A5281DBA5900F18BE9 /* AppearanceSelectorViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSelectorViewReactor.swift; sourceTree = "<group>"; };
 		8E8699A7281DD4D600F18BE9 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		8E8699A9281E934600F18BE9 /* AboutAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
+		8E8699AB281E936C00F18BE9 /* AboutviewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutviewReactor.swift; sourceTree = "<group>"; };
+		8E8699AD281E980200F18BE9 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 		8E87761127E6FFB600ED5839 /* IconKeyPadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconKeyPadButton.swift; sourceTree = "<group>"; };
 		8E87761327E7021900ED5839 /* KeypadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeypadButton.swift; sourceTree = "<group>"; };
 		8E8EDC6927F1DEFB005B73F6 /* Stirng+NumberSentenceAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stirng+NumberSentenceAttribute.swift"; sourceTree = "<group>"; };
@@ -252,6 +258,8 @@
 				8EACB38A281698D100EA5117 /* SettingViewReactor.swift */,
 				8E429870281C59910091ECF0 /* AppearanceSelectorViewController.swift */,
 				8E8699A5281DBA5900F18BE9 /* AppearanceSelectorViewReactor.swift */,
+				8E8699A9281E934600F18BE9 /* AboutAppViewController.swift */,
+				8E8699AB281E936C00F18BE9 /* AboutviewReactor.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -378,6 +386,7 @@
 				8E529C74280BFA36004868FB /* UIView+Animation.swift */,
 				8EBDB44E280FFF0600243E61 /* UIView+Toast.swift */,
 				8E11CD742812DCCE0043B8E9 /* UIView+Flash.swift */,
+				8E8699AD281E980200F18BE9 /* AppInfo.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -704,6 +713,7 @@
 				8E3EBEA9281959C800F84064 /* SettingItemTableViewCell.swift in Sources */,
 				8E87761427E7021900ED5839 /* KeypadButton.swift in Sources */,
 				8EA670AA27E1CBD7007928E4 /* AppDelegate.swift in Sources */,
+				8E8699AE281E980200F18BE9 /* AppInfo.swift in Sources */,
 				8E8699A8281DD4D600F18BE9 /* BaseViewController.swift in Sources */,
 				8E414F5727E72465007F0B65 /* HistoryViewReactor.swift in Sources */,
 				8E3EBE232819088400F84064 /* SettingItem.swift in Sources */,
@@ -715,12 +725,14 @@
 				8E529C6F280BCF7C004868FB /* GradientSmootherView.swift in Sources */,
 				8E429871281C59910091ECF0 /* AppearanceSelectorViewController.swift in Sources */,
 				8E8699A6281DBA5900F18BE9 /* AppearanceSelectorViewReactor.swift in Sources */,
+				8E8699AC281E936C00F18BE9 /* AboutviewReactor.swift in Sources */,
 				8EEEBBC627F96FF6009D3FED /* FeedbackManager.swift in Sources */,
 				8E3EBEA2281925C800F84064 /* SwitchRowTableViewCell.swift in Sources */,
 				8E8699A4281DB87900F18BE9 /* Appearance.swift in Sources */,
 				8EEEBBD627FA9083009D3FED /* Date+DateFormatter.swift in Sources */,
 				8EE41F7627EC1B040053FA17 /* HistoryTableViewCell.swift in Sources */,
 				8EEEBBCB27F9CD8E009D3FED /* CalculationHistory.swift in Sources */,
+				8E8699AA281E934600F18BE9 /* AboutAppViewController.swift in Sources */,
 				8EDA316F27F44A5C0077B0F0 /* String+Calculation.swift in Sources */,
 				8EACB38B281698D100EA5117 /* SettingViewReactor.swift in Sources */,
 				8E64D96827EF547500330497 /* UITraitColleciton+Orientation.swift in Sources */,
