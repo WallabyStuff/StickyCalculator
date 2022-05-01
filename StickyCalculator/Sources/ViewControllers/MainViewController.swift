@@ -11,7 +11,7 @@ import ReactorKit
 import RxCocoa
 import RxGesture
 
-class MainViewController: UIViewController, View {
+class MainViewController: BaseViewController, View {
 
     
     // MARK: - Properties
@@ -23,6 +23,7 @@ class MainViewController: UIViewController, View {
     @IBOutlet weak var keypadStackViewLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var historyContainerViewWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var showHistoryButton: UIButton!
+    @IBOutlet weak var settingButton: UIButton!
     @IBOutlet weak var historyContainerView: UIView!
     @IBOutlet weak var numberSentenceContainerView: UIView!
     @IBOutlet weak var numberSentenceTextView: UITextView!
@@ -78,6 +79,7 @@ class MainViewController: UIViewController, View {
         super.traitCollectionDidChange(previousTraitCollection)
         /// update cgcolors if appearance is changed
         setupShowHistoryButton()
+        setupSettingButton()
         
         if traitCollection.isLandScapeOniPhone {
             hideHistoryContainerView(false)
@@ -102,6 +104,7 @@ class MainViewController: UIViewController, View {
     
     private func setupView() {
         setupShowHistoryButton()
+        setupSettingButton()
         setupHistoryViewController()
         setupHistoryContainerView()
         setupNumberSentenceTextView()
@@ -117,7 +120,19 @@ class MainViewController: UIViewController, View {
         showHistoryButton.layer.shadowColor = R.color.backgroundColorReversed()?.cgColor
         showHistoryButton.layer.shadowOpacity = 0.1
         showHistoryButton.layer.shadowOffset = CGSize(width: 0, height: 4)
-        showHistoryButton.layer.shadowRadius = 20
+        showHistoryButton.layer.shadowRadius = 10
+        showHistoryButton.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        showHistoryButton.contentEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    }
+    
+    private func setupSettingButton() {
+        settingButton.layer.cornerRadius = 12
+        settingButton.layer.shadowColor = R.color.backgroundColorReversed()?.cgColor
+        settingButton.layer.shadowOpacity = 0.1
+        settingButton.layer.shadowOffset = CGSize(width: 0, height: 4)
+        settingButton.layer.shadowRadius = 10
+        settingButton.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+        settingButton.contentEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     }
     
     private func setupHistoryViewController() {
@@ -298,7 +313,15 @@ class MainViewController: UIViewController, View {
         
         iconKeypadButtonEqual.rx.tap
             .bind(with: self, onNext: { vc, _ in
-                vc.view.flash(with: R.color.backgroundGrayLightest()!)
+                if UserDefaults.standard.bool(forKey: UserDefaultsKey.visualEffect.rawValue) {
+                    vc.view.flash(with: R.color.backgroundGrayLightest()!)
+                }
+            }).disposed(by: disposeBag)
+        
+        settingButton.rx.tap
+            .asDriver()
+            .drive(with: self, onNext: { vc, _ in
+                vc.presentSettingVC()
             }).disposed(by: disposeBag)
         
         // State
@@ -434,6 +457,17 @@ class MainViewController: UIViewController, View {
                 self.resultLabelGradientView.fadeOut()
             }
         }
+    }
+    
+    private func presentSettingVC() {
+        let storyboard = UIStoryboard(name: "Setting", bundle: nil)
+        guard let settingVC = storyboard.instantiateViewController(withIdentifier: "settingStoryboard") as? SettingViewController else {
+            return
+        }
+        
+        let wrappedVC = UINavigationController(rootViewController: settingVC)
+        wrappedVC.modalPresentationStyle = .fullScreen
+        present(wrappedVC, animated: true)
     }
 }
 

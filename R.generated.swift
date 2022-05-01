@@ -90,7 +90,7 @@ struct R: Rswift.Validatable {
   }
 
   #if os(iOS) || os(tvOS)
-  /// This `R.storyboard` struct is generated, and contains static references to 3 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 4 storyboards.
   struct storyboard {
     /// Storyboard `History`.
     static let history = _R.storyboard.history()
@@ -98,6 +98,8 @@ struct R: Rswift.Validatable {
     static let launchScreen = _R.storyboard.launchScreen()
     /// Storyboard `Main`.
     static let main = _R.storyboard.main()
+    /// Storyboard `Setting`.
+    static let setting = _R.storyboard.setting()
 
     #if os(iOS) || os(tvOS)
     /// `UIStoryboard(name: "History", bundle: ...)`
@@ -120,11 +122,18 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    #if os(iOS) || os(tvOS)
+    /// `UIStoryboard(name: "Setting", bundle: ...)`
+    static func setting(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.setting)
+    }
+    #endif
+
     fileprivate init() {}
   }
   #endif
 
-  /// This `R.color` struct is generated, and contains static references to 16 colors.
+  /// This `R.color` struct is generated, and contains static references to 22 colors.
   struct color {
     /// Color `AccentBlack-light`.
     static let accentBlackLight = Rswift.ColorResource(bundle: R.hostingBundle, name: "AccentBlack-light")
@@ -140,14 +149,26 @@ struct R: Rswift.Validatable {
     static let backgroundColorReversed = Rswift.ColorResource(bundle: R.hostingBundle, name: "BackgroundColor-reversed")
     /// Color `BackgroundColor`.
     static let backgroundColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "BackgroundColor")
+    /// Color `BackgroundGray-lighter`.
+    static let backgroundGrayLighter = Rswift.ColorResource(bundle: R.hostingBundle, name: "BackgroundGray-lighter")
     /// Color `BackgroundGray-lightest`.
     static let backgroundGrayLightest = Rswift.ColorResource(bundle: R.hostingBundle, name: "BackgroundGray-lightest")
     /// Color `BackgroundGray`.
     static let backgroundGray = Rswift.ColorResource(bundle: R.hostingBundle, name: "BackgroundGray")
+    /// Color `IconBlack`.
+    static let iconBlack = Rswift.ColorResource(bundle: R.hostingBundle, name: "IconBlack")
     /// Color `IconColor`.
     static let iconColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "IconColor")
     /// Color `IconWhite`.
     static let iconWhite = Rswift.ColorResource(bundle: R.hostingBundle, name: "IconWhite")
+    /// Color `Item-blue`.
+    static let itemBlue = Rswift.ColorResource(bundle: R.hostingBundle, name: "Item-blue")
+    /// Color `Item-mint`.
+    static let itemMint = Rswift.ColorResource(bundle: R.hostingBundle, name: "Item-mint")
+    /// Color `Item-red`.
+    static let itemRed = Rswift.ColorResource(bundle: R.hostingBundle, name: "Item-red")
+    /// Color `Item-yellow`.
+    static let itemYellow = Rswift.ColorResource(bundle: R.hostingBundle, name: "Item-yellow")
     /// Color `LineGray-reversed`.
     static let lineGrayReversed = Rswift.ColorResource(bundle: R.hostingBundle, name: "LineGray-reversed")
     /// Color `LineGray`.
@@ -232,11 +253,29 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "BackgroundGray-lighter", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func backgroundGrayLighter(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.backgroundGrayLighter, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIColor(named: "BackgroundGray-lightest", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
     static func backgroundGrayLightest(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.backgroundGrayLightest, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "IconBlack", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func iconBlack(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.iconBlack, compatibleWith: traitCollection)
     }
     #endif
 
@@ -255,6 +294,42 @@ struct R: Rswift.Validatable {
     @available(iOS 11.0, *)
     static func iconWhite(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.iconWhite, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "Item-blue", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func itemBlue(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.itemBlue, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "Item-mint", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func itemMint(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.itemMint, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "Item-red", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func itemRed(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.itemRed, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "Item-yellow", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func itemYellow(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.itemYellow, compatibleWith: traitCollection)
     }
     #endif
 
@@ -368,10 +443,26 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(watchOS)
+    /// `UIColor(named: "BackgroundGray-lighter", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func backgroundGrayLighter(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.backgroundGrayLighter.name)
+    }
+    #endif
+
+    #if os(watchOS)
     /// `UIColor(named: "BackgroundGray-lightest", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
     static func backgroundGrayLightest(_: Void = ()) -> UIKit.UIColor? {
       return UIKit.UIColor(named: R.color.backgroundGrayLightest.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "IconBlack", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func iconBlack(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.iconBlack.name)
     }
     #endif
 
@@ -388,6 +479,38 @@ struct R: Rswift.Validatable {
     @available(watchOSApplicationExtension 4.0, *)
     static func iconWhite(_: Void = ()) -> UIKit.UIColor? {
       return UIKit.UIColor(named: R.color.iconWhite.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "Item-blue", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func itemBlue(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.itemBlue.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "Item-mint", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func itemMint(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.itemMint.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "Item-red", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func itemRed(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.itemRed.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "Item-yellow", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func itemYellow(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.itemYellow.name)
     }
     #endif
 
@@ -513,26 +636,40 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 9 images.
+  /// This `R.image` struct is generated, and contains static references to 16 images.
   struct image {
     /// Image `add`.
     static let add = Rswift.ImageResource(bundle: R.hostingBundle, name: "add")
     /// Image `backspace`.
     static let backspace = Rswift.ImageResource(bundle: R.hostingBundle, name: "backspace")
+    /// Image `check`.
+    static let check = Rswift.ImageResource(bundle: R.hostingBundle, name: "check")
     /// Image `divide`.
     static let divide = Rswift.ImageResource(bundle: R.hostingBundle, name: "divide")
     /// Image `dot`.
     static let dot = Rswift.ImageResource(bundle: R.hostingBundle, name: "dot")
     /// Image `equal`.
     static let equal = Rswift.ImageResource(bundle: R.hostingBundle, name: "equal")
+    /// Image `flash`.
+    static let flash = Rswift.ImageResource(bundle: R.hostingBundle, name: "flash")
+    /// Image `folder`.
+    static let folder = Rswift.ImageResource(bundle: R.hostingBundle, name: "folder")
+    /// Image `gear`.
+    static let gear = Rswift.ImageResource(bundle: R.hostingBundle, name: "gear")
+    /// Image `info`.
+    static let info = Rswift.ImageResource(bundle: R.hostingBundle, name: "info")
     /// Image `minus`.
     static let minus = Rswift.ImageResource(bundle: R.hostingBundle, name: "minus")
     /// Image `multiply`.
     static let multiply = Rswift.ImageResource(bundle: R.hostingBundle, name: "multiply")
+    /// Image `paint-brush`.
+    static let paintBrush = Rswift.ImageResource(bundle: R.hostingBundle, name: "paint-brush")
     /// Image `percent`.
     static let percent = Rswift.ImageResource(bundle: R.hostingBundle, name: "percent")
     /// Image `plus-minus`.
     static let plusMinus = Rswift.ImageResource(bundle: R.hostingBundle, name: "plus-minus")
+    /// Image `right-chevron`.
+    static let rightChevron = Rswift.ImageResource(bundle: R.hostingBundle, name: "right-chevron")
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "add", bundle: ..., traitCollection: ...)`
@@ -545,6 +682,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "backspace", bundle: ..., traitCollection: ...)`
     static func backspace(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.backspace, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "check", bundle: ..., traitCollection: ...)`
+    static func check(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.check, compatibleWith: traitCollection)
     }
     #endif
 
@@ -570,6 +714,34 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "flash", bundle: ..., traitCollection: ...)`
+    static func flash(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.flash, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "folder", bundle: ..., traitCollection: ...)`
+    static func folder(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.folder, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "gear", bundle: ..., traitCollection: ...)`
+    static func gear(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.gear, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "info", bundle: ..., traitCollection: ...)`
+    static func info(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.info, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "minus", bundle: ..., traitCollection: ...)`
     static func minus(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.minus, compatibleWith: traitCollection)
@@ -584,6 +756,13 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "paint-brush", bundle: ..., traitCollection: ...)`
+    static func paintBrush(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.paintBrush, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "percent", bundle: ..., traitCollection: ...)`
     static func percent(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.percent, compatibleWith: traitCollection)
@@ -594,6 +773,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "plus-minus", bundle: ..., traitCollection: ...)`
     static func plusMinus(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.plusMinus, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "right-chevron", bundle: ..., traitCollection: ...)`
+    static func rightChevron(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.rightChevron, compatibleWith: traitCollection)
     }
     #endif
 
@@ -631,10 +817,16 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 4 nibs.
   struct nib {
     /// Nib `HistoryTableViewCell`.
     static let historyTableViewCell = _R.nib._HistoryTableViewCell()
+    /// Nib `OptionRowTableViewCell`.
+    static let optionRowTableViewCell = _R.nib._OptionRowTableViewCell()
+    /// Nib `SwitchRowTableViewCell`.
+    static let switchRowTableViewCell = _R.nib._SwitchRowTableViewCell()
+    /// Nib `TapActionRowTableViewCell`.
+    static let tapActionRowTableViewCell = _R.nib._TapActionRowTableViewCell()
 
     #if os(iOS) || os(tvOS)
     /// `UINib(name: "HistoryTableViewCell", in: bundle)`
@@ -644,17 +836,59 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "OptionRowTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.optionRowTableViewCell) instead")
+    static func optionRowTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.optionRowTableViewCell)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "SwitchRowTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.switchRowTableViewCell) instead")
+    static func switchRowTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.switchRowTableViewCell)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "TapActionRowTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.tapActionRowTableViewCell) instead")
+    static func tapActionRowTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.tapActionRowTableViewCell)
+    }
+    #endif
+
     static func historyTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> HistoryTableViewCell? {
       return R.nib.historyTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HistoryTableViewCell
+    }
+
+    static func optionRowTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> OptionRowTableViewCell? {
+      return R.nib.optionRowTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? OptionRowTableViewCell
+    }
+
+    static func switchRowTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> SwitchRowTableViewCell? {
+      return R.nib.switchRowTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? SwitchRowTableViewCell
+    }
+
+    static func tapActionRowTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> TapActionRowTableViewCell? {
+      return R.nib.tapActionRowTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? TapActionRowTableViewCell
     }
 
     fileprivate init() {}
   }
 
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 4 reuse identifiers.
   struct reuseIdentifier {
     /// Reuse identifier `historyTableCell`.
     static let historyTableCell: Rswift.ReuseIdentifier<HistoryTableViewCell> = Rswift.ReuseIdentifier(identifier: "historyTableCell")
+    /// Reuse identifier `optionRowCell`.
+    static let optionRowCell: Rswift.ReuseIdentifier<OptionRowTableViewCell> = Rswift.ReuseIdentifier(identifier: "optionRowCell")
+    /// Reuse identifier `switchRowCell`.
+    static let switchRowCell: Rswift.ReuseIdentifier<SwitchRowTableViewCell> = Rswift.ReuseIdentifier(identifier: "switchRowCell")
+    /// Reuse identifier `tapActionRowCell`.
+    static let tapActionRowCell: Rswift.ReuseIdentifier<TapActionRowTableViewCell> = Rswift.ReuseIdentifier(identifier: "tapActionRowCell")
 
     fileprivate init() {}
   }
@@ -705,7 +939,7 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
 
-    /// This `R.string.localizable` struct is generated, and contains static references to 9 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 20 localization keys.
     struct localizable {
       /// en translation: 
       ///
@@ -719,6 +953,14 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, ko, ja
       static let minute = Rswift.StringResource(key: "minute", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
+      /// en translation: About
+      ///
+      /// Locales: en, ko, ja
+      static let about = Rswift.StringResource(key: "about", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
+      /// en translation: Appearance
+      ///
+      /// Locales: en, ko, ja
+      static let appearance = Rswift.StringResource(key: "appearance", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
       /// en translation: Are you sure you want to clear all histories
       ///
       /// Locales: en, ko, ja
@@ -735,14 +977,50 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, ko, ja
       static let confirm = Rswift.StringResource(key: "confirm", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
+      /// en translation: Dark
+      ///
+      /// Locales: en, ko, ja
+      static let appearanceDark = Rswift.StringResource(key: "appearance.dark", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
       /// en translation: Delete
       ///
       /// Locales: en, ko, ja
       static let delete = Rswift.StringResource(key: "delete", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
+      /// en translation: Dismiss
+      ///
+      /// Locales: en, ko, ja
+      static let dismiss = Rswift.StringResource(key: "dismiss", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
+      /// en translation: Light
+      ///
+      /// Locales: en, ko, ja
+      static let appearanceLight = Rswift.StringResource(key: "appearance.light", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
+      /// en translation: Make flash effect when you press the equal button
+      ///
+      /// Locales: en, ko, ja
+      static let visual_effectDesc = Rswift.StringResource(key: "visual_effect.desc", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
+      /// en translation: Record history
+      ///
+      /// Locales: en, ko, ja
+      static let record_history = Rswift.StringResource(key: "record_history", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
+      /// en translation: Recording calculation history
+      ///
+      /// Locales: en, ko, ja
+      static let record_historyDesc = Rswift.StringResource(key: "record_history.desc", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
       /// en translation: Result value copied to clipboard
       ///
       /// Locales: en, ko, ja
       static let copy_message = Rswift.StringResource(key: "copy_message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
+      /// en translation: Settings
+      ///
+      /// Locales: en, ko, ja
+      static let setting = Rswift.StringResource(key: "setting", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
+      /// en translation: System
+      ///
+      /// Locales: en, ko, ja
+      static let appearanceSystem = Rswift.StringResource(key: "appearance.system", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
+      /// en translation: Visual effect
+      ///
+      /// Locales: en, ko, ja
+      static let visual_effect = Rswift.StringResource(key: "visual_effect", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
 
       /// en translation: 
       ///
@@ -787,6 +1065,36 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("minute", bundle: bundle, comment: "")
+      }
+
+      /// en translation: About
+      ///
+      /// Locales: en, ko, ja
+      static func about(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("about", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "about"
+        }
+
+        return NSLocalizedString("about", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Appearance
+      ///
+      /// Locales: en, ko, ja
+      static func appearance(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("appearance", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "appearance"
+        }
+
+        return NSLocalizedString("appearance", bundle: bundle, comment: "")
       }
 
       /// en translation: Are you sure you want to clear all histories
@@ -849,6 +1157,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("confirm", bundle: bundle, comment: "")
       }
 
+      /// en translation: Dark
+      ///
+      /// Locales: en, ko, ja
+      static func appearanceDark(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("appearance.dark", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "appearance.dark"
+        }
+
+        return NSLocalizedString("appearance.dark", bundle: bundle, comment: "")
+      }
+
       /// en translation: Delete
       ///
       /// Locales: en, ko, ja
@@ -864,6 +1187,81 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("delete", bundle: bundle, comment: "")
       }
 
+      /// en translation: Dismiss
+      ///
+      /// Locales: en, ko, ja
+      static func dismiss(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("dismiss", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "dismiss"
+        }
+
+        return NSLocalizedString("dismiss", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Light
+      ///
+      /// Locales: en, ko, ja
+      static func appearanceLight(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("appearance.light", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "appearance.light"
+        }
+
+        return NSLocalizedString("appearance.light", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Make flash effect when you press the equal button
+      ///
+      /// Locales: en, ko, ja
+      static func visual_effectDesc(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("visual_effect.desc", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "visual_effect.desc"
+        }
+
+        return NSLocalizedString("visual_effect.desc", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Record history
+      ///
+      /// Locales: en, ko, ja
+      static func record_history(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("record_history", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "record_history"
+        }
+
+        return NSLocalizedString("record_history", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Recording calculation history
+      ///
+      /// Locales: en, ko, ja
+      static func record_historyDesc(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("record_history.desc", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "record_history.desc"
+        }
+
+        return NSLocalizedString("record_history.desc", bundle: bundle, comment: "")
+      }
+
       /// en translation: Result value copied to clipboard
       ///
       /// Locales: en, ko, ja
@@ -877,6 +1275,51 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("copy_message", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Settings
+      ///
+      /// Locales: en, ko, ja
+      static func setting(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("setting", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "setting"
+        }
+
+        return NSLocalizedString("setting", bundle: bundle, comment: "")
+      }
+
+      /// en translation: System
+      ///
+      /// Locales: en, ko, ja
+      static func appearanceSystem(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("appearance.system", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "appearance.system"
+        }
+
+        return NSLocalizedString("appearance.system", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Visual effect
+      ///
+      /// Locales: en, ko, ja
+      static func visual_effect(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("visual_effect", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "visual_effect"
+        }
+
+        return NSLocalizedString("visual_effect", bundle: bundle, comment: "")
       }
 
       fileprivate init() {}
@@ -901,12 +1344,20 @@ struct R: Rswift.Validatable {
 struct _R: Rswift.Validatable {
   static func validate() throws {
     #if os(iOS) || os(tvOS)
+    try nib.validate()
+    #endif
+    #if os(iOS) || os(tvOS)
     try storyboard.validate()
     #endif
   }
 
   #if os(iOS) || os(tvOS)
-  struct nib {
+  struct nib: Rswift.Validatable {
+    static func validate() throws {
+      try _OptionRowTableViewCell.validate()
+      try _TapActionRowTableViewCell.validate()
+    }
+
     struct _HistoryTableViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
       typealias ReusableType = HistoryTableViewCell
 
@@ -916,6 +1367,68 @@ struct _R: Rswift.Validatable {
 
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> HistoryTableViewCell? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HistoryTableViewCell
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _OptionRowTableViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType, Rswift.Validatable {
+      typealias ReusableType = OptionRowTableViewCell
+
+      let bundle = R.hostingBundle
+      let identifier = "optionRowCell"
+      let name = "OptionRowTableViewCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> OptionRowTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? OptionRowTableViewCell
+      }
+
+      static func validate() throws {
+        if UIKit.UIImage(named: "check", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'check' is used in nib 'OptionRowTableViewCell', but couldn't be loaded.") }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+          if UIKit.UIColor(named: "AccentColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'AccentColor' is used in nib 'OptionRowTableViewCell', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "BackgroundColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'BackgroundColor' is used in nib 'OptionRowTableViewCell', but couldn't be loaded.") }
+        }
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _SwitchRowTableViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = SwitchRowTableViewCell
+
+      let bundle = R.hostingBundle
+      let identifier = "switchRowCell"
+      let name = "SwitchRowTableViewCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> SwitchRowTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? SwitchRowTableViewCell
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _TapActionRowTableViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType, Rswift.Validatable {
+      typealias ReusableType = TapActionRowTableViewCell
+
+      let bundle = R.hostingBundle
+      let identifier = "tapActionRowCell"
+      let name = "TapActionRowTableViewCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> TapActionRowTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? TapActionRowTableViewCell
+      }
+
+      static func validate() throws {
+        if UIKit.UIImage(named: "right-chevron", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'right-chevron' is used in nib 'TapActionRowTableViewCell', but couldn't be loaded.") }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+          if UIKit.UIColor(named: "BackgroundColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'BackgroundColor' is used in nib 'TapActionRowTableViewCell', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "BackgroundGray-lighter", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'BackgroundGray-lighter' is used in nib 'TapActionRowTableViewCell', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "IconBlack", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'IconBlack' is used in nib 'TapActionRowTableViewCell', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "TextColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'TextColor' is used in nib 'TapActionRowTableViewCell', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "TextGray", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'TextGray' is used in nib 'TapActionRowTableViewCell', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "TextGray-light", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'TextGray-light' is used in nib 'TapActionRowTableViewCell', but couldn't be loaded.") }
+        }
       }
 
       fileprivate init() {}
@@ -936,6 +1449,9 @@ struct _R: Rswift.Validatable {
       #endif
       #if os(iOS) || os(tvOS)
       try main.validate()
+      #endif
+      #if os(iOS) || os(tvOS)
+      try setting.validate()
       #endif
     }
 
@@ -1000,7 +1516,8 @@ struct _R: Rswift.Validatable {
         if UIKit.UIImage(named: "divide", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'divide' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "dot", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'dot' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "equal", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'equal' is used in storyboard 'Main', but couldn't be loaded.") }
-        if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "folder.fill") == nil { throw Rswift.ValidationError(description: "[R.swift] System image named 'folder.fill' is used in storyboard 'Main', but couldn't be loaded.") } }
+        if UIKit.UIImage(named: "folder", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'folder' is used in storyboard 'Main', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "gear", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'gear' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "minus", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'minus' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "multiply", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'multiply' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "percent", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'percent' is used in storyboard 'Main', but couldn't be loaded.") }
@@ -1012,6 +1529,37 @@ struct _R: Rswift.Validatable {
           if UIKit.UIColor(named: "TextGray", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'TextGray' is used in storyboard 'Main', but couldn't be loaded.") }
         }
         if _R.storyboard.main().mainStoryboard() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'mainStoryboard' could not be loaded from storyboard 'Main' as 'MainViewController'.") }
+      }
+
+      fileprivate init() {}
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    struct setting: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = UIKit.UINavigationController
+
+      let bundle = R.hostingBundle
+      let name = "Setting"
+      let settingStoryboard = StoryboardViewControllerResource<SettingViewController>(identifier: "settingStoryboard")
+      let themeSelectorStoryboard = StoryboardViewControllerResource<AppearanceSelectorViewController>(identifier: "themeSelectorStoryboard")
+
+      func settingStoryboard(_: Void = ()) -> SettingViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: settingStoryboard)
+      }
+
+      func themeSelectorStoryboard(_: Void = ()) -> AppearanceSelectorViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: themeSelectorStoryboard)
+      }
+
+      static func validate() throws {
+        if #available(iOS 11.0, tvOS 11.0, *) {
+          if UIKit.UIColor(named: "AccentPink", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'AccentPink' is used in storyboard 'Setting', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "BackgroundColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'BackgroundColor' is used in storyboard 'Setting', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "TextColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'TextColor' is used in storyboard 'Setting', but couldn't be loaded.") }
+        }
+        if _R.storyboard.setting().settingStoryboard() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'settingStoryboard' could not be loaded from storyboard 'Setting' as 'SettingViewController'.") }
+        if _R.storyboard.setting().themeSelectorStoryboard() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'themeSelectorStoryboard' could not be loaded from storyboard 'Setting' as 'AppearanceSelectorViewController'.") }
       }
 
       fileprivate init() {}

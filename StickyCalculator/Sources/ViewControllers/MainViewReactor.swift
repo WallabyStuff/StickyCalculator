@@ -255,13 +255,15 @@ class MainViewReactor: Reactor {
             
         case .saveHistory:
             if state.onResult == false {
-                let item = CalculationHistory(numberSentence: state.numberSentence,
-                                              resultValue: state.resultValue)
-                calculationHistoryManager.addData(item)
-                    .subscribe(onCompleted: {
-                        state.updateHistory += 1
-                    })
-                    .disposed(by: disposeBag)
+                if UserDefaults.standard.bool(forKey: UserDefaultsKey.recordHistory.rawValue) {
+                    let item = CalculationHistory(numberSentence: state.numberSentence,
+                                                  resultValue: state.resultValue)
+                    calculationHistoryManager.addData(item)
+                        .subscribe(onCompleted: {
+                            state.updateHistory += 1
+                        })
+                        .disposed(by: disposeBag)
+                }
             }
             
         case .updateResultState(let bool):
