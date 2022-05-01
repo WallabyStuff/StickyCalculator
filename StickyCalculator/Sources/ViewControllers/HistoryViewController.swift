@@ -17,7 +17,7 @@ protocol HistoryViewDelegate {
     @objc optional func didHistoryItemSelected(item: CalculationHistory)
 }
 
-class HistoryViewController: UIViewController, View {
+class HistoryViewController: BaseViewController, View {
     
     
     // MARK: - Properties

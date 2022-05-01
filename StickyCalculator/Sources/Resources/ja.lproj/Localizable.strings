@@ -3,6 +3,7 @@
 "confirm" = "確認";
 "cancel" = "キャンセル";
 "delete" = "削除";
+"dismiss" = "確認";
 
 // Toast messages
 "copy_message" = "クリップボードにコピーされました。";
@@ -11,3 +12,26 @@
 "hour" = "時 ";
 "minute" = "分 ";
 "second" = "秒";
+
+// NavigationBar Titles
+"setting" = "設定";
+"theme" = "テーマ";
+"about" = "クレジット";
+
+
+// Setting Items
+"setting" = "設定";
+
+"visual_effect" = "フラッシュ効果";
+"visual_effect.desc" = "等号ボタンを押したらフラッシュ効果を作り出します";
+
+"record_history" = "計算記録";
+"record_history.desc" = "計算記録を貯蔵します";
+
+"appearance" = "テーマ";
+"appearance.system" = "システーム";
+"appearance.light" = "ライト";
+"appearance.dark" = "ダーク";
+
+"about" = "クレジット";
+
