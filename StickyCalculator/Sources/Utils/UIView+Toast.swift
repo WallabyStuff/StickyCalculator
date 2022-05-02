@@ -19,11 +19,11 @@ extension UIView {
         toastView.backgroundColor = ToastManager.shared.style.backgroundColor
         toastView.layer.cornerRadius = ToastManager.shared.style.cornerRadius
         toastView.layer.borderWidth = ToastManager.shared.style.borderWidth
-        toastView.layer.borderColor = ToastManager.shared.style.borderColor.cgColor
+        toastView.layer.borderColor = ToastManager.shared.style.borderColor.resolvedColor(with: self.traitCollection).cgColor
         
         if ToastManager.shared.style.isShadowHidden == false {
             toastView.layer.shadowRadius = ToastManager.shared.style.shadowRadius
-            toastView.layer.shadowColor = ToastManager.shared.style.shadowColor.cgColor
+            toastView.layer.shadowColor = ToastManager.shared.style.shadowColor.resolvedColor(with: self.traitCollection).cgColor
             toastView.layer.shadowOffset = ToastManager.shared.style.shadowOffset
             toastView.layer.shadowOpacity = ToastManager.shared.style.shadowOpacity
         }
