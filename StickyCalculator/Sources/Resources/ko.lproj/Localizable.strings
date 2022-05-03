@@ -26,7 +26,7 @@
 "setting" = "설정";
 
 "visual_effect" = "시각효과";
-"visual_effect.desc" = "등호 버튼을 누르면 반짝이는 배경 효과를 만들어냅니다.";
+"visual_effect.desc" = "등호 버튼을 누르면 깜빡이는 배경 효과를 만들어냅니다.";
 
 "record_history" = "계산기록";
 "record_history.desc" = "계산기록을 저장합니다.";

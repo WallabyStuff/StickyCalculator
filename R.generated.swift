@@ -1006,14 +1006,14 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, ko, ja
       static let visual_effectDesc = Rswift.StringResource(key: "visual_effect.desc", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
+      /// en translation: Record calculation history
+      ///
+      /// Locales: en, ko, ja
+      static let record_historyDesc = Rswift.StringResource(key: "record_history.desc", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
       /// en translation: Record history
       ///
       /// Locales: en, ko, ja
       static let record_history = Rswift.StringResource(key: "record_history", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
-      /// en translation: Recording calculation history
-      ///
-      /// Locales: en, ko, ja
-      static let record_historyDesc = Rswift.StringResource(key: "record_history.desc", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
       /// en translation: Result value copied to clipboard
       ///
       /// Locales: en, ko, ja
@@ -1241,6 +1241,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("visual_effect.desc", bundle: bundle, comment: "")
       }
 
+      /// en translation: Record calculation history
+      ///
+      /// Locales: en, ko, ja
+      static func record_historyDesc(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("record_history.desc", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "record_history.desc"
+        }
+
+        return NSLocalizedString("record_history.desc", bundle: bundle, comment: "")
+      }
+
       /// en translation: Record history
       ///
       /// Locales: en, ko, ja
@@ -1254,21 +1269,6 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("record_history", bundle: bundle, comment: "")
-      }
-
-      /// en translation: Recording calculation history
-      ///
-      /// Locales: en, ko, ja
-      static func record_historyDesc(preferredLanguages: [String]? = nil) -> String {
-        guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("record_history.desc", bundle: hostingBundle, comment: "")
-        }
-
-        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "record_history.desc"
-        }
-
-        return NSLocalizedString("record_history.desc", bundle: bundle, comment: "")
       }
 
       /// en translation: Result value copied to clipboard

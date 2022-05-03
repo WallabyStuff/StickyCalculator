@@ -23,7 +23,7 @@
 "visual_effect.desc" = "Make flash effect when you press the equal button";
 
 "record_history" = "Record history";
-"record_history.desc" = "Recording calculation history";
+"record_history.desc" = "Record calculation history";
 
 "appearance" = "Appearance";
 "appearance.system" = "System";
