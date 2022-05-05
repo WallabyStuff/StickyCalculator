@@ -1,0 +1,40 @@
+"clear" = "전체삭제";
+"confirm_message" = "정말 모든 계산기록을 삭제하시겠습니까?";
+"confirm" = "확인";
+"cancel" = "취소";
+"delete" = "삭제";
+"dismiss" = "확인";
+
+
+// Toast messages
+"copy_message" = "결과값이 클립보드에 복사되었습니다.";
+
+
+// Date format
+"hour" = "시 ";
+"minute" = "분 ";
+"second" = "초";
+
+
+// NavigationBar Titles
+"setting" = "설정";
+"theme" = "테마";
+"about" = "크레딧";
+
+
+// Setting Items
+"setting" = "설정";
+
+"visual_effect" = "시각효과";
+"visual_effect.desc" = "등호 버튼을 누르면 깜빡이는 배경 효과를 만들어냅니다.";
+
+"record_history" = "계산기록";
+"record_history.desc" = "계산기록을 저장합니다.";
+
+"appearance" = "테마";
+"appearance.system" = "시스템";
+"appearance.light" = "라이트";
+"appearance.dark" = "다크";
+
+"about" = "크레딧";
+

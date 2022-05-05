@@ -1,0 +1,34 @@
+"clear" = "Clear";
+"confirm_message" = "Are you sure you want to clear all histories";
+"confirm" = "Confirm";
+"cancel" = "Cancel";
+"delete" = "Delete";
+"dismiss" = "Dismiss";
+
+
+// Toast messages
+"copy_message" = "Result value copied to clipboard";
+
+
+// Date format
+"hour" = ":";
+"minute" = ":";
+"second" = "";
+
+
+// Setting Items
+"setting" = "Settings";
+
+"visual_effect" = "Visual effect";
+"visual_effect.desc" = "Make flash effect when you press the equal button";
+
+"record_history" = "Record history";
+"record_history.desc" = "Record calculation history";
+
+"appearance" = "Appearance";
+"appearance.system" = "System";
+"appearance.light" = "Light";
+"appearance.dark" = "Dark";
+
+"about" = "About";
+
