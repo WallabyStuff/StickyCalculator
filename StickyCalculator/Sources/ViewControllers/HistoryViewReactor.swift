@@ -36,6 +36,9 @@ class HistoryViewReactor: Reactor {
     private var disposeBag = DisposeBag()
     private let calculationHistoryManager = CalculationHistoryManager()
     
+    
+    // MARK: - Initializers
+    
     init() {
         self.initialState = State(
             calculationHistories: HistoryViewReactor.configureSections(),

@@ -17,7 +17,7 @@ protocol HistoryViewDelegate {
     @objc optional func didHistoryItemSelected(item: CalculationHistory)
 }
 
-class HistoryViewController: BaseViewController, View {
+class HistoryViewController: BaseViewController {
     
     
     // MARK: - Properties
@@ -29,12 +29,29 @@ class HistoryViewController: BaseViewController, View {
     typealias Reactor = HistoryViewReactor
     
     weak var delegate: HistoryViewDelegate?
-    var disposeBag = DisposeBag()
+    private var disposeBag = DisposeBag()
+    private var reactor: HistoryViewReactor
     private var historyView = HistoryViewReactor()
     private var dataSource: RxTableViewSectionedAnimatedDataSource<CalculationHistorySection>?
     
     
     // MARK: - Initializers
+    
+    init(_ reactor: HistoryViewReactor) {
+        self.reactor = reactor
+        super.init(nibName: nil, bundle: nil)
+        self.dataSource = dataSourceFactory()
+    }
+    
+    init?(_ coder: NSCoder, _ reactor: HistoryViewReactor) {
+        self.reactor = reactor
+        super.init(coder: coder)
+        self.dataSource = dataSourceFactory()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     private func dataSourceFactory() -> RxTableViewSectionedAnimatedDataSource<CalculationHistorySection> {
         let dataSource = RxTableViewSectionedAnimatedDataSource<CalculationHistorySection> { [weak self] dataSource, tableView, indexPath, item in
@@ -77,10 +94,8 @@ class HistoryViewController: BaseViewController, View {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        dataSource = dataSourceFactory()
-        self.reactor = HistoryViewReactor()
         setupView()
+        bind()
     }
     
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -116,7 +131,7 @@ class HistoryViewController: BaseViewController, View {
     
     // MARK: - Configuring
     
-    func bind(reactor: Reactor) {
+    func bind() {
         // Action
         hideButton.rx.tap.asDriver()
             .drive(with: self, onNext: { vc, _ in
@@ -157,10 +172,10 @@ class HistoryViewController: BaseViewController, View {
                                       message: "confirm_message".localized(),
                                       preferredStyle: .actionSheet)
         
-        let confirmAction = UIAlertAction(title: "confirm".localized(), style: .destructive) { action in
-            guard let reactor = self.reactor else { return }
+        let confirmAction = UIAlertAction(title: "confirm".localized(), style: .destructive) { [weak self] action in
+            guard let self = self else { return }
             Observable.just(HistoryViewReactor.Action.clear)
-                .bind(to: reactor.action)
+                .bind(to: self.reactor.action)
                 .dispose()
         }
         let cancelAction = UIAlertAction(title: "cancel".localized(), style: .cancel)
@@ -171,18 +186,14 @@ class HistoryViewController: BaseViewController, View {
     }
     
     func reloadHistoryTableView() {
-        guard let reactor = self.reactor else { return }
-        
         Observable.just(HistoryViewReactor.Action.reload)
-            .bind(to: reactor.action)
+            .bind(to: self.reactor.action)
             .dispose()
     }
     
     func removeHistoryItem(_ indexPath: IndexPath) {
-        guard let reactor = self.reactor else { return }
-        
         Observable.just(HistoryViewReactor.Action.removeItem(indexPath))
-            .bind(to: reactor.action)
+            .bind(to: self.reactor.action)
             .dispose()
     }
 }

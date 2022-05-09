@@ -10,7 +10,7 @@ import UIKit
 import ReactorKit
 import RxCocoa
 
-class AboutAppViewController: BaseViewController, View {
+class AboutAppViewController: BaseViewController {
     
     
     // MARK: - Properties
@@ -18,7 +18,25 @@ class AboutAppViewController: BaseViewController, View {
     @IBOutlet weak var headerLabel: UILabel!
     
     typealias Reactor = AboutAppViewReactor
-    var disposeBag = DisposeBag()
+    private var disposeBag = DisposeBag()
+    private var reactor: AboutAppViewReactor
+    
+    
+    // MARK: - Initializers
+    
+    init(_ reactor: AboutAppViewReactor) {
+        self.reactor = reactor
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    init?(_ coder: NSCoder, _ reactor: AboutAppViewReactor) {
+        self.reactor = reactor
+        super.init(coder: coder)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     
     // MARK: - LifeCycles
@@ -28,6 +46,7 @@ class AboutAppViewController: BaseViewController, View {
         
         self.reactor = AboutAppViewReactor()
         setupView()
+        bind(reactor: reactor)
     }
     
     

@@ -103,9 +103,9 @@ extension SettingItem {
                               linkHeader: Appearance.current.title,
                               actionHandler: { vc in
                 let storyboard = UIStoryboard(name: R.storyboard.setting.name, bundle: nil)
-                guard let destVC = storyboard.instantiateViewController(withIdentifier: R.storyboard.setting.themeSelectorStoryboard.identifier)
-                        as? AppearanceSelectorViewController else {
-                    return
+                let destVC = storyboard.instantiateViewController(identifier: R.storyboard.setting.themeSelectorStoryboard.identifier) { coder -> AppearanceSelectorViewController in
+                    let reactor = AppearnaceSelectorViewReactor()
+                    return .init(coder, reactor) ?? AppearanceSelectorViewController(.init())
                 }
                 
                 destVC.delegate = vc as? AppearanceSelectorViewDelegate
@@ -117,9 +117,9 @@ extension SettingItem {
                               title: "about".localized(),
                               actionHandler: { vc in
                 let storyboard = UIStoryboard(name: R.storyboard.setting.name, bundle: nil)
-                guard let destVC = storyboard.instantiateViewController(withIdentifier: R.storyboard.setting.aboutAppStoryboard.identifier)
-                        as? AboutAppViewController else {
-                    return
+                let destVC = storyboard.instantiateViewController(identifier: R.storyboard.setting.aboutAppStoryboard.identifier) { coder -> AboutAppViewController in
+                    let reactor = AboutAppViewReactor()
+                    return .init(coder, reactor) ?? AboutAppViewController(.init())
                 }
                 
                 vc.navigationController?.pushViewController(destVC, animated: true)

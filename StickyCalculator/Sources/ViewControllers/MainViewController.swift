@@ -61,9 +61,17 @@ class MainViewController: BaseViewController, View {
     typealias Reactor = MainViewReactor
     
     var disposeBag = DisposeBag()
-    private var historyViewController = HistoryViewController()
+    private var historyViewController: HistoryViewController
     private var numberSentenceGradientView = GradientSmootherView()
     private var resultLabelGradientView = GradientSmootherView()
+    
+    
+    // MARK: - Initializers
+    
+    required init?(coder: NSCoder) {
+        historyViewController = Self.instantiateHistoryViewController()
+        super.init(coder: coder)
+    }
     
     
     // MARK: - LifeCycle
@@ -71,6 +79,7 @@ class MainViewController: BaseViewController, View {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("view did load called")
         self.reactor = MainViewReactor()
         setupView()
     }
@@ -136,10 +145,7 @@ class MainViewController: BaseViewController, View {
     }
     
     private func setupHistoryViewController() {
-        guard let historyVC = instantiateHistoryViewController() else {
-            return
-        }
-        
+        let historyVC = Self.instantiateHistoryViewController()
         historyVC.delegate = self
         historyViewController = historyVC
     }
@@ -400,10 +406,7 @@ class MainViewController: BaseViewController, View {
     
     private func presentHistoryVC() {
         if historyContainerView.frame.width == 0 {
-            guard let historyVC = instantiateHistoryViewController() else {
-                return
-            }
-            
+            let historyVC = Self.instantiateHistoryViewController()
             historyVC.delegate = self
             present(historyVC, animated: true)
         } else {
@@ -411,11 +414,11 @@ class MainViewController: BaseViewController, View {
         }
     }
     
-    private func instantiateHistoryViewController() -> HistoryViewController? {
+    static private func instantiateHistoryViewController() -> HistoryViewController {
         let storyboard = UIStoryboard(name: R.storyboard.history.name, bundle: nil)
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: R.storyboard.history.historyStoryboard.identifier)
-                as? HistoryViewController else {
-            return nil
+        let viewController = storyboard.instantiateViewController(identifier: R.storyboard.history.historyStoryboard.identifier) { coder -> HistoryViewController in
+            let reactor = HistoryViewReactor()
+            return .init(coder, reactor) ?? HistoryViewController(.init())
         }
         
         return viewController
@@ -461,8 +464,9 @@ class MainViewController: BaseViewController, View {
     
     private func presentSettingVC() {
         let storyboard = UIStoryboard(name: "Setting", bundle: nil)
-        guard let settingVC = storyboard.instantiateViewController(withIdentifier: "settingStoryboard") as? SettingViewController else {
-            return
+        let settingVC = storyboard.instantiateViewController(identifier: "settingStoryboard") { coder -> SettingViewController in
+            let reactor = SettingViewReactor()
+            return .init(coder, reactor) ?? SettingViewController(.init())
         }
         
         let wrappedVC = UINavigationController(rootViewController: settingVC)
