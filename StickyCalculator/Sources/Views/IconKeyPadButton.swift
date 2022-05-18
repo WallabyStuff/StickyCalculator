@@ -10,10 +10,15 @@ import UIKit
 @IBDesignable
 class IconKeyPadButton: KeypadButton {
     
+    
     // MARK: - Properties
+    
+    private static let imageSizeRatio: CGFloat = 0.25
     private var _imageSize: CGFloat = 0
     
+    
     // MARK: - Initializers
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -24,24 +29,29 @@ class IconKeyPadButton: KeypadButton {
         setupView()
     }
     
+    
+    // MARK: - Configurations
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         configureInsets()
     }
     
-    // MARK: - Setup
     private func setupView() {
         titleLabel?.isHidden = true
     }
     
     private func configureInsets() {
-        let horizontalInset = (frame.width - _imageSize) / 2
-        let verticalInset = (frame.height - _imageSize) / 2
+        let resizedImageSize = (frame.width + frame.height) / 2 * Self.imageSizeRatio
+        let horizontalInset = (frame.width - resizedImageSize) / 2
+        let verticalInset = (frame.height - resizedImageSize) / 2
         contentEdgeInsets = UIEdgeInsets(top: verticalInset, left: horizontalInset, bottom: verticalInset, right: horizontalInset)
     }
 }
 
+
 // MARK: - Designs
+
 extension IconKeyPadButton {
     @IBInspectable
     var imageSize: CGFloat {
