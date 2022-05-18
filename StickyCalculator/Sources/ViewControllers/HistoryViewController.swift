@@ -171,6 +171,10 @@ class HistoryViewController: BaseViewController {
         let alert = UIAlertController(title: "clear".localized(),
                                       message: "confirm_message".localized(),
                                       preferredStyle: .actionSheet)
+        alert.popoverPresentationController?.sourceView = clearHistoryButton
+        alert.popoverPresentationController?.sourceRect = .init(x: clearHistoryButton.bounds.midX,
+                                                                y: clearHistoryButton.bounds.midY - clearHistoryButton.frame.height / 2,
+                                                                width: 0, height: 0)
         
         let confirmAction = UIAlertAction(title: "confirm".localized(), style: .destructive) { [weak self] action in
             guard let self = self else { return }
