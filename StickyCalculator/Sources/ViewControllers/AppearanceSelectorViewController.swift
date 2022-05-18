@@ -14,25 +14,44 @@ protocol AppearanceSelectorViewDelegate: AnyObject {
     func didNewAppearanceSelected(_ selectedAppearance: Appearance)
 }
 
-class AppearanceSelectorViewController: BaseViewController, View {
+class AppearanceSelectorViewController: BaseViewController {
     
     
     // MARK: - Properties
+    
     @IBOutlet weak var itemTableView: UITableView!
     
     typealias Reactor = AppearnaceSelectorViewReactor
     weak var delegate: AppearanceSelectorViewDelegate?
-    var disposeBag = DisposeBag()
+    private var disposeBag = DisposeBag()
+    private var reactor: AppearnaceSelectorViewReactor
     
     
     // MARK: - LifeCycles
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.reactor = AppearnaceSelectorViewReactor()
         setupView()
+        bind()
     }
+    
+    
+    // MARK: - Initializers
+    
+    init(_ reactor: AppearnaceSelectorViewReactor) {
+        self.reactor = reactor
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    init?(_ coder: NSCoder, _ reactor: AppearnaceSelectorViewReactor) {
+        self.reactor = reactor
+        super.init(coder: coder)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     
     
     // MARK: - Setups
@@ -54,7 +73,7 @@ class AppearanceSelectorViewController: BaseViewController, View {
         itemTableView.separatorStyle = .none
     }
     
-    func bind(reactor: AppearnaceSelectorViewReactor) {
+    func bind() {
         // Action
         itemTableView.rx.itemSelected
             .asDriver()
@@ -64,7 +83,7 @@ class AppearanceSelectorViewController: BaseViewController, View {
                     return
                 }
                 
-                let selectedAppearance = reactor.currentState.appearanceItems[indexPath.row]
+                let selectedAppearance = vc.reactor.currentState.appearanceItems[indexPath.row]
                 
                 cell.checkImageView.isHidden = false
                 UserDefaults.standard.set(selectedAppearance.rawValue,

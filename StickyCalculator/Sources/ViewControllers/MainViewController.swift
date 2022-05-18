@@ -21,8 +21,10 @@ class MainViewController: BaseViewController, View {
 
     // contriants
     @IBOutlet weak var keypadStackViewLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var historyContainerViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var historyContainerViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var historyContainerViewWidthConstraint: NSLayoutConstraint!
-    @IBOutlet weak var showHistoryButton: UIButton!
+    @IBOutlet weak var historyViewToggleButton: UIButton!
     @IBOutlet weak var settingButton: UIButton!
     @IBOutlet weak var historyContainerView: UIView!
     @IBOutlet weak var numberSentenceContainerView: UIView!
@@ -61,9 +63,17 @@ class MainViewController: BaseViewController, View {
     typealias Reactor = MainViewReactor
     
     var disposeBag = DisposeBag()
-    private var historyViewController = HistoryViewController()
+    private var historyViewController: HistoryViewController
     private var numberSentenceGradientView = GradientSmootherView()
     private var resultLabelGradientView = GradientSmootherView()
+    
+    
+    // MARK: - Initializers
+    
+    required init?(coder: NSCoder) {
+        historyViewController = Self.instantiateHistoryViewController()
+        super.init(coder: coder)
+    }
     
     
     // MARK: - LifeCycle
@@ -71,6 +81,7 @@ class MainViewController: BaseViewController, View {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("view did load called")
         self.reactor = MainViewReactor()
         setupView()
     }
@@ -78,16 +89,19 @@ class MainViewController: BaseViewController, View {
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         /// update cgcolors if appearance is changed
-        setupShowHistoryButton()
+        setupHistoryViewToggleButton()
         setupSettingButton()
         
         if traitCollection.isLandScapeOniPhone {
-            hideHistoryContainerView(false)
+            print("Trait collection state 1 called")
+            toggleHistoryContainerView(false, duration: 0)
         } else if traitCollection.isPortraitOniPhone {
-            hideHistoryContainerView(true)
+            print("Trait collection state 2 called")
+            toggleHistoryContainerView(true, duration: 0)
         } else if traitCollection.isPortraitOrLandscapeOniPad {
             if isHistoryContainerViewHidden == false {
-                hideHistoryContainerView(false)
+                print("Trait collection state 3 called")
+                toggleHistoryContainerView(false, duration: 0)
             }
         }
         
@@ -103,7 +117,7 @@ class MainViewController: BaseViewController, View {
     // MARK: - Setup
     
     private func setupView() {
-        setupShowHistoryButton()
+        setupHistoryViewToggleButton()
         setupSettingButton()
         setupHistoryViewController()
         setupHistoryContainerView()
@@ -115,14 +129,14 @@ class MainViewController: BaseViewController, View {
         configureResultLabelGradientSmootherView()
     }
     
-    private func setupShowHistoryButton() {
-        showHistoryButton.layer.cornerRadius = 12
-        showHistoryButton.layer.shadowColor = R.color.backgroundColorReversed()?.cgColor
-        showHistoryButton.layer.shadowOpacity = 0.1
-        showHistoryButton.layer.shadowOffset = CGSize(width: 0, height: 4)
-        showHistoryButton.layer.shadowRadius = 10
-        showHistoryButton.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        showHistoryButton.contentEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    private func setupHistoryViewToggleButton() {
+        historyViewToggleButton.layer.cornerRadius = 12
+        historyViewToggleButton.layer.shadowColor = R.color.backgroundColorReversed()?.cgColor
+        historyViewToggleButton.layer.shadowOpacity = 0.1
+        historyViewToggleButton.layer.shadowOffset = CGSize(width: 0, height: 4)
+        historyViewToggleButton.layer.shadowRadius = 10
+        historyViewToggleButton.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        historyViewToggleButton.contentEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     }
     
     private func setupSettingButton() {
@@ -136,10 +150,7 @@ class MainViewController: BaseViewController, View {
     }
     
     private func setupHistoryViewController() {
-        guard let historyVC = instantiateHistoryViewController() else {
-            return
-        }
-        
+        let historyVC = Self.instantiateHistoryViewController()
         historyVC.delegate = self
         historyViewController = historyVC
     }
@@ -199,7 +210,7 @@ class MainViewController: BaseViewController, View {
     
     func bind(reactor: Reactor) {
         // Action
-        showHistoryButton.rx.tap
+        historyViewToggleButton.rx.tap
             .asDriver()
             .drive(with: self, onNext: { vc, _ in
                 vc.presentHistoryVC()
@@ -399,23 +410,20 @@ class MainViewController: BaseViewController, View {
     }
     
     private func presentHistoryVC() {
-        if historyContainerView.frame.width == 0 {
-            guard let historyVC = instantiateHistoryViewController() else {
-                return
-            }
-            
+        if (traitCollection.isPortraitOniPhone && !traitCollection.isLandScapeOniPhone) && isHistoryContainerViewHidden {
+            let historyVC = Self.instantiateHistoryViewController()
             historyVC.delegate = self
             present(historyVC, animated: true)
         } else {
-            hideHistoryContainerView(false)
+            toggleHistoryContainerView(false)
         }
     }
     
-    private func instantiateHistoryViewController() -> HistoryViewController? {
+    static private func instantiateHistoryViewController() -> HistoryViewController {
         let storyboard = UIStoryboard(name: R.storyboard.history.name, bundle: nil)
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: R.storyboard.history.historyStoryboard.identifier)
-                as? HistoryViewController else {
-            return nil
+        let viewController = storyboard.instantiateViewController(identifier: R.storyboard.history.historyStoryboard.identifier) { coder -> HistoryViewController in
+            let reactor = HistoryViewReactor()
+            return .init(coder, reactor) ?? HistoryViewController(.init())
         }
         
         return viewController
@@ -461,8 +469,9 @@ class MainViewController: BaseViewController, View {
     
     private func presentSettingVC() {
         let storyboard = UIStoryboard(name: "Setting", bundle: nil)
-        guard let settingVC = storyboard.instantiateViewController(withIdentifier: "settingStoryboard") as? SettingViewController else {
-            return
+        let settingVC = storyboard.instantiateViewController(identifier: "settingStoryboard") { coder -> SettingViewController in
+            let reactor = SettingViewReactor()
+            return .init(coder, reactor) ?? SettingViewController(.init())
         }
         
         let wrappedVC = UINavigationController(rootViewController: settingVC)
@@ -472,13 +481,49 @@ class MainViewController: BaseViewController, View {
 }
 
 extension MainViewController {
-    private func hideHistoryContainerView(_ isHidden: Bool) {
+    private func toggleHistoryContainerView(_ isHidden: Bool,
+                                            duration: CGFloat = 0.3) {
         if isHidden {
-            historyContainerView.isHidden = true
-            showHistoryButton.isHidden = false
+            hideHistoryContainerView(duration)
         } else {
-            historyContainerView.isHidden = false
-            showHistoryButton.isHidden = true
+            showHistoryContainerView(duration)
+        }
+    }
+    
+    private func showHistoryContainerView(_ duration: CGFloat) {
+        historyContainerView.isHidden = false
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            historyContainerViewWidthConstraint.constant = 340
+            historyContainerView.frame.size.height = view.frame.height
+        } else {
+            historyContainerViewTopConstraint.constant = 0
+            historyContainerViewBottomConstraint.constant = 0
+        }
+        
+        UIView.animate(withDuration: duration,
+                       delay: 0,
+                       usingSpringWithDamping: 0.8,
+                       initialSpringVelocity: 0.8,
+                       options: []) {
+            self.view.layoutIfNeeded()
+        } completion: { _ in
+            self.historyViewToggleButton.isHidden = true
+        }
+    }
+    
+    private func hideHistoryContainerView(_ duration: CGFloat) {
+        historyViewToggleButton.isHidden = false
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            historyContainerViewWidthConstraint.constant = 0
+        } else {
+            historyContainerViewTopConstraint.constant = view.frame.height
+            historyContainerViewBottomConstraint.constant = -view.frame.height
+        }
+        
+        UIView.animate(withDuration: duration) {
+            self.view.layoutIfNeeded()
+        } completion: { _ in
+            self.historyContainerView.isHidden = true
         }
     }
     
@@ -489,11 +534,11 @@ extension MainViewController {
 
 extension MainViewController: HistoryViewDelegate {
     func didTapHideButton() {
-        hideHistoryContainerView(true)
+        toggleHistoryContainerView(true)
     }
     
     func didDismissByTransition() {
-        hideHistoryContainerView(false)
+        toggleHistoryContainerView(false)
     }
     
     func didHistoryItemSelected(item: CalculationHistory) {
