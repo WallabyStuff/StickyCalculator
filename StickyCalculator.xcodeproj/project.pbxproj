@@ -318,7 +318,6 @@
 				8E4FE4BC27E2304B00182E4F /* ViewControllers */,
 				8E4FE4BA27E2303F00182E4F /* Views */,
 				8EE8047F27ED6B870001C011 /* Utils */,
-				8E4FE4BD27E2305800182E4F /* Resources */,
 				8E4FE4BE27E2306100182E4F /* SupportingFiles */,
 			);
 			path = Sources;
@@ -350,6 +349,7 @@
 			isa = PBXGroup;
 			children = (
 				8E9C394227E2330F004263B0 /* Sources */,
+				8E4FE4BD27E2305800182E4F /* Resources */,
 			);
 			path = StickyCalculator;
 			sourceTree = "<group>";
