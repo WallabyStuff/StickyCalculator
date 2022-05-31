@@ -1014,7 +1014,7 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en, ko, ja
       static let record_history = Rswift.StringResource(key: "record_history", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
-      /// en translation: Result value copied to clipboard
+      /// en translation: Result value is copied to clipboard
       ///
       /// Locales: en, ko, ja
       static let copy_message = Rswift.StringResource(key: "copy_message", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ko", "ja"], comment: nil)
@@ -1271,7 +1271,7 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("record_history", bundle: bundle, comment: "")
       }
 
-      /// en translation: Result value copied to clipboard
+      /// en translation: Result value is copied to clipboard
       ///
       /// Locales: en, ko, ja
       static func copy_message(preferredLanguages: [String]? = nil) -> String {
