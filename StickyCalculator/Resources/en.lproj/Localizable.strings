@@ -7,7 +7,7 @@
 
 
 // Toast messages
-"copy_message" = "Result value copied to clipboard";
+"copy_message" = "Result value is copied to clipboard";
 
 
 // Date format
