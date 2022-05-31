@@ -93,14 +93,11 @@ class MainViewController: BaseViewController, View {
         setupSettingButton()
         
         if traitCollection.isLandScapeOniPhone {
-            print("Trait collection state 1 called")
             toggleHistoryContainerView(false, duration: 0)
         } else if traitCollection.isPortraitOniPhone {
-            print("Trait collection state 2 called")
             toggleHistoryContainerView(true, duration: 0)
         } else if traitCollection.isPortraitOrLandscapeOniPad {
             if isHistoryContainerViewHidden == false {
-                print("Trait collection state 3 called")
                 toggleHistoryContainerView(false, duration: 0)
             }
         }
