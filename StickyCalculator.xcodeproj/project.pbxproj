@@ -7,15 +7,74 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2121A97425D4F4C8F446C4E8 /* Pods_StickyCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06EE2761449D26C0963F0856 /* Pods_StickyCalculator.framework */; };
+		8E11CD752812DCCE0043B8E9 /* UIView+Flash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E11CD742812DCCE0043B8E9 /* UIView+Flash.swift */; };
+		8E2789DA280844D4009A81D0 /* CalculationHistories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2789D9280844D4009A81D0 /* CalculationHistories.swift */; };
+		8E2A462A28081BA2008D79C5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E2A462C28081BA2008D79C5 /* Localizable.strings */; };
+		8E2A463028081CF1008D79C5 /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2A462F28081CF1008D79C5 /* String+Localizable.swift */; };
+		8E2A463128081F91008D79C5 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E2A463328081F91008D79C5 /* History.storyboard */; };
+		8E2CC74327E969700046E314 /* UIFont+NanumSquareRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2CC74227E969700046E314 /* UIFont+NanumSquareRound.swift */; };
+		8E3EBE232819088400F84064 /* SettingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EBE222819088400F84064 /* SettingItem.swift */; };
+		8E3EBEA2281925C800F84064 /* SwitchRowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EBEA0281925C800F84064 /* SwitchRowTableViewCell.swift */; };
+		8E3EBEA3281925C800F84064 /* SwitchRowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E3EBEA1281925C800F84064 /* SwitchRowTableViewCell.xib */; };
+		8E3EBEA62819301800F84064 /* TapActionRowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EBEA42819301800F84064 /* TapActionRowTableViewCell.swift */; };
+		8E3EBEA72819301800F84064 /* TapActionRowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E3EBEA52819301800F84064 /* TapActionRowTableViewCell.xib */; };
+		8E3EBEA9281959C800F84064 /* SettingItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EBEA8281959C800F84064 /* SettingItemTableViewCell.swift */; };
+		8E3EBEAB2819A1B100F84064 /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EBEAA2819A1B100F84064 /* UserDefaultsKey.swift */; };
+		8E414F5327E723D0007F0B65 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E414F5227E723D0007F0B65 /* HistoryViewController.swift */; };
+		8E414F5527E72453007F0B65 /* MainViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E414F5427E72453007F0B65 /* MainViewReactor.swift */; };
+		8E414F5727E72465007F0B65 /* HistoryViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E414F5627E72465007F0B65 /* HistoryViewReactor.swift */; };
+		8E429871281C59910091ECF0 /* AppearanceSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E429870281C59910091ECF0 /* AppearanceSelectorViewController.swift */; };
+		8E529C2F2809A908004868FB /* UIScrollView+AutoScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529C2E2809A908004868FB /* UIScrollView+AutoScroll.swift */; };
+		8E529C6D280B3476004868FB /* WorkingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529C6C280B3476004868FB /* WorkingState.swift */; };
+		8E529C6F280BCF7C004868FB /* GradientSmootherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529C6E280BCF7C004868FB /* GradientSmootherView.swift */; };
+		8E529C71280BEAA3004868FB /* CALayer+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529C70280BEAA3004868FB /* CALayer+Animation.swift */; };
+		8E529C75280BFA36004868FB /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E529C74280BFA36004868FB /* UIView+Animation.swift */; };
+		8E64D96827EF547500330497 /* UITraitColleciton+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64D96727EF547500330497 /* UITraitColleciton+Orientation.swift */; };
+		8E86999E281DB4D300F18BE9 /* OptionRowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E86999C281DB4D300F18BE9 /* OptionRowTableViewCell.swift */; };
+		8E86999F281DB4D300F18BE9 /* OptionRowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E86999D281DB4D300F18BE9 /* OptionRowTableViewCell.xib */; };
+		8E8699A4281DB87900F18BE9 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8699A3281DB87900F18BE9 /* Appearance.swift */; };
+		8E8699A6281DBA5900F18BE9 /* AppearanceSelectorViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8699A5281DBA5900F18BE9 /* AppearanceSelectorViewReactor.swift */; };
+		8E8699A8281DD4D600F18BE9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8699A7281DD4D600F18BE9 /* BaseViewController.swift */; };
+		8E8699AA281E934600F18BE9 /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8699A9281E934600F18BE9 /* AboutAppViewController.swift */; };
+		8E8699AC281E936C00F18BE9 /* AboutviewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8699AB281E936C00F18BE9 /* AboutviewReactor.swift */; };
+		8E8699AE281E980200F18BE9 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8699AD281E980200F18BE9 /* AppInfo.swift */; };
+		8E87761227E6FFB600ED5839 /* IconKeyPadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E87761127E6FFB600ED5839 /* IconKeyPadButton.swift */; };
+		8E87761427E7021900ED5839 /* KeypadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E87761327E7021900ED5839 /* KeypadButton.swift */; };
+		8E8EDC6A27F1DEFB005B73F6 /* Stirng+NumberSentenceAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8EDC6927F1DEFB005B73F6 /* Stirng+NumberSentenceAttribute.swift */; };
+		8E975D6A27E2333A00F6C7C5 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E975D6927E2333A00F6C7C5 /* R.generated.swift */; };
+		8E977FCF27EB81E400B91E1B /* TextKeypadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E977FCE27EB81E400B91E1B /* TextKeypadButton.swift */; };
 		8EA670AA27E1CBD7007928E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA670A927E1CBD7007928E4 /* AppDelegate.swift */; };
 		8EA670AC27E1CBD7007928E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA670AB27E1CBD7007928E4 /* SceneDelegate.swift */; };
-		8EA670AE27E1CBD7007928E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA670AD27E1CBD7007928E4 /* ViewController.swift */; };
+		8EA670AE27E1CBD7007928E4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA670AD27E1CBD7007928E4 /* MainViewController.swift */; };
 		8EA670B127E1CBD7007928E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA670AF27E1CBD7007928E4 /* Main.storyboard */; };
 		8EA670B327E1CBD8007928E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EA670B227E1CBD8007928E4 /* Assets.xcassets */; };
 		8EA670B627E1CBD8007928E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA670B427E1CBD8007928E4 /* LaunchScreen.storyboard */; };
 		8EA670C127E1CBD8007928E4 /* StickyCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA670C027E1CBD8007928E4 /* StickyCalculatorTests.swift */; };
 		8EA670CB27E1CBD8007928E4 /* StickyCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA670CA27E1CBD8007928E4 /* StickyCalculatorUITests.swift */; };
 		8EA670CD27E1CBD8007928E4 /* StickyCalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA670CC27E1CBD8007928E4 /* StickyCalculatorUITestsLaunchTests.swift */; };
+		8EACB3872815C27000EA5117 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EACB3862815C27000EA5117 /* Setting.storyboard */; };
+		8EACB3892815C27C00EA5117 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EACB3882815C27C00EA5117 /* SettingViewController.swift */; };
+		8EACB38B281698D100EA5117 /* SettingViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EACB38A281698D100EA5117 /* SettingViewReactor.swift */; };
+		8EBDB44F280FFF0600243E61 /* UIView+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBDB44E280FFF0600243E61 /* UIView+Toast.swift */; };
+		8EBDB4512810037B00243E61 /* ToastStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBDB4502810037B00243E61 /* ToastStyle.swift */; };
+		8EDA316F27F44A5C0077B0F0 /* String+Calculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA316E27F44A5C0077B0F0 /* String+Calculation.swift */; };
+		8EDA317127F45EFD0077B0F0 /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA317027F45EFD0077B0F0 /* Operator.swift */; };
+		8EE41F7627EC1B040053FA17 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE41F7427EC1B040053FA17 /* HistoryTableViewCell.swift */; };
+		8EE41F7727EC1B040053FA17 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EE41F7527EC1B040053FA17 /* HistoryTableViewCell.xib */; };
+		8EE8048127ED6BA30001C011 /* DeviceResolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE8048027ED6BA30001C011 /* DeviceResolution.swift */; };
+		8EEEBBC627F96FF6009D3FED /* FeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEBBC527F96FF6009D3FED /* FeedbackManager.swift */; };
+		8EEEBBC927F99046009D3FED /* CalculationCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEBBC827F99046009D3FED /* CalculationCacheManager.swift */; };
+		8EEEBBCB27F9CD8E009D3FED /* CalculationHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEBBCA27F9CD8E009D3FED /* CalculationHistory.swift */; };
+		8EEEBBCE27F9CF5F009D3FED /* CalculationHistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEBBCD27F9CF5F009D3FED /* CalculationHistoryManager.swift */; };
+		8EEEBBD127FA07A9009D3FED /* NanumSquareRound-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8EE12327F0528B00756208 /* NanumSquareRound-ExtraBold.otf */; };
+		8EEEBBD227FA07A9009D3FED /* NanumSquareRound-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8EE12427F0528B00756208 /* NanumSquareRound-Bold.otf */; };
+		8EEEBBD327FA07A9009D3FED /* NanumSquareRound-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8EE12527F0528B00756208 /* NanumSquareRound-Regular.otf */; };
+		8EEEBBD427FA07A9009D3FED /* NanumSquareRound-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E8EE12627F0528B00756208 /* NanumSquareRound-Light.otf */; };
+		8EEEBBD627FA9083009D3FED /* Date+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEBBD527FA9083009D3FED /* Date+DateFormatter.swift */; };
+		8EEEBBD927FC3E32009D3FED /* CalculationHistorySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEBBD827FC3E32009D3FED /* CalculationHistorySection.swift */; };
+		BE3A771A348E5663E1725CD1 /* Pods_StickyCalculatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B38F88C20E4880BE99C9CA /* Pods_StickyCalculatorTests.framework */; };
+		FB4A283D1CB572A32D08CFCF /* Pods_StickyCalculator_StickyCalculatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 446823D9FF72464921069350 /* Pods_StickyCalculator_StickyCalculatorUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +95,63 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06EE2761449D26C0963F0856 /* Pods_StickyCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StickyCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24E9E4C640840BDB3309D836 /* Pods-StickyCalculatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyCalculatorTests.release.xcconfig"; path = "Target Support Files/Pods-StickyCalculatorTests/Pods-StickyCalculatorTests.release.xcconfig"; sourceTree = "<group>"; };
+		34D0A771775497AD6BA0FCE9 /* Pods-StickyCalculatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyCalculatorTests.debug.xcconfig"; path = "Target Support Files/Pods-StickyCalculatorTests/Pods-StickyCalculatorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		44526AB9F21D6556A049AE43 /* Pods-StickyCalculator-StickyCalculatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyCalculator-StickyCalculatorUITests.debug.xcconfig"; path = "Target Support Files/Pods-StickyCalculator-StickyCalculatorUITests/Pods-StickyCalculator-StickyCalculatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		446823D9FF72464921069350 /* Pods_StickyCalculator_StickyCalculatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StickyCalculator_StickyCalculatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CC3C2E240891867BF5D8E52 /* Pods-StickyCalculator-StickyCalculatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyCalculator-StickyCalculatorUITests.release.xcconfig"; path = "Target Support Files/Pods-StickyCalculator-StickyCalculatorUITests/Pods-StickyCalculator-StickyCalculatorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		78B38F88C20E4880BE99C9CA /* Pods_StickyCalculatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StickyCalculatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B40A20A79596EDCE33CB364 /* Pods-StickyCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyCalculator.debug.xcconfig"; path = "Target Support Files/Pods-StickyCalculator/Pods-StickyCalculator.debug.xcconfig"; sourceTree = "<group>"; };
+		8717EE1067339CD6C1E8ECDF /* Pods-StickyCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyCalculator.release.xcconfig"; path = "Target Support Files/Pods-StickyCalculator/Pods-StickyCalculator.release.xcconfig"; sourceTree = "<group>"; };
+		8E11CD742812DCCE0043B8E9 /* UIView+Flash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Flash.swift"; sourceTree = "<group>"; };
+		8E2789D62808283B009A81D0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/History.strings; sourceTree = "<group>"; };
+		8E2789D82808286A009A81D0 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/History.strings; sourceTree = "<group>"; };
+		8E2789D9280844D4009A81D0 /* CalculationHistories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationHistories.swift; sourceTree = "<group>"; };
+		8E2A462B28081BA2008D79C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8E2A462D28081BAA008D79C5 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8E2A462E28081BB0008D79C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8E2A462F28081CF1008D79C5 /* String+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
+		8E2A463B2808234B008D79C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/History.storyboard; sourceTree = "<group>"; };
+		8E2CC74227E969700046E314 /* UIFont+NanumSquareRound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+NanumSquareRound.swift"; sourceTree = "<group>"; };
+		8E3EBE222819088400F84064 /* SettingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingItem.swift; sourceTree = "<group>"; };
+		8E3EBEA0281925C800F84064 /* SwitchRowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchRowTableViewCell.swift; sourceTree = "<group>"; };
+		8E3EBEA1281925C800F84064 /* SwitchRowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchRowTableViewCell.xib; sourceTree = "<group>"; };
+		8E3EBEA42819301800F84064 /* TapActionRowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapActionRowTableViewCell.swift; sourceTree = "<group>"; };
+		8E3EBEA52819301800F84064 /* TapActionRowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TapActionRowTableViewCell.xib; sourceTree = "<group>"; };
+		8E3EBEA8281959C800F84064 /* SettingItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingItemTableViewCell.swift; sourceTree = "<group>"; };
+		8E3EBEAA2819A1B100F84064 /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
+		8E414F5227E723D0007F0B65 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		8E414F5427E72453007F0B65 /* MainViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewReactor.swift; sourceTree = "<group>"; };
+		8E414F5627E72465007F0B65 /* HistoryViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewReactor.swift; sourceTree = "<group>"; };
+		8E429870281C59910091ECF0 /* AppearanceSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSelectorViewController.swift; sourceTree = "<group>"; };
+		8E529C2E2809A908004868FB /* UIScrollView+AutoScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+AutoScroll.swift"; sourceTree = "<group>"; };
+		8E529C6C280B3476004868FB /* WorkingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingState.swift; sourceTree = "<group>"; };
+		8E529C6E280BCF7C004868FB /* GradientSmootherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientSmootherView.swift; sourceTree = "<group>"; };
+		8E529C70280BEAA3004868FB /* CALayer+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Animation.swift"; sourceTree = "<group>"; };
+		8E529C74280BFA36004868FB /* UIView+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animation.swift"; sourceTree = "<group>"; };
+		8E64D96727EF547500330497 /* UITraitColleciton+Orientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITraitColleciton+Orientation.swift"; sourceTree = "<group>"; };
+		8E86999C281DB4D300F18BE9 /* OptionRowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionRowTableViewCell.swift; sourceTree = "<group>"; };
+		8E86999D281DB4D300F18BE9 /* OptionRowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionRowTableViewCell.xib; sourceTree = "<group>"; };
+		8E8699A3281DB87900F18BE9 /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		8E8699A5281DBA5900F18BE9 /* AppearanceSelectorViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSelectorViewReactor.swift; sourceTree = "<group>"; };
+		8E8699A7281DD4D600F18BE9 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		8E8699A9281E934600F18BE9 /* AboutAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
+		8E8699AB281E936C00F18BE9 /* AboutviewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutviewReactor.swift; sourceTree = "<group>"; };
+		8E8699AD281E980200F18BE9 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
+		8E87761127E6FFB600ED5839 /* IconKeyPadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconKeyPadButton.swift; sourceTree = "<group>"; };
+		8E87761327E7021900ED5839 /* KeypadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeypadButton.swift; sourceTree = "<group>"; };
+		8E8EDC6927F1DEFB005B73F6 /* Stirng+NumberSentenceAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stirng+NumberSentenceAttribute.swift"; sourceTree = "<group>"; };
+		8E8EE12327F0528B00756208 /* NanumSquareRound-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumSquareRound-ExtraBold.otf"; sourceTree = "<group>"; };
+		8E8EE12427F0528B00756208 /* NanumSquareRound-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumSquareRound-Bold.otf"; sourceTree = "<group>"; };
+		8E8EE12527F0528B00756208 /* NanumSquareRound-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumSquareRound-Regular.otf"; sourceTree = "<group>"; };
+		8E8EE12627F0528B00756208 /* NanumSquareRound-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumSquareRound-Light.otf"; sourceTree = "<group>"; };
+		8E975D6927E2333A00F6C7C5 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		8E977FCE27EB81E400B91E1B /* TextKeypadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextKeypadButton.swift; sourceTree = "<group>"; };
 		8EA670A627E1CBD7007928E4 /* StickyCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StickyCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA670A927E1CBD7007928E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EA670AB27E1CBD7007928E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8EA670AD27E1CBD7007928E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8EA670AD27E1CBD7007928E4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8EA670B027E1CBD7007928E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8EA670B227E1CBD8007928E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EA670B527E1CBD8007928E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +161,22 @@
 		8EA670C627E1CBD8007928E4 /* StickyCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StickyCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA670CA27E1CBD8007928E4 /* StickyCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyCalculatorUITests.swift; sourceTree = "<group>"; };
 		8EA670CC27E1CBD8007928E4 /* StickyCalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyCalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8EACB3862815C27000EA5117 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		8EACB3882815C27C00EA5117 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		8EACB38A281698D100EA5117 /* SettingViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewReactor.swift; sourceTree = "<group>"; };
+		8EBDB44E280FFF0600243E61 /* UIView+Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Toast.swift"; sourceTree = "<group>"; };
+		8EBDB4502810037B00243E61 /* ToastStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastStyle.swift; sourceTree = "<group>"; };
+		8EDA316E27F44A5C0077B0F0 /* String+Calculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Calculation.swift"; sourceTree = "<group>"; };
+		8EDA317027F45EFD0077B0F0 /* Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Operator.swift; path = StickyCalculator/Sources/Models/Operator.swift; sourceTree = SOURCE_ROOT; };
+		8EE41F7427EC1B040053FA17 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		8EE41F7527EC1B040053FA17 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
+		8EE8048027ED6BA30001C011 /* DeviceResolution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceResolution.swift; sourceTree = "<group>"; };
+		8EEEBBC527F96FF6009D3FED /* FeedbackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackManager.swift; sourceTree = "<group>"; };
+		8EEEBBC827F99046009D3FED /* CalculationCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationCacheManager.swift; sourceTree = "<group>"; };
+		8EEEBBCA27F9CD8E009D3FED /* CalculationHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationHistory.swift; sourceTree = "<group>"; };
+		8EEEBBCD27F9CF5F009D3FED /* CalculationHistoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationHistoryManager.swift; sourceTree = "<group>"; };
+		8EEEBBD527FA9083009D3FED /* Date+DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+DateFormatter.swift"; sourceTree = "<group>"; };
+		8EEEBBD827FC3E32009D3FED /* CalculationHistorySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationHistorySection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +184,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2121A97425D4F4C8F446C4E8 /* Pods_StickyCalculator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +192,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE3A771A348E5663E1725CD1 /* Pods_StickyCalculatorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +200,129 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB4A283D1CB572A32D08CFCF /* Pods_StickyCalculator_StickyCalculatorUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79FF890CA5F4379D10690283 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06EE2761449D26C0963F0856 /* Pods_StickyCalculator.framework */,
+				446823D9FF72464921069350 /* Pods_StickyCalculator_StickyCalculatorUITests.framework */,
+				78B38F88C20E4880BE99C9CA /* Pods_StickyCalculatorTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8E2CC73127E965F00046E314 /* NanumSquareRoundFontFamily */ = {
+			isa = PBXGroup;
+			children = (
+				8E8EE12427F0528B00756208 /* NanumSquareRound-Bold.otf */,
+				8E8EE12327F0528B00756208 /* NanumSquareRound-ExtraBold.otf */,
+				8E8EE12627F0528B00756208 /* NanumSquareRound-Light.otf */,
+				8E8EE12527F0528B00756208 /* NanumSquareRound-Regular.otf */,
+			);
+			path = NanumSquareRoundFontFamily;
+			sourceTree = "<group>";
+		};
+		8E4FE4BA27E2303F00182E4F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8E87761327E7021900ED5839 /* KeypadButton.swift */,
+				8E87761127E6FFB600ED5839 /* IconKeyPadButton.swift */,
+				8E977FCE27EB81E400B91E1B /* TextKeypadButton.swift */,
+				8EE41F7427EC1B040053FA17 /* HistoryTableViewCell.swift */,
+				8E529C6E280BCF7C004868FB /* GradientSmootherView.swift */,
+				8EBDB4502810037B00243E61 /* ToastStyle.swift */,
+				8E3EBEA8281959C800F84064 /* SettingItemTableViewCell.swift */,
+				8E3EBEA0281925C800F84064 /* SwitchRowTableViewCell.swift */,
+				8E3EBEA42819301800F84064 /* TapActionRowTableViewCell.swift */,
+				8E86999C281DB4D300F18BE9 /* OptionRowTableViewCell.swift */,
+				8E4FE4C027E2309300182E4F /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8E4FE4BC27E2304B00182E4F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8E8699A7281DD4D600F18BE9 /* BaseViewController.swift */,
+				8EA670AD27E1CBD7007928E4 /* MainViewController.swift */,
+				8E414F5427E72453007F0B65 /* MainViewReactor.swift */,
+				8E414F5227E723D0007F0B65 /* HistoryViewController.swift */,
+				8E414F5627E72465007F0B65 /* HistoryViewReactor.swift */,
+				8EACB3882815C27C00EA5117 /* SettingViewController.swift */,
+				8EACB38A281698D100EA5117 /* SettingViewReactor.swift */,
+				8E429870281C59910091ECF0 /* AppearanceSelectorViewController.swift */,
+				8E8699A5281DBA5900F18BE9 /* AppearanceSelectorViewReactor.swift */,
+				8E8699A9281E934600F18BE9 /* AboutAppViewController.swift */,
+				8E8699AB281E936C00F18BE9 /* AboutviewReactor.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8E4FE4BD27E2305800182E4F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8E2CC73127E965F00046E314 /* NanumSquareRoundFontFamily */,
+				8EA670B427E1CBD8007928E4 /* LaunchScreen.storyboard */,
+				8EA670B227E1CBD8007928E4 /* Assets.xcassets */,
+				8E975D6927E2333A00F6C7C5 /* R.generated.swift */,
+				8E2CC74227E969700046E314 /* UIFont+NanumSquareRound.swift */,
+				8E2A462C28081BA2008D79C5 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8E4FE4BE27E2306100182E4F /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				8EA670B727E1CBD8007928E4 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		8E4FE4C027E2309300182E4F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8EA670AF27E1CBD7007928E4 /* Main.storyboard */,
+				8E2A463328081F91008D79C5 /* History.storyboard */,
+				8EACB3862815C27000EA5117 /* Setting.storyboard */,
+				8E8699A2281DB75E00F18BE9 /* Cell */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8E8699A2281DB75E00F18BE9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8EE41F7527EC1B040053FA17 /* HistoryTableViewCell.xib */,
+				8E3EBEA1281925C800F84064 /* SwitchRowTableViewCell.xib */,
+				8E3EBEA52819301800F84064 /* TapActionRowTableViewCell.xib */,
+				8E86999D281DB4D300F18BE9 /* OptionRowTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8E9C394227E2330F004263B0 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8EA670A927E1CBD7007928E4 /* AppDelegate.swift */,
+				8EA670AB27E1CBD7007928E4 /* SceneDelegate.swift */,
+				8EEEBBCC27F9CF47009D3FED /* Managers */,
+				8EEEBBC727F98FB8009D3FED /* Models */,
+				8EEEBBD727FC3E1B009D3FED /* Sections */,
+				8E4FE4BC27E2304B00182E4F /* ViewControllers */,
+				8E4FE4BA27E2303F00182E4F /* Views */,
+				8EE8047F27ED6B870001C011 /* Utils */,
+				8E4FE4BE27E2306100182E4F /* SupportingFiles */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		8EA6709D27E1CBD7007928E4 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +330,8 @@
 				8EA670BF27E1CBD8007928E4 /* StickyCalculatorTests */,
 				8EA670C927E1CBD8007928E4 /* StickyCalculatorUITests */,
 				8EA670A727E1CBD7007928E4 /* Products */,
+				E71046B597D8C908F9A6E936 /* Pods */,
+				79FF890CA5F4379D10690283 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +348,8 @@
 		8EA670A827E1CBD7007928E4 /* StickyCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				8EA670A927E1CBD7007928E4 /* AppDelegate.swift */,
-				8EA670AB27E1CBD7007928E4 /* SceneDelegate.swift */,
-				8EA670AD27E1CBD7007928E4 /* ViewController.swift */,
-				8EA670AF27E1CBD7007928E4 /* Main.storyboard */,
-				8EA670B227E1CBD8007928E4 /* Assets.xcassets */,
-				8EA670B427E1CBD8007928E4 /* LaunchScreen.storyboard */,
-				8EA670B727E1CBD8007928E4 /* Info.plist */,
+				8E9C394227E2330F004263B0 /* Sources */,
+				8E4FE4BD27E2305800182E4F /* Resources */,
 			);
 			path = StickyCalculator;
 			sourceTree = "<group>";
@@ -127,6 +371,70 @@
 			path = StickyCalculatorUITests;
 			sourceTree = "<group>";
 		};
+		8EE8047F27ED6B870001C011 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8EE8048027ED6BA30001C011 /* DeviceResolution.swift */,
+				8E64D96727EF547500330497 /* UITraitColleciton+Orientation.swift */,
+				8E8EDC6927F1DEFB005B73F6 /* Stirng+NumberSentenceAttribute.swift */,
+				8EDA316E27F44A5C0077B0F0 /* String+Calculation.swift */,
+				8EEEBBC527F96FF6009D3FED /* FeedbackManager.swift */,
+				8EEEBBD527FA9083009D3FED /* Date+DateFormatter.swift */,
+				8E2A462F28081CF1008D79C5 /* String+Localizable.swift */,
+				8E529C2E2809A908004868FB /* UIScrollView+AutoScroll.swift */,
+				8E529C70280BEAA3004868FB /* CALayer+Animation.swift */,
+				8E529C74280BFA36004868FB /* UIView+Animation.swift */,
+				8EBDB44E280FFF0600243E61 /* UIView+Toast.swift */,
+				8E11CD742812DCCE0043B8E9 /* UIView+Flash.swift */,
+				8E8699AD281E980200F18BE9 /* AppInfo.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8EEEBBC727F98FB8009D3FED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8EDA317027F45EFD0077B0F0 /* Operator.swift */,
+				8EEEBBCA27F9CD8E009D3FED /* CalculationHistory.swift */,
+				8E2789D9280844D4009A81D0 /* CalculationHistories.swift */,
+				8E529C6C280B3476004868FB /* WorkingState.swift */,
+				8E3EBE222819088400F84064 /* SettingItem.swift */,
+				8E3EBEAA2819A1B100F84064 /* UserDefaultsKey.swift */,
+				8E8699A3281DB87900F18BE9 /* Appearance.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8EEEBBCC27F9CF47009D3FED /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				8EEEBBC827F99046009D3FED /* CalculationCacheManager.swift */,
+				8EEEBBCD27F9CF5F009D3FED /* CalculationHistoryManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		8EEEBBD727FC3E1B009D3FED /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				8EEEBBD827FC3E32009D3FED /* CalculationHistorySection.swift */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		E71046B597D8C908F9A6E936 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7B40A20A79596EDCE33CB364 /* Pods-StickyCalculator.debug.xcconfig */,
+				8717EE1067339CD6C1E8ECDF /* Pods-StickyCalculator.release.xcconfig */,
+				44526AB9F21D6556A049AE43 /* Pods-StickyCalculator-StickyCalculatorUITests.debug.xcconfig */,
+				6CC3C2E240891867BF5D8E52 /* Pods-StickyCalculator-StickyCalculatorUITests.release.xcconfig */,
+				34D0A771775497AD6BA0FCE9 /* Pods-StickyCalculatorTests.debug.xcconfig */,
+				24E9E4C640840BDB3309D836 /* Pods-StickyCalculatorTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +442,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8EA670D027E1CBD8007928E4 /* Build configuration list for PBXNativeTarget "StickyCalculator" */;
 			buildPhases = (
+				60E2612003CEAE53A7AA312B /* [CP] Check Pods Manifest.lock */,
+				8E4FE4C127E2314300182E4F /* R.swift */,
 				8EA670A227E1CBD7007928E4 /* Sources */,
 				8EA670A327E1CBD7007928E4 /* Frameworks */,
 				8EA670A427E1CBD7007928E4 /* Resources */,
+				160FB25F5731F447C72FFF76 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +462,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8EA670D327E1CBD8007928E4 /* Build configuration list for PBXNativeTarget "StickyCalculatorTests" */;
 			buildPhases = (
+				5638124BDFCCE9867327D54D /* [CP] Check Pods Manifest.lock */,
 				8EA670B827E1CBD8007928E4 /* Sources */,
 				8EA670B927E1CBD8007928E4 /* Frameworks */,
 				8EA670BA27E1CBD8007928E4 /* Resources */,
@@ -169,9 +481,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8EA670D627E1CBD8007928E4 /* Build configuration list for PBXNativeTarget "StickyCalculatorUITests" */;
 			buildPhases = (
+				7D14FE947D7EA8F4A381869F /* [CP] Check Pods Manifest.lock */,
 				8EA670C227E1CBD8007928E4 /* Sources */,
 				8EA670C327E1CBD8007928E4 /* Frameworks */,
 				8EA670C427E1CBD8007928E4 /* Resources */,
+				3A63AF5AEDCB27DB463D73D4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -213,6 +527,8 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
+				ja,
 			);
 			mainGroup = 8EA6709D27E1CBD7007928E4;
 			productRefGroup = 8EA670A727E1CBD7007928E4 /* Products */;
@@ -232,8 +548,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EA670B627E1CBD8007928E4 /* LaunchScreen.storyboard in Resources */,
+				8E3EBEA3281925C800F84064 /* SwitchRowTableViewCell.xib in Resources */,
 				8EA670B327E1CBD8007928E4 /* Assets.xcassets in Resources */,
+				8EEEBBD427FA07A9009D3FED /* NanumSquareRound-Light.otf in Resources */,
+				8E3EBEA72819301800F84064 /* TapActionRowTableViewCell.xib in Resources */,
+				8EEEBBD327FA07A9009D3FED /* NanumSquareRound-Regular.otf in Resources */,
 				8EA670B127E1CBD7007928E4 /* Main.storyboard in Resources */,
+				8E2A462A28081BA2008D79C5 /* Localizable.strings in Resources */,
+				8EEEBBD127FA07A9009D3FED /* NanumSquareRound-ExtraBold.otf in Resources */,
+				8EEEBBD227FA07A9009D3FED /* NanumSquareRound-Bold.otf in Resources */,
+				8EE41F7727EC1B040053FA17 /* HistoryTableViewCell.xib in Resources */,
+				8E86999F281DB4D300F18BE9 /* OptionRowTableViewCell.xib in Resources */,
+				8EACB3872815C27000EA5117 /* Setting.storyboard in Resources */,
+				8E2A463128081F91008D79C5 /* History.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,14 +580,182 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		160FB25F5731F447C72FFF76 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StickyCalculator/Pods-StickyCalculator-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StickyCalculator/Pods-StickyCalculator-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StickyCalculator/Pods-StickyCalculator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A63AF5AEDCB27DB463D73D4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StickyCalculator-StickyCalculatorUITests/Pods-StickyCalculator-StickyCalculatorUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StickyCalculator-StickyCalculatorUITests/Pods-StickyCalculator-StickyCalculatorUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StickyCalculator-StickyCalculatorUITests/Pods-StickyCalculator-StickyCalculatorUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5638124BDFCCE9867327D54D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StickyCalculatorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60E2612003CEAE53A7AA312B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StickyCalculator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D14FE947D7EA8F4A381869F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StickyCalculator-StickyCalculatorUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E4FE4C127E2314300182E4F /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8EA670A227E1CBD7007928E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EA670AE27E1CBD7007928E4 /* ViewController.swift in Sources */,
+				8EA670AE27E1CBD7007928E4 /* MainViewController.swift in Sources */,
+				8E529C2F2809A908004868FB /* UIScrollView+AutoScroll.swift in Sources */,
+				8E3EBEA9281959C800F84064 /* SettingItemTableViewCell.swift in Sources */,
+				8E87761427E7021900ED5839 /* KeypadButton.swift in Sources */,
 				8EA670AA27E1CBD7007928E4 /* AppDelegate.swift in Sources */,
+				8E8699AE281E980200F18BE9 /* AppInfo.swift in Sources */,
+				8E8699A8281DD4D600F18BE9 /* BaseViewController.swift in Sources */,
+				8E414F5727E72465007F0B65 /* HistoryViewReactor.swift in Sources */,
+				8E3EBE232819088400F84064 /* SettingItem.swift in Sources */,
+				8EACB3892815C27C00EA5117 /* SettingViewController.swift in Sources */,
+				8E87761227E6FFB600ED5839 /* IconKeyPadButton.swift in Sources */,
+				8E86999E281DB4D300F18BE9 /* OptionRowTableViewCell.swift in Sources */,
 				8EA670AC27E1CBD7007928E4 /* SceneDelegate.swift in Sources */,
+				8EBDB4512810037B00243E61 /* ToastStyle.swift in Sources */,
+				8E529C6F280BCF7C004868FB /* GradientSmootherView.swift in Sources */,
+				8E429871281C59910091ECF0 /* AppearanceSelectorViewController.swift in Sources */,
+				8E8699A6281DBA5900F18BE9 /* AppearanceSelectorViewReactor.swift in Sources */,
+				8E8699AC281E936C00F18BE9 /* AboutviewReactor.swift in Sources */,
+				8EEEBBC627F96FF6009D3FED /* FeedbackManager.swift in Sources */,
+				8E3EBEA2281925C800F84064 /* SwitchRowTableViewCell.swift in Sources */,
+				8E8699A4281DB87900F18BE9 /* Appearance.swift in Sources */,
+				8EEEBBD627FA9083009D3FED /* Date+DateFormatter.swift in Sources */,
+				8EE41F7627EC1B040053FA17 /* HistoryTableViewCell.swift in Sources */,
+				8EEEBBCB27F9CD8E009D3FED /* CalculationHistory.swift in Sources */,
+				8E8699AA281E934600F18BE9 /* AboutAppViewController.swift in Sources */,
+				8EDA316F27F44A5C0077B0F0 /* String+Calculation.swift in Sources */,
+				8EACB38B281698D100EA5117 /* SettingViewReactor.swift in Sources */,
+				8E64D96827EF547500330497 /* UITraitColleciton+Orientation.swift in Sources */,
+				8E414F5327E723D0007F0B65 /* HistoryViewController.swift in Sources */,
+				8EBDB44F280FFF0600243E61 /* UIView+Toast.swift in Sources */,
+				8E529C71280BEAA3004868FB /* CALayer+Animation.swift in Sources */,
+				8E977FCF27EB81E400B91E1B /* TextKeypadButton.swift in Sources */,
+				8E3EBEAB2819A1B100F84064 /* UserDefaultsKey.swift in Sources */,
+				8E529C75280BFA36004868FB /* UIView+Animation.swift in Sources */,
+				8E975D6A27E2333A00F6C7C5 /* R.generated.swift in Sources */,
+				8EEEBBC927F99046009D3FED /* CalculationCacheManager.swift in Sources */,
+				8EEEBBCE27F9CF5F009D3FED /* CalculationHistoryManager.swift in Sources */,
+				8EDA317127F45EFD0077B0F0 /* Operator.swift in Sources */,
+				8E2789DA280844D4009A81D0 /* CalculationHistories.swift in Sources */,
+				8E3EBEA62819301800F84064 /* TapActionRowTableViewCell.swift in Sources */,
+				8E8EDC6A27F1DEFB005B73F6 /* Stirng+NumberSentenceAttribute.swift in Sources */,
+				8EEEBBD927FC3E32009D3FED /* CalculationHistorySection.swift in Sources */,
+				8EE8048127ED6BA30001C011 /* DeviceResolution.swift in Sources */,
+				8E2CC74327E969700046E314 /* UIFont+NanumSquareRound.swift in Sources */,
+				8E414F5527E72453007F0B65 /* MainViewReactor.swift in Sources */,
+				8E11CD752812DCCE0043B8E9 /* UIView+Flash.swift in Sources */,
+				8E2A463028081CF1008D79C5 /* String+Localizable.swift in Sources */,
+				8E529C6D280B3476004868FB /* WorkingState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +792,26 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		8E2A462C28081BA2008D79C5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E2A462B28081BA2008D79C5 /* en */,
+				8E2A462D28081BAA008D79C5 /* ko */,
+				8E2A462E28081BB0008D79C5 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		8E2A463328081F91008D79C5 /* History.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E2A463B2808234B008D79C5 /* Base */,
+				8E2789D62808283B009A81D0 /* ja */,
+				8E2789D82808286A009A81D0 /* ko */,
+			);
+			name = History.storyboard;
+			sourceTree = "<group>";
+		};
 		8EA670AF27E1CBD7007928E4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -320,6 +835,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -380,6 +896,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -432,25 +949,27 @@
 		};
 		8EA670D127E1CBD8007928E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B40A20A79596EDCE33CB364 /* Pods-StickyCalculator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 497P4L97SV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = StickyCalculator/Info.plist;
+				INFOPLIST_FILE = StickyCalculator/Sources/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = DobbyXIII.StickyCalculator;
+				PRODUCT_BUNDLE_IDENTIFIER = SeunggiLee.StickyCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -460,25 +979,27 @@
 		};
 		8EA670D227E1CBD8007928E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8717EE1067339CD6C1E8ECDF /* Pods-StickyCalculator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 497P4L97SV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = StickyCalculator/Info.plist;
+				INFOPLIST_FILE = StickyCalculator/Sources/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = DobbyXIII.StickyCalculator;
+				PRODUCT_BUNDLE_IDENTIFIER = SeunggiLee.StickyCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -488,6 +1009,7 @@
 		};
 		8EA670D427E1CBD8007928E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34D0A771775497AD6BA0FCE9 /* Pods-StickyCalculatorTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +1030,7 @@
 		};
 		8EA670D527E1CBD8007928E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24E9E4C640840BDB3309D836 /* Pods-StickyCalculatorTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -528,6 +1051,7 @@
 		};
 		8EA670D727E1CBD8007928E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44526AB9F21D6556A049AE43 /* Pods-StickyCalculator-StickyCalculatorUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -546,6 +1070,7 @@
 		};
 		8EA670D827E1CBD8007928E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CC3C2E240891867BF5D8E52 /* Pods-StickyCalculator-StickyCalculatorUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

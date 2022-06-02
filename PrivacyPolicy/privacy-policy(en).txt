@@ -1,0 +1,68 @@
+PrivacyPolicy
+
+[Sticky Calculator] has the following processing policy to protect users' personal information and rights and interests in accordance with the Personal Information Protection Act.
+
+When we revise our personal information processing policy, we will announce it through the app screen and website announcement.
+
+
+
+1. Purpose of processing personal information: 
+
+This application is a standalone application that does not collect personal information and does not operate a separate server or collect information.
+We can collect information that is not directly related to a particular individual and cannot be identified in terms of functions for iOS service and advertising services for rewards.
+We do not store or use personal information separately. 
+
+
+
+2. Current status of personal information file
+
+We do not use or save any separate personal information files.
+We do not store and do not use Coogie.
+However, the information used by the store service and the information used by the advertising service will be used through the SDK of the service. This information is not stored by us.
+If users have any questions about this, they should contact the service (Apple and each advertising media) directly.
+
+
+
+3. Processing and retention period of personal information
+
+We do not store or retain personal information directly. 
+All of our applications are used indirectly through the SDK of the media service (Apple, Advertising Media).
+Therefore, our company does not process the user's personal information nor does it have a retention period.
+
+
+
+4. Matters concerning the provision of personal information to third parties
+
+We do not provide personal information to third parties.
+
+
+
+5. Entrustment of personal information processing.
+
+We do not entrust personal information.
+
+
+
+6. The rights and obligations of the data subject and the method of exercise thereof
+
+Users can exercise their rights as personal information subjects.
+1) Personal information access request
+2) Request correction if there is an error, etc
+3) Delete request
+4) Request to stop processing
+We do not store or entrust personal information.
+
+
+
+7. Destruction of personal information
+
+Our application K is a standalone application and does not use a separate server.
+Also, there is nothing to destroy because we do not store personal information.
+However, you can destroy all data by 'deleting' the application if you want.
+
+
+
+
+8. Preparation of the person in charge of personal information protection
+
+- Email: avocado34.131@gmail.com
